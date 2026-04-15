@@ -9,7 +9,7 @@ export const ClassesGrid = () => {
 	return (
 		<div className="mt-9 grid grid-cols-2 gap-6">
 			{CLASSES.map((item) => (
-				<div key={item.id}>
+				<div className="group" key={item.id}>
 					<div className="mb-2 flex items-center justify-between gap-3 rounded-lg bg-card p-6">
 						<h3 className="font-bold text-xl">{item.name}</h3>
 						<Button className="bg-card" variant="outline">
@@ -27,7 +27,7 @@ export const ClassesGrid = () => {
 							<ProgressiveBlur className="[--height:30%]" position="bottom" />
 							<Image
 								alt={item.name}
-								className="object-cover"
+								className="object-cover transition-[scale] duration-300 group-hover:scale-105"
 								fill
 								src={item.image}
 							/>

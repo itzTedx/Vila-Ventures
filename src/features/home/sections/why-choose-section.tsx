@@ -40,22 +40,24 @@ export const WhyChooseSection = () => {
 					</p>
 					<div className="grid flex-1 grid-cols-2 gap-4">
 						{WHY_US_ITEMS.map((item) => (
-							<div className="flex flex-col" key={item.id}>
-								<div className="flex justify-between gap-3 rounded-lg bg-card px-6 py-4">
-									<h3 className="font-semibold text-2xl text-foreground">
+							<div className="group flex flex-col" key={item.id}>
+								<div className="flex justify-between gap-3 rounded-lg bg-card px-6 py-4 transition-colors duration-300 group-hover:bg-primary group-hover:text-card">
+									<h3 className="font-semibold text-2xl">
 										<NumberCounter
 											suffix={item.count.suffix}
 											value={item.count.value}
 										/>
 									</h3>
 
-									<span className="text-muted-foreground/30">{item.id}</span>
+									<span className="text-muted-foreground/30 transition-colors duration-300 group-hover:text-muted/30">
+										{item.id}
+									</span>
 								</div>
-								<div className="mt-2 flex flex-1 flex-col justify-between rounded-lg bg-card p-6">
+								<div className="mt-2 flex flex-1 flex-col justify-between rounded-lg bg-card p-6 transition-colors duration-300 group-hover:bg-primary group-hover:text-card">
 									<h4 className="ml-auto max-w-3xs text-end font-semibold text-3xl">
 										{item.title}
 									</h4>
-									<p className="text-muted-foreground text-xl">
+									<p className="text-muted-foreground text-xl transition-colors duration-300 group-hover:text-muted/80">
 										{item.description}
 									</p>
 								</div>
