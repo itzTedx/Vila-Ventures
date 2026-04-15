@@ -2,7 +2,7 @@ export const ABOUT_LIST = [
 	"Mindful Yoga Practices",
 	"Lifestyle Experiences",
 	"Community & Connection",
-];
+] as const;
 
 export const ABOUT_DETAILS = [
 	{
@@ -17,7 +17,7 @@ export const ABOUT_DETAILS = [
 		label: "For Whom",
 		value: "Women, Kids & Corporate Wellness",
 	},
-];
+] as const;
 
 export const FEATURED_CAROUSEL_ITEMS = [
 	{
@@ -47,7 +47,7 @@ export const FEATURED_CAROUSEL_ITEMS = [
 			description: "Daily yoga, mindful practices & creative sessions",
 		},
 	},
-];
+] as const;
 
 export const WHY_US_ITEMS = [
 	{
@@ -64,4 +64,4 @@ export const WHY_US_ITEMS = [
 		description:
 			"Most participants leave feeling calmer, clearer, and more connected after every session.",
 	},
-];
+] as const;
