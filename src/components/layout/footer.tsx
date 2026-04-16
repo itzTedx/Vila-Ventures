@@ -1,0 +1,301 @@
+"use client";
+
+import Link from "next/link";
+
+import {
+	InstagramLogo,
+	LinkedinLogo,
+	TwitterLogo,
+} from "@phosphor-icons/react/dist/ssr";
+import { motion, useReducedMotion } from "motion/react";
+
+import { Button } from "@/components/ui/button";
+
+import { LogoIcon } from "@/assets/logo";
+
+const footerNav = [
+	{
+		title: "Explore",
+		links: [
+			{ label: "Classes", href: "#classes" },
+			{ label: "Products", href: "#products" },
+			{ label: "Stories", href: "#blog" },
+			{ label: "FAQ", href: "#faq" },
+		],
+	},
+	{
+		title: "Studio",
+		links: [
+			{ label: "About Vila", href: "#about" },
+			{ label: "Why Vila", href: "#why-vila" },
+			{ label: "Feedback", href: "#feedback" },
+		],
+	},
+];
+
+const socialLinks = [
+	{
+		label: "Visit Vila on Instagram",
+		href: "https://instagram.com",
+		Icon: InstagramLogo,
+	},
+	{
+		label: "Connect on LinkedIn",
+		href: "https://linkedin.com",
+		Icon: LinkedinLogo,
+	},
+	{
+		label: "Follow on X (Twitter)",
+		href: "https://x.com",
+		Icon: TwitterLogo,
+	},
+];
+
+const ambientBlobs = [
+	{
+		id: "footer-blob-1",
+		style: "translate3d(-10%, -10%, 0) scale(1.1)",
+	},
+	{
+		id: "footer-blob-2",
+		style: "translate3d(20%, 0, 0) scale(1.2)",
+	},
+	{
+		id: "footer-blob-3",
+		style: "translate3d(-20%, 10%, 0) scale(1.15)",
+	},
+];
+
+export const Footer = () => {
+	const prefersReducedMotion = useReducedMotion();
+
+	return (
+		<footer className="relative mt-24 bg-taupe-950 text-card">
+			{/* <div
+				aria-hidden="true"
+				className="pointer-events-none absolute inset-0 overflow-hidden"
+			>
+				{ambientBlobs.map((blob, index) => (
+					<motion.div
+						animate={
+							prefersReducedMotion
+								? undefined
+								: {
+										scale: [1, 1.05, 1],
+										opacity: [0.4, 0.7, 0.4],
+									}
+						}
+						className="pointer-events-none absolute aspect-4/3 w-xl rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklch,var(--footer-accent)_55%,transparent)_0,transparent_70%)] opacity-65 blur-3xl"
+						key={blob.id}
+						style={{
+							top: index === 0 ? "-10%" : index === 1 ? "10%" : "50%",
+							left: index === 1 ? "55%" : index === 2 ? "-5%" : "5%",
+							transform: blob.style,
+						}}
+						transition={
+							prefersReducedMotion
+								? undefined
+								: {
+										duration: 26 + index * 4,
+										repeat: Number.POSITIVE_INFINITY,
+										ease: "easeInOut",
+									}
+						}
+					/>
+				))}
+				<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12)_0,transparent_60%)]" />
+				<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,color-mix(in_oklch,var(--footer-accent)_32%,transparent)_0,transparent_70%)] mix-blend-screen" />
+			</div> */}
+
+			<div className="relative z-10 pt-16 pb-10">
+				<div className="container max-w-7xl">
+					<motion.section
+						className="relative mb-14 flex flex-col gap-6 overflow-hidden rounded-lg border border-(--footer-surface-border) bg-(--footer-surface)/95 p-px px-6 py-7 shadow-[0_18px_48px_rgba(203,89,27,0.16)] backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between sm:px-9 sm:py-8"
+						initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+						transition={{ duration: 0.5, ease: "easeOut" }}
+						viewport={{ once: true, amount: 0.4 }}
+						whileInView={
+							prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+						}
+					>
+						<div className="relative z-10 max-w-xl space-y-3">
+							<h2 className="text-balance font-display text-2xl uppercase leading-snug sm:text-3xl">
+								Ready to make your practice
+								<span className="ml-2 rounded-full bg-(--footer-accent-soft) px-3 py-0.5 font-medium text-(--footer-accent)">
+									a daily ritual?
+								</span>
+							</h2>
+							<p className="text-balance text-(--footer-muted) text-sm sm:text-lg">
+								Book a session or curate a mindful product selection for your
+								space with Vila in the UAE.
+							</p>
+						</div>
+						<div className="relative z-10 flex flex-col items-start gap-1.5 sm:items-center">
+							<motion.div
+								initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+								transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+								viewport={{ once: true, amount: 0.8 }}
+								whileInView={
+									prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+								}
+							>
+								<Button
+									className="shadow-[0_12px_28px_rgba(203,89,27,0.38)] transition hover:-translate-y-0.5 hover:bg-orange-500 hover:shadow-[0_16px_36px_rgba(203,89,27,0.5)]"
+									nativeButton={false}
+									render={<Link href="#contact" />}
+									size="lg"
+								>
+									<span>Book a discovery call</span>
+								</Button>
+							</motion.div>
+							<p className="text-muted-foreground text-xs">
+								Available for new collaborations
+							</p>
+						</div>
+						<LogoIcon className="absolute top-1/2 -right-12 size-172 -translate-y-1/2 text-muted-foreground/20" />
+					</motion.section>
+
+					<motion.section
+						className="grid gap-10 border-(--footer-surface-border) border-y py-10 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-12"
+						initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
+						transition={{ duration: 0.5, ease: "easeOut", delay: 0.08 }}
+						viewport={{ once: true, amount: 0.3 }}
+						whileInView={
+							prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+						}
+					>
+						<div className="space-y-5">
+							<div className="inline-flex items-center rounded-full border border-(--footer-surface-border) bg-black/30 px-3 py-1 font-medium text-(--footer-muted) text-xs backdrop-blur">
+								<span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-(--footer-accent)" />
+								Vila • Mindful movement studio
+							</div>
+							<div className="space-y-3">
+								<h3 className="font-semibold text-xl uppercase sm:text-3xl">
+									Designed for bodies that live in the real world.
+								</h3>
+								<p className="text-(--footer-muted) text-sm leading-relaxed">
+									Intimate yoga classes, thoughtful objects, and rituals that
+									soften the edges of busy days from sunrise flows to slow
+									evening unwinds in the UAE.
+								</p>
+							</div>
+							<dl className="grid gap-3 text-(--footer-muted) text-sm sm:max-w-xs">
+								<div className="flex items-center gap-2">
+									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase tracking-[0.2em]">
+										Contact
+									</dt>
+									<dd>
+										<Link
+											className="transition hover:text-(--footer-accent)"
+											href="mailto:hello@withvila.com"
+										>
+											hello@withvila.com
+										</Link>
+									</dd>
+								</div>
+								<div className="flex items-center gap-2">
+									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase tracking-[0.2em]">
+										Location
+									</dt>
+									<dd>UAE • In-person & curated experiences</dd>
+								</div>
+							</dl>
+						</div>
+
+						<div className="grid gap-8 sm:grid-cols-3">
+							{footerNav.map((section) => (
+								<nav
+									aria-label={section.title}
+									className="space-y-4"
+									key={section.title}
+								>
+									<h4 className="font-semibold text-(--footer-muted) text-xs uppercase tracking-[0.22em]">
+										{section.title}
+									</h4>
+									<ul className="space-y-2.5 text-(--footer-muted) text-sm">
+										{section.links.map((link) => (
+											<li key={link.label}>
+												<a
+													className="group inline-flex items-center gap-1.5 rounded-full px-1 py-0.5 text-sm transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+													href={link.href}
+												>
+													<span>{link.label}</span>
+													<span
+														aria-hidden="true"
+														className="h-0.5 w-3 rounded-full bg-(--footer-accent-soft) transition group-hover:w-4"
+													/>
+												</a>
+											</li>
+										))}
+									</ul>
+								</nav>
+							))}
+
+							<div className="space-y-4">
+								<h4 className="font-semibold text-(--footer-muted) text-xs uppercase tracking-[0.22em]">
+									Connect with Vila
+								</h4>
+								<p className="text-(--footer-muted) text-sm">
+									Occasional notes, studio moments, and Vila happenings in the
+									UAE — shared through our social spaces.
+								</p>
+								<div className="mt-3 flex flex-wrap gap-3">
+									{socialLinks.map(({ href, label, Icon }) => (
+										<a
+											aria-label={label}
+											className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+											href={href}
+											key={label}
+										>
+											<Icon className="h-4 w-4" weight="fill" />
+										</a>
+									))}
+								</div>
+							</div>
+						</div>
+					</motion.section>
+
+					<div className="mt-6 flex flex-col gap-3 text-(--footer-muted) text-xs sm:flex-row sm:items-center sm:justify-between sm:text-[0.78rem]">
+						<div className="flex items-center gap-1.5">
+							<span className="text-[0.75rem]">
+								© {new Date().getFullYear()}
+							</span>
+							<span className="font-medium text-(--footer-text)">
+								Vila Ventures
+							</span>
+							<span>All rights reserved.</span>
+						</div>
+						<div className="flex flex-wrap items-center gap-4 text-[0.78rem]">
+							<Link
+								className="transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+								href="#"
+							>
+								Privacy
+							</Link>
+							<Link
+								className="transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+								href="#"
+							>
+								Terms
+							</Link>
+							<span className="inline-flex items-center gap-1 text-[0.78rem]">
+								<span className="relative inline-flex h-1.5 w-1.5 items-center justify-center">
+									<span className="absolute inline-flex h-2.5 w-2.5 animate-ping rounded-full bg-(--footer-accent-soft)" />
+									<span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-(--footer-accent)" />
+								</span>
+								Designed from UAE →{" "}
+								<Link
+									className="text-muted transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+									href="https://ziron.pro"
+									target="_blank"
+								>
+									Ziron Pro
+								</Link>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	);
+};

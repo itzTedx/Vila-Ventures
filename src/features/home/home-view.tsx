@@ -1,3 +1,5 @@
+import { Cta } from "@/components/layout/cta";
+
 import { AboutSection } from "./sections/about-section";
 import { BlogsSection } from "./sections/blogs-section";
 import { ClassesSection } from "./sections/classes-section";
@@ -20,6 +22,7 @@ export const HomeView = () => {
 			<FeedbackSection />
 			<BlogsSection />
 			<FaqSection />
+			<Cta />
 		</main>
 	);
 };

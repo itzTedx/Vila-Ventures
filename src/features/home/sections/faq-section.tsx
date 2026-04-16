@@ -1,14 +1,61 @@
+import Link from "next/link";
+
+import {
+	ArrowUpRightIcon,
+	HandWavingIcon,
+} from "@phosphor-icons/react/dist/ssr";
+
+import {
+	Accordion,
+	AccordionItem,
+	AccordionPanel,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+
+import { FAQS } from "../constants";
 
 export const FaqSection = () => {
 	return (
-		<section className="container mx-auto py-14">
-			<div>
-				<Badge className="bg-card text-muted-foreground!" variant="secondary">
-					FAQs
-				</Badge>
-				<h2>Quick answers for your yoga journey</h2>
+		<section className="container mx-auto grid grid-cols-2 gap-6 py-14">
+			<div className="flex flex-col justify-between gap-4">
+				<div className="max-w-md">
+					<Badge
+						className="mb-3 bg-card text-muted-foreground!"
+						variant="secondary"
+					>
+						FAQs
+					</Badge>
+					<h2 className="font-medium text-4xl">
+						Quick answers for your yoga journey
+					</h2>
+				</div>
+				<div className="max-w-xs rounded-lg bg-card p-9">
+					<div className="flex size-12 items-center justify-center rounded-full bg-muted">
+						<HandWavingIcon size={32} />
+					</div>
+					<h3 className="mt-6 font-medium text-lg">Still have questions?</h3>
+					<p className="mt-2 mb-6 text-balance text-muted-foreground">
+						Whether it's about the program, accommodation, or anything in
+						between - we're happy to help
+					</p>
+					<Link className="flex items-center justify-between gap-2" href="/">
+						Contact us <ArrowUpRightIcon />
+					</Link>
+				</div>
 			</div>
+			<Accordion className="w-full space-y-3" defaultValue={["01"]}>
+				{FAQS.map((item) => (
+					<AccordionItem
+						className="rounded-lg border-b-0 bg-taupe-300/30 px-4"
+						key={item.id}
+						value={item.id}
+					>
+						<AccordionTrigger>{item.title}</AccordionTrigger>
+						<AccordionPanel>{item.content}</AccordionPanel>
+					</AccordionItem>
+				))}
+			</Accordion>
 		</section>
 	);
 };
