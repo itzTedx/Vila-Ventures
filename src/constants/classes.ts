@@ -5,15 +5,15 @@ export const CLASSES = [
 		description:
 			"Build a strong foundation with slow, mindful movements and breath-focused practice. Ideal for beginners and stress relief.",
 		image: "/images/classes/hatha-yoga.webp",
-		button: "Book Your Session",
+		button: "Book a Session",
 	},
 	{
 		id: 2,
-		name: "Vinyasa Yoga",
+		name: "Vinyasa Flow",
 		description:
 			"Flow through dynamic sequences that improve strength, flexibility, and focus while connecting breath with movement.",
 		image: "/images/classes/vinyasa-yoga.webp",
-		button: "Join a Class",
+		button: "Book a Session",
 	},
 	{
 		id: 3,
@@ -21,14 +21,14 @@ export const CLASSES = [
 		description:
 			"Practice yoga from the comfort of your home with live guided sessions available for individuals, groups, and corporate wellness programs.",
 		image: "/images/classes/virtual-yoga.webp",
-		button: "View Schedule",
+		button: "Book a Session",
 	},
 	{
 		id: 4,
-		name: "Vinyasa Yoga",
+		name: "Kids Yoga",
 		description:
-			"Flow through dynamic sequences that improve strength, flexibility, and focus while connecting breath with movement.",
+			"Playful, age-appropriate yoga that builds body awareness, confidence, and focus through storytelling and movement games.",
 		image: "/images/classes/other-yoga.webp",
-		button: "Book Your Session",
+		button: "Book a Session",
 	},
 ];

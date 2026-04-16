@@ -17,7 +17,7 @@ const footerNav = [
 	{
 		title: "Explore",
 		links: [
-			{ label: "Classes", href: "#classes" },
+			{ label: "Classes", href: "/classes" },
 			{ label: "Products", href: "#products" },
 			{ label: "Stories", href: "#blog" },
 			{ label: "FAQ", href: "#faq" },
@@ -26,7 +26,7 @@ const footerNav = [
 	{
 		title: "Studio",
 		links: [
-			{ label: "About Vila", href: "#about" },
+			{ label: "About Vila", href: "/about" },
 			{ label: "Why Vila", href: "#why-vila" },
 			{ label: "Feedback", href: "#feedback" },
 		],
@@ -51,62 +51,11 @@ const socialLinks = [
 	},
 ];
 
-const ambientBlobs = [
-	{
-		id: "footer-blob-1",
-		style: "translate3d(-10%, -10%, 0) scale(1.1)",
-	},
-	{
-		id: "footer-blob-2",
-		style: "translate3d(20%, 0, 0) scale(1.2)",
-	},
-	{
-		id: "footer-blob-3",
-		style: "translate3d(-20%, 10%, 0) scale(1.15)",
-	},
-];
-
 export const Footer = () => {
 	const prefersReducedMotion = useReducedMotion();
 
 	return (
 		<footer className="relative mt-24 bg-taupe-950 text-card">
-			{/* <div
-				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 overflow-hidden"
-			>
-				{ambientBlobs.map((blob, index) => (
-					<motion.div
-						animate={
-							prefersReducedMotion
-								? undefined
-								: {
-										scale: [1, 1.05, 1],
-										opacity: [0.4, 0.7, 0.4],
-									}
-						}
-						className="pointer-events-none absolute aspect-4/3 w-xl rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklch,var(--footer-accent)_55%,transparent)_0,transparent_70%)] opacity-65 blur-3xl"
-						key={blob.id}
-						style={{
-							top: index === 0 ? "-10%" : index === 1 ? "10%" : "50%",
-							left: index === 1 ? "55%" : index === 2 ? "-5%" : "5%",
-							transform: blob.style,
-						}}
-						transition={
-							prefersReducedMotion
-								? undefined
-								: {
-										duration: 26 + index * 4,
-										repeat: Number.POSITIVE_INFINITY,
-										ease: "easeInOut",
-									}
-						}
-					/>
-				))}
-				<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12)_0,transparent_60%)]" />
-				<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,color-mix(in_oklch,var(--footer-accent)_32%,transparent)_0,transparent_70%)] mix-blend-screen" />
-			</div> */}
-
 			<div className="relative z-10 pt-16 pb-10">
 				<div className="container max-w-7xl">
 					<motion.section
@@ -240,15 +189,15 @@ export const Footer = () => {
 									UAE — shared through our social spaces.
 								</p>
 								<div className="mt-3 flex flex-wrap gap-3">
-								{socialLinks.map(({ href, label, Icon }) => (
-									<a
-										aria-label={label}
-										className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-										href={href}
-										key={label}
-										rel="noopener noreferrer"
-										target="_blank"
-									>
+									{socialLinks.map(({ href, label, Icon }) => (
+										<a
+											aria-label={label}
+											className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+											href={href}
+											key={label}
+											rel="noopener noreferrer"
+											target="_blank"
+										>
 											<Icon className="h-4 w-4" weight="fill" />
 										</a>
 									))}
