@@ -13,39 +13,42 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 
-import { FAQS } from "../constants";
+import { SHOP_FAQS } from "../constants";
 
-export const FaqSection = () => {
+export const ShopFaqSection = () => {
 	return (
-		<section className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2" id="faq">
+		<section
+			className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2"
+			id="faq"
+		>
 			<div className="flex flex-col justify-between gap-4">
 				<div className="max-w-md">
 					<Badge
 						className="mb-3 bg-card text-muted-foreground!"
 						variant="secondary"
 					>
-						FAQs
+						Shopping Questions
 					</Badge>
 					<h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl">
-						Quick answers for your yoga journey
+						Everything you need to know before you order
 					</h2>
 				</div>
 				<div className="max-w-full rounded-lg bg-card p-9 sm:max-w-xs">
 					<div className="flex size-12 items-center justify-center rounded-full bg-muted">
 						<HandWavingIcon size={32} />
 					</div>
-					<h3 className="mt-6 font-medium text-lg">Still have questions?</h3>
+					<h3 className="mt-6 font-medium text-lg">Need help choosing?</h3>
 					<p className="mt-2 mb-6 text-balance text-muted-foreground">
-						Whether it's about the program, accommodation, or anything in
-						between - we're happy to help
+						Not sure which mat, size, or product is right for you? We're
+						happy to help you figure it out.
 					</p>
-					<Link className="flex items-center justify-between gap-2" href="/contact">
-						Contact us <ArrowUpRightIcon />
+					<Link className="flex items-center justify-between gap-2" href="mailto:hello@withvila.com">
+						Email us <ArrowUpRightIcon />
 					</Link>
 				</div>
 			</div>
 			<Accordion className="w-full space-y-3" defaultValue={["01"]}>
-				{FAQS.map((item) => (
+				{SHOP_FAQS.map((item) => (
 					<AccordionItem
 						className="rounded-lg border-b-0 bg-taupe-300/30 px-4"
 						key={item.id}

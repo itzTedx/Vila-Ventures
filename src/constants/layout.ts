@@ -13,14 +13,14 @@ export const NAV_LINKS = [
 	},
 	{
 		label: "Shop",
-		href: "/",
+		href: "/shop",
 	},
 	{
 		label: "Blog",
-		href: "/",
+		href: "/blog",
 	},
 	{
 		label: "Contact",
-		href: "/",
+		href: "/contact",
 	},
 ] as const;

@@ -18,8 +18,8 @@ const footerNav = [
 		title: "Explore",
 		links: [
 			{ label: "Classes", href: "/classes" },
-			{ label: "Products", href: "#products" },
-			{ label: "Stories", href: "#blog" },
+			{ label: "Shop", href: "/shop" },
+			{ label: "Stories", href: "/blog" },
 			{ label: "FAQ", href: "#faq" },
 		],
 	},
@@ -29,6 +29,7 @@ const footerNav = [
 			{ label: "About Vila", href: "/about" },
 			{ label: "Why Vila", href: "#why-vila" },
 			{ label: "Feedback", href: "#feedback" },
+			{ label: "Contact", href: "/contact" },
 		],
 	},
 ];
