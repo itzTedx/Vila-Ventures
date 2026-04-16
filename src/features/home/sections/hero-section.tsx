@@ -22,6 +22,8 @@ export const HeroSection = () => {
 						<div className="flex items-start gap-3">
 							<Button
 								className="flex-1 font-semibold hover:gap-9! hover:px-9 md:flex-none"
+								data-cal-config='{"layout":"month_view"}'
+								data-cal-link="zironpro/15min"
 								size="lg"
 							>
 								Book a class <ArrowRightIcon data-icon="inline-end" />
@@ -54,7 +56,13 @@ export const HeroSection = () => {
 									</p>
 								</div>
 							</div>
-							<Button variant="secondary">Book 15-min call</Button>
+							<Button
+								data-cal-config='{"layout":"month_view"}'
+								data-cal-link="zironpro/15min"
+								variant="secondary"
+							>
+								Book 15-min call
+							</Button>
 						</div>
 					</div>
 				</div>

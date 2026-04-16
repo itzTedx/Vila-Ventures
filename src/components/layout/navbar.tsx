@@ -51,14 +51,18 @@ export const Navbar = () => {
 				</nav>
 
 				<div className="hidden flex-1 justify-end lg:flex">
-					<div className="flex items-center gap-2 rounded-[calc(var(--radius-lg)+0.25rem)] border border-border/20 bg-card/95 p-1 backdrop-blur-lg supports-backdrop-filter:bg-muted/20">
+					<div className="flex items-center gap-2 rounded-[calc(var(--radius-lg)+0.25rem)] border border-border/20 bg-card/95 p-1 backdrop-blur-lg supports-backdrop-filter:bg-muted/50">
 						<Button size="icon-lg" variant="ghost">
 							<MagnifyingGlassIcon size={24} />
 						</Button>
 						<Button size="icon-lg" variant="ghost">
 							<ShoppingCartIcon size={24} />
 						</Button>
-						<Button size="lg">
+						<Button
+							data-cal-config='{"layout":"month_view"}'
+							data-cal-link="zironpro/15min"
+							size="lg"
+						>
 							<CalendarBlankIcon data-icon="inline-start" size={24} /> Book a
 							class
 						</Button>
@@ -101,7 +105,13 @@ export const Navbar = () => {
 									))}
 								</nav>
 								<div className="mt-auto flex flex-col gap-3 pt-6">
-									<Button className="w-full" size="lg">
+									<Button
+										className="w-full"
+										data-cal-config='{"layout":"month_view"}'
+										data-cal-link="zironpro/15min"
+										onClick={() => setOpen(false)}
+										size="lg"
+									>
 										<CalendarBlankIcon data-icon="inline-start" size={20} />{" "}
 										Book a class
 									</Button>

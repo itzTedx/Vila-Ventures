@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
+import { CalEmbed } from "@/components/cal-embed";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 
@@ -89,6 +90,7 @@ export default function RootLayout({
 			lang="en"
 		>
 			<body>
+				<CalEmbed />
 				<Navbar />
 				{children}
 				<Footer />
