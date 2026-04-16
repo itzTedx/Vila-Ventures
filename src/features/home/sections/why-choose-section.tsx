@@ -9,7 +9,11 @@ export const WhyChooseSection = () => {
 	return (
 		<section className="container mx-auto py-14">
 			<div className="grid grid-cols-3 gap-4">
-				<Badge className="text-muted-foreground!" render={<h2 />}>
+				<Badge
+					className="bg-card text-muted-foreground!"
+					render={<h2 />}
+					variant="secondary"
+				>
 					Why Choose Us
 				</Badge>
 				<p className="col-span-2 font-medium text-5xl text-muted-foreground leading-snug">

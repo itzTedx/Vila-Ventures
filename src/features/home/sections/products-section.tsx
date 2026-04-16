@@ -5,9 +5,11 @@ import { ProductsGrid } from "../components/products-grid";
 
 export const ProductsSection = () => {
 	return (
-		<section className="container mx-auto py-14">
-			<div className="grid grid-cols-4 gap-6">
-				<Badge className="bg-card text-muted-foreground!">Products</Badge>
+		<section className="container mx-auto py-14 text-center">
+			<div className="grid grid-cols-4 gap-6 text-start">
+				<Badge className="bg-card text-muted-foreground!" variant="secondary">
+					Products
+				</Badge>
 				<div className="col-span-3 grid grid-cols-2 gap-6">
 					<h2 className="font-semibold text-4xl text-muted-foreground">
 						<span className="text-foreground">Thoughtfully Designed</span> for

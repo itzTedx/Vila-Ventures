@@ -24,7 +24,7 @@ export const ClassesGrid = () => {
 								</p>
 							</div>
 							<div className="absolute inset-x-0 bottom-0 z-10 h-1/3 bg-linear-to-t from-black/50 to-transparent" />
-							<ProgressiveBlur className="[--height:30%]" position="bottom" />
+							<ProgressiveBlur className="[--height:40%]" position="bottom" />
 							<Image
 								alt={item.name}
 								className="object-cover transition-[scale] duration-300 group-hover:scale-105"

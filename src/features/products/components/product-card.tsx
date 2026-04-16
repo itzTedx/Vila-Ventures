@@ -14,7 +14,7 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps) => {
 	return (
-		<div>
+		<div className="text-start">
 			<div className="relative aspect-5/6 overflow-hidden rounded-lg">
 				<Image
 					alt={product.title}
