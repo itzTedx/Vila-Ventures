@@ -4,7 +4,7 @@ import { ClassesGrid } from "../components/classes-grid";
 
 export const ClassesSection = () => {
 	return (
-		<section className="container mx-auto py-14">
+		<section className="container mx-auto py-14" id="classes">
 			<div className="grid grid-cols-3 items-center gap-6">
 				<h2 className="font-display text-8xl text-primary">Classes</h2>
 

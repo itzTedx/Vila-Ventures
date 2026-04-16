@@ -5,7 +5,7 @@ import { ProductsGrid } from "../components/products-grid";
 
 export const ProductsSection = () => {
 	return (
-		<section className="container mx-auto py-14 text-center">
+		<section className="container mx-auto py-14 text-center" id="products">
 			<div className="grid grid-cols-4 gap-6 text-start">
 				<Badge className="bg-card text-muted-foreground!" variant="secondary">
 					Products

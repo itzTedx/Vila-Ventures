@@ -8,10 +8,74 @@ import { inter, serif } from "@/assets/fonts";
 
 import { cn } from "@/lib/utils";
 
+const SITE_URL = "https://vilaventures.com";
+
 export const metadata: Metadata = {
-	title: "Yoga Classes & Mindful Lifestyle Products in UAE",
+	metadataBase: new URL(SITE_URL),
+	title: {
+		default:
+			"Vila Ventures | Yoga Classes & Mindful Lifestyle Products in Abu Dhabi",
+		template: "%s | Vila Ventures",
+	},
 	description:
-		"Discover mindful yoga classes, creative lifestyle products, and a space where movement, design, and joy come together - with Vila.",
+		"Discover mindful yoga classes, creative lifestyle products & a community rooted in joy. Group, private & corporate sessions in Abu Dhabi, UAE. Book your session today.",
+	keywords: [
+		"yoga classes Abu Dhabi",
+		"yoga UAE",
+		"mindful lifestyle products",
+		"corporate yoga UAE",
+		"kids yoga Abu Dhabi",
+		"private yoga sessions Abu Dhabi",
+		"vinyasa yoga UAE",
+		"hatha yoga Abu Dhabi",
+		"online yoga classes UAE",
+		"yoga mats UAE",
+		"mindful living",
+		"Vila Ventures",
+		"wellness Abu Dhabi",
+	],
+	authors: [{ name: "Vila", url: SITE_URL }],
+	creator: "Vila Ventures",
+	publisher: "Vila Ventures",
+	category: "Health & Wellness",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: SITE_URL,
+		siteName: "Vila Ventures",
+		title: "Vila Ventures | Yoga & Mindful Lifestyle in Abu Dhabi",
+		description:
+			"Mindful yoga classes, creative lifestyle products & a community rooted in joy. Group, private & corporate sessions in Abu Dhabi.",
+		images: [
+			{
+				url: "/og-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Vila Ventures - Yoga Classes & Mindful Lifestyle Products in Abu Dhabi",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Vila Ventures | Yoga & Mindful Lifestyle in Abu Dhabi",
+		description:
+			"Mindful yoga classes, creative lifestyle products & a community rooted in joy. Book your session in Abu Dhabi today.",
+		images: ["/og-image.png"],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+	alternates: {
+		canonical: SITE_URL,
+	},
 };
 
 export default function RootLayout({

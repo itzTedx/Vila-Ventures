@@ -1,3 +1,3 @@
 export const FeedbackSection = () => {
-	return <div>FeedbackSection</div>;
+	return <div id="feedback">FeedbackSection</div>;
 };

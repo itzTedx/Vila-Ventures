@@ -17,7 +17,7 @@ import { ABOUT_DETAILS, ABOUT_LIST } from "../constants";
 
 export const AboutSection = () => {
 	return (
-		<section className="bg-card">
+		<section className="bg-card" id="about">
 			<div className="container mx-auto grid grid-cols-3 gap-6 py-28">
 				<div className="flex flex-col justify-between">
 					<div>
@@ -56,15 +56,15 @@ export const AboutSection = () => {
 
 				<div className="flex flex-col gap-6">
 					<ul>
-						{ABOUT_DETAILS.map((item) => (
-							<li
-								className="flex items-center justify-between gap-3 border-b py-4"
-								key={item.label}
-							>
-								<h4 className="text-muted-foreground">{item.label}</h4>
-								<p className="font-medium">{item.value}</p>
-							</li>
-						))}
+					{ABOUT_DETAILS.map((item) => (
+						<li
+							className="flex items-center justify-between gap-3 border-b py-4"
+							key={item.label}
+						>
+							<span className="text-muted-foreground">{item.label}</span>
+							<span className="font-medium">{item.value}</span>
+						</li>
+					))}
 					</ul>
 					<Card className="h-full flex-1 justify-between bg-primary text-card">
 						<CardHeader>

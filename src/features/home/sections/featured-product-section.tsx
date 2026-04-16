@@ -17,7 +17,7 @@ export const FeaturedProductSection = () => {
 				</div>
 				<div className="absolute top-1/2 right-9 z-10 translate-x-[20%] -translate-y-1/2 overflow-hidden rounded-md shadow-lg transition-transform duration-300 ease-out group-hover:translate-x-0">
 					<Image
-						alt="Dawn Mat Explained"
+						alt="The Dawn Mat yoga mat by Vila Ventures featuring a rising sun design with extra grip and cushioning"
 						className="h-[530px] w-auto"
 						height={1024}
 						quality={100}

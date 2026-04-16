@@ -21,7 +21,7 @@ export const BlogsSection = () => {
 	);
 
 	return (
-		<section className="container mx-auto py-14">
+		<section className="container mx-auto py-14" id="blog">
 			<Header
 				badge="Blogs"
 				buttonText="View all blogs"

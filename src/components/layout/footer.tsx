@@ -36,17 +36,17 @@ const footerNav = [
 const socialLinks = [
 	{
 		label: "Visit Vila on Instagram",
-		href: "https://instagram.com",
+		href: "https://instagram.com/vilaventures",
 		Icon: InstagramLogo,
 	},
 	{
 		label: "Connect on LinkedIn",
-		href: "https://linkedin.com",
+		href: "https://linkedin.com/company/vilaventures",
 		Icon: LinkedinLogo,
 	},
 	{
 		label: "Follow on X (Twitter)",
-		href: "https://x.com",
+		href: "https://x.com/vilaventures",
 		Icon: TwitterLogo,
 	},
 ];
@@ -240,13 +240,15 @@ export const Footer = () => {
 									UAE — shared through our social spaces.
 								</p>
 								<div className="mt-3 flex flex-wrap gap-3">
-									{socialLinks.map(({ href, label, Icon }) => (
-										<a
-											aria-label={label}
-											className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-											href={href}
-											key={label}
-										>
+								{socialLinks.map(({ href, label, Icon }) => (
+									<a
+										aria-label={label}
+										className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+										href={href}
+										key={label}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
 											<Icon className="h-4 w-4" weight="fill" />
 										</a>
 									))}

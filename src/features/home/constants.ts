@@ -23,7 +23,7 @@ export const FEATURED_CAROUSEL_ITEMS = [
 	{
 		id: 1,
 		image: "/images/women-yoga-outdoor.webp",
-		alt: "Women Yoga Outdoor",
+		alt: "Woman practicing yoga outdoors in Abu Dhabi with Vila Ventures",
 		content: {
 			title: "Move, Create & Flow with Intention",
 			description: "Daily yoga, mindful practices & creative sessions",
@@ -32,7 +32,7 @@ export const FEATURED_CAROUSEL_ITEMS = [
 	{
 		id: 2,
 		image: "/images/women-yoga-outdoor.webp",
-		alt: "Women Yoga Outdoor",
+		alt: "Mindful outdoor yoga session guided by Vila in the UAE",
 		content: {
 			title: "Move, Create & Flow with Intention",
 			description: "Daily yoga, mindful practices & creative sessions",
@@ -41,7 +41,7 @@ export const FEATURED_CAROUSEL_ITEMS = [
 	{
 		id: 3,
 		image: "/images/women-yoga-outdoor.webp",
-		alt: "Women Yoga Outdoor",
+		alt: "Group yoga practice in a natural setting with Vila Ventures community",
 		content: {
 			title: "Move, Create & Flow with Intention",
 			description: "Daily yoga, mindful practices & creative sessions",
