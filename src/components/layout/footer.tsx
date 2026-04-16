@@ -152,7 +152,7 @@ export const Footer = () => {
 								Available for new collaborations
 							</p>
 						</div>
-						<LogoIcon className="absolute top-1/2 -right-12 size-172 -translate-y-1/2 text-muted-foreground/20" />
+						<LogoIcon className="absolute top-1/2 -right-12 hidden size-172 -translate-y-1/2 text-muted-foreground/20 sm:block" />
 					</motion.section>
 
 					<motion.section

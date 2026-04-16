@@ -17,7 +17,7 @@ import { FAQS } from "../constants";
 
 export const FaqSection = () => {
 	return (
-		<section className="container mx-auto grid grid-cols-2 gap-6 py-14" id="faq">
+		<section className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2" id="faq">
 			<div className="flex flex-col justify-between gap-4">
 				<div className="max-w-md">
 					<Badge
@@ -26,11 +26,11 @@ export const FaqSection = () => {
 					>
 						FAQs
 					</Badge>
-					<h2 className="font-medium text-4xl">
+					<h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl">
 						Quick answers for your yoga journey
 					</h2>
 				</div>
-				<div className="max-w-xs rounded-lg bg-card p-9">
+				<div className="max-w-full rounded-lg bg-card p-9 sm:max-w-xs">
 					<div className="flex size-12 items-center justify-center rounded-full bg-muted">
 						<HandWavingIcon size={32} />
 					</div>

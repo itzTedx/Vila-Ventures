@@ -7,19 +7,19 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
 	return (
-		<section className="relative h-screen w-full bg-primary">
-			<div className="container relative z-10 mx-auto h-full py-28">
-				<div className="flex h-full max-w-3xl flex-col justify-between">
-					<div className="py-16">
+		<section className="relative min-h-screen w-full bg-primary">
+			<div className="container relative z-10 mx-auto h-full py-20 lg:py-28">
+				<div className="flex h-full max-w-full flex-col justify-between sm:max-w-xl lg:max-w-3xl">
+					<div className="py-8 lg:py-16">
 						<Badge>Rooted in Joy. Designed for Balance.</Badge>
-						<h1 className="font-display text-6xl text-card tracking-tight">
+						<h1 className="font-display text-3xl text-card tracking-tight sm:text-4xl lg:text-6xl">
 							Yoga Classes & Mindful Lifestyle Products in UAE
 						</h1>
-						<p className="hero-description my-8 text-2xl text-card leading-snug">
+						<p className="hero-description my-6 text-card text-lg leading-snug sm:text-xl lg:my-8 lg:text-2xl">
 							Discover mindful yoga classes, creative lifestyle products, and a
 							space where movement, design, and joy come together - with Vila.
 						</p>
-						<div className="flex items-center gap-3">
+						<div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
 							<Button className="font-semibold" size="lg">
 								Book a class <ArrowRightIcon data-icon="inline-end" />
 							</Button>
@@ -28,11 +28,11 @@ export const HeroSection = () => {
 							</Button>
 						</div>
 					</div>
-					<div className="max-w-sm rounded-lg border border-card/20 bg-card/30 supports-backdrop-filter:bg-card/20">
+					<div className="max-w-full rounded-lg border border-card/20 bg-card/30 supports-backdrop-filter:bg-card/20 sm:max-w-sm">
 						<div className="flex gap-3 p-3 text-card">
 							<div className="aspect-4/3 size-full rounded-md bg-card/40" />
-							<div className="">
-								<h2 className="font-semibold text-xl">
+							<div>
+								<h2 className="font-semibold text-lg sm:text-xl">
 									Virtual & Physical Yoga
 								</h2>
 								<p className="mt-1.5 text-sm tracking-wide">
@@ -41,7 +41,7 @@ export const HeroSection = () => {
 								</p>
 							</div>
 						</div>
-						<div className="flex justify-between gap-3 bg-card/20 p-3 text-card">
+						<div className="flex flex-wrap justify-between gap-3 bg-card/20 p-3 text-card">
 							<div className="flex items-center gap-3">
 								<div className="aspect-square size-10 rounded-md bg-card/40" />
 								<div className="shrink-0">

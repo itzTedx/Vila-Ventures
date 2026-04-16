@@ -49,7 +49,7 @@ export const BlogsSection = () => {
 							</div>
 						</div>
 						<div className="flex items-end justify-between gap-9">
-							<h3 className="flex-1 font-medium text-3xl leading-tight">
+							<h3 className="flex-1 font-medium text-xl leading-tight sm:text-2xl lg:text-3xl">
 								{featuredBlog.title}
 							</h3>
 							<Button className="w-fit" variant="link">
@@ -64,10 +64,10 @@ export const BlogsSection = () => {
 				<div className="flex flex-col gap-4">
 					{sideBlogs.map((blog) => (
 						<article
-							className="flex h-full overflow-hidden rounded-lg border border-border/60 bg-card"
+							className="flex h-full flex-col overflow-hidden rounded-lg border border-border/60 bg-card sm:flex-row"
 							key={blog.id}
 						>
-							<div className="relative aspect-4/3 h-full flex-1">
+							<div className="relative aspect-video flex-1 sm:aspect-4/3 sm:h-full">
 								<Image
 									alt={blog.title}
 									className="object-cover"

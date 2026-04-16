@@ -6,12 +6,12 @@ import { ProductsGrid } from "../components/products-grid";
 export const ProductsSection = () => {
 	return (
 		<section className="container mx-auto py-14 text-center" id="products">
-			<div className="grid grid-cols-4 gap-6 text-start">
+			<div className="grid grid-cols-1 gap-6 text-start md:grid-cols-4">
 				<Badge className="bg-card text-muted-foreground!" variant="secondary">
 					Products
 				</Badge>
-				<div className="col-span-3 grid grid-cols-2 gap-6">
-					<h2 className="font-semibold text-4xl text-muted-foreground">
+				<div className="col-span-1 grid grid-cols-1 gap-6 sm:grid-cols-2 md:col-span-3">
+					<h2 className="font-semibold text-2xl text-muted-foreground sm:text-3xl lg:text-4xl">
 						<span className="text-foreground">Thoughtfully Designed</span> for
 						Everyday Joy
 					</h2>

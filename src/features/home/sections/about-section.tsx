@@ -18,11 +18,11 @@ import { ABOUT_DETAILS, ABOUT_LIST } from "../constants";
 export const AboutSection = () => {
 	return (
 		<section className="bg-card" id="about">
-			<div className="container mx-auto grid grid-cols-3 gap-6 py-28">
+			<div className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-3 lg:py-28">
 				<div className="flex flex-col justify-between">
 					<div>
 						<Badge variant="secondary">A Journey to Mindful Living</Badge>
-						<h2 className="mt-3 text-balance font-display font-semibold text-5xl text-primary uppercase leading-snug">
+						<h2 className="mt-3 text-balance font-display font-semibold text-3xl text-primary uppercase leading-snug sm:text-4xl lg:text-5xl">
 							A journey back to yourself - through yoga, creativity & joy
 						</h2>
 						<ul className="my-6 flex flex-wrap items-center gap-2.5 text-xs">

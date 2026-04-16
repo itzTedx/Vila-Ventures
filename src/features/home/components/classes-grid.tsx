@@ -7,7 +7,7 @@ import { CLASSES } from "@/constants/classes";
 
 export const ClassesGrid = () => {
 	return (
-		<div className="mt-9 grid grid-cols-2 gap-6">
+		<div className="mt-9 grid grid-cols-1 gap-6 sm:grid-cols-2">
 			{CLASSES.map((item) => (
 				<div className="group" key={item.id}>
 					<div className="mb-2 flex items-center justify-between gap-3 rounded-lg bg-card p-6">
