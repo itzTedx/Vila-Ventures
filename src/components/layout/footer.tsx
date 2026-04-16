@@ -286,7 +286,7 @@ export const Footer = () => {
 								Designed from UAE →{" "}
 								<Link
 									className="text-muted transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-									href="https://ziron.pro"
+									href="https://zironpro.ae/?utm_source=vila-ventures&utm_medium=footer-link&utm_campaign=brand-credit"
 									target="_blank"
 								>
 									Ziron Pro
