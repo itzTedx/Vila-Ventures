@@ -8,7 +8,8 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
+				default:
+					"relative not-disabled:inset-shadow-[0_1.5px_--theme(--color-white/26%)] overflow-hidden border-primary bg-primary text-primary-foreground shadow-primary/24 shadow-xs before:absolute before:inset-0 before:bg-linear-to-b before:from-card/20 hover:bg-primary/90 data-pressed:bg-primary/90 *:data-[slot=button-loading-indicator]:text-primary-foreground [:active,[data-pressed]]:inset-shadow-[0_1.5px_--theme(--color-black/8%)] [:disabled,:active,[data-pressed]]:shadow-none [a]:hover:bg-primary/80",
 				outline:
 					"border-primary bg-background text-primary hover:bg-primary hover:text-card aria-expanded:bg-primary aria-expanded:text-card",
 				secondary:

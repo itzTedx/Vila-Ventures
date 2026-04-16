@@ -31,16 +31,16 @@ export const Navbar = () => {
 	return (
 		<header className="fixed inset-x-0 top-4 z-9999">
 			<div className="container mx-auto flex h-14 items-center justify-between px-4">
-				<div className="flex items-center gap-2">
+				<div className="flex flex-1 items-center gap-2">
 					<Logo />
 				</div>
 
-				<nav className="hidden h-full items-center rounded-lg bg-card px-6 lg:flex">
+				<nav className="hidden h-full items-center rounded-lg border bg-card px-6 shadow-lg lg:flex">
 					<ul className="flex items-center gap-4">
 						{NAV_LINKS.map((nav) => (
 							<li key={`${nav.href}-${nav.label}`}>
 								<Link
-									className="px-2 py-3 font-medium text-foreground text-sm transition-colors hover:text-primary"
+									className="px-2 py-3 font-display text-foreground transition-colors hover:text-primary"
 									href={nav.href}
 								>
 									{nav.label}
@@ -50,8 +50,8 @@ export const Navbar = () => {
 					</ul>
 				</nav>
 
-				<div className="hidden lg:flex">
-					<div className="flex items-center gap-2 rounded-md border border-card/20 bg-card/95 p-1 backdrop-blur-lg supports-backdrop-filter:bg-muted-foreground/20">
+				<div className="hidden flex-1 justify-end lg:flex">
+					<div className="flex items-center gap-2 rounded-[calc(var(--radius-lg)+0.25rem)] border border-border/20 bg-card/95 p-1 backdrop-blur-lg supports-backdrop-filter:bg-muted/20">
 						<Button size="icon-lg" variant="ghost">
 							<MagnifyingGlassIcon size={24} />
 						</Button>
