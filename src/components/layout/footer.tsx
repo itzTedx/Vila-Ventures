@@ -220,15 +220,15 @@ export const Footer = () => {
 						<div className="flex flex-wrap items-center gap-4 text-[0.78rem]">
 							<Link
 								className="transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-								href="#"
+								href="/privacy-policy"
 							>
-								Privacy
+								Privacy Policy
 							</Link>
 							<Link
 								className="transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-								href="#"
+								href="/terms"
 							>
-								Terms
+								Terms & Conditions
 							</Link>
 							<span className="inline-flex items-center gap-1 text-[0.78rem]">
 								<span className="relative inline-flex h-1.5 w-1.5 items-center justify-center">
