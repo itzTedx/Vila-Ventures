@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { CONTACT_FAQS } from "@/features/contact/constants";
 import { ContactView } from "@/features/contact/contact-view";
 import { JsonLd } from "@/features/seo/json-ld";
-
-const SITE_URL = "https://vilaventures.com";
 
 export const metadata: Metadata = {
 	title: "Contact Vila Ventures | Yoga Inquiries & Collaborations in Abu Dhabi",

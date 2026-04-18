@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
 
-const SITE_URL = "https://vilaventures.com";
 const LAST_UPDATED = "April 17, 2026";
 
 export const metadata: Metadata = {

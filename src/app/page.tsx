@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { FAQS } from "@/features/home/constants";
 import { HomeView } from "@/features/home/home-view";
 import { JsonLd } from "@/features/seo/json-ld";
@@ -22,11 +23,11 @@ const homepageSchema = {
 	"@graph": [
 		{
 			"@type": "Organization",
-			"@id": "https://vilaventures.com/#organization",
+			"@id": `${SITE_URL}/#organization`,
 			name: "Vila Ventures",
 			alternateName: "VilaVentures",
-			url: "https://vilaventures.com",
-			logo: "https://vilaventures.com/og-image.png",
+			url: SITE_URL,
+			logo: `${SITE_URL}/og-image.png`,
 			description:
 				"A creative lifestyle brand and community space rooted in joy, blending mindful yoga experiences with thoughtfully designed lifestyle products in Abu Dhabi, UAE.",
 			foundingDate: "2024",
@@ -55,21 +56,21 @@ const homepageSchema = {
 		},
 		{
 			"@type": "WebSite",
-			"@id": "https://vilaventures.com/#website",
-			url: "https://vilaventures.com",
+			"@id": `${SITE_URL}/#website`,
+			url: SITE_URL,
 			name: "Vila Ventures",
 			description:
 				"Mindful yoga classes, creative lifestyle products & a community rooted in joy in Abu Dhabi, UAE.",
-			publisher: { "@id": "https://vilaventures.com/#organization" },
+			publisher: { "@id": `${SITE_URL}/#organization` },
 			inLanguage: "en-US",
 		},
 		{
 			"@type": "WebPage",
-			"@id": "https://vilaventures.com/#webpage",
-			url: "https://vilaventures.com",
+			"@id": `${SITE_URL}/#webpage`,
+			url: SITE_URL,
 			name: "Yoga Classes & Mindful Lifestyle Products in Abu Dhabi, UAE | Vila Ventures",
-			isPartOf: { "@id": "https://vilaventures.com/#website" },
-			about: { "@id": "https://vilaventures.com/#organization" },
+			isPartOf: { "@id": `${SITE_URL}/#website` },
+			about: { "@id": `${SITE_URL}/#organization` },
 			description:
 				"Discover mindful yoga classes, creative lifestyle products & a community rooted in joy. Group, private & corporate sessions in Abu Dhabi.",
 			inLanguage: "en-US",
@@ -80,9 +81,9 @@ const homepageSchema = {
 		},
 		{
 			"@type": "HealthAndBeautyBusiness",
-			"@id": "https://vilaventures.com/#localbusiness",
+			"@id": `${SITE_URL}/#localbusiness`,
 			name: "Vila Ventures",
-			url: "https://vilaventures.com",
+			url: SITE_URL,
 			description:
 				"Intimate yoga classes, thoughtful lifestyle products, and mindful experiences in Abu Dhabi. Offering Hatha, Vinyasa, virtual, private, corporate, kids, and women's yoga sessions.",
 			address: {
@@ -92,7 +93,7 @@ const homepageSchema = {
 			},
 			email: "hello@withvila.com",
 			priceRange: "$$",
-			image: "https://vilaventures.com/images/hero-yoga.webp",
+			image: `${SITE_URL}/images/hero-yoga.webp`,
 			hasOfferCatalog: {
 				"@type": "OfferCatalog",
 				name: "Yoga Classes & Lifestyle Products",
@@ -147,7 +148,7 @@ const homepageSchema = {
 		},
 		{
 			"@type": "FAQPage",
-			"@id": "https://vilaventures.com/#faq",
+			"@id": `${SITE_URL}/#faq`,
 			mainEntity: FAQS.map((faq) => ({
 				"@type": "Question",
 				name: faq.title,

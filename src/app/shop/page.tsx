@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
 import { SHOP_FAQS, SHOP_PRODUCTS } from "@/features/shop/constants";
 import { ShopView } from "@/features/shop/shop-view";
-
-const SITE_URL = "https://vilaventures.com";
 
 export const metadata: Metadata = {
 	title: "Shop Yoga Essentials | Mats, Apparel & Accessories | Vila Ventures",

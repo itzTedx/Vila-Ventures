@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { BlogView } from "@/features/blogs/blog-view";
 import { BLOG_POSTS } from "@/features/blogs/constants";
 import { JsonLd } from "@/features/seo/json-ld";
-
-const SITE_URL = "https://vilaventures.com";
 
 export const metadata: Metadata = {
 	title: "Yoga & Wellness Blog | Tips, Guides & Stories | Vila Ventures",

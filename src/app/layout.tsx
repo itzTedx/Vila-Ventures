@@ -9,9 +9,8 @@ import { Navbar } from "@/components/layout/navbar";
 
 import { inter, serif } from "@/assets/fonts";
 
+import { SITE_URL } from "@/constants/site-config";
 import { cn } from "@/lib/utils";
-
-const SITE_URL = "https://vilaventures.com";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(SITE_URL),

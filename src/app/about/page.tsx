@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { AboutView } from "@/features/about/about-view";
 import { JsonLd } from "@/features/seo/json-ld";
-
-const SITE_URL = "https://vilaventures.com";
 
 export const metadata: Metadata = {
 	title: "About Vila Ventures | Our Story, Mission & Mindful Approach",

@@ -1,20 +1,19 @@
 import type { MetadataRoute } from "next";
 
+import { SITE_URL } from "@/constants/site-config";
 import { BLOG_POSTS } from "@/features/blogs/constants";
 import { SHOP_PRODUCTS } from "@/features/shop/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = "https://vilaventures.com";
-
 	const productUrls: MetadataRoute.Sitemap = SHOP_PRODUCTS.map((product) => ({
-		url: `${baseUrl}/shop/${product.slug}`,
+		url: `${SITE_URL}/shop/${product.slug}`,
 		lastModified: new Date(),
 		changeFrequency: "monthly" as const,
 		priority: 0.7,
 	}));
 
 	const blogUrls: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-		url: `${baseUrl}/blog/${post.slug}`,
+		url: `${SITE_URL}/blog/${post.slug}`,
 		lastModified: new Date(post.publishedAt),
 		changeFrequency: "monthly" as const,
 		priority: 0.7,
@@ -22,37 +21,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	return [
 		{
-			url: baseUrl,
+			url: SITE_URL,
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 1,
 		},
 		{
-			url: `${baseUrl}/about`,
+			url: `${SITE_URL}/about`,
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.8,
 		},
 		{
-			url: `${baseUrl}/classes`,
+			url: `${SITE_URL}/classes`,
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.9,
 		},
 		{
-			url: `${baseUrl}/shop`,
+			url: `${SITE_URL}/shop`,
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.85,
 		},
 		{
-			url: `${baseUrl}/blog`,
+			url: `${SITE_URL}/blog`,
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.85,
 		},
 		{
-			url: `${baseUrl}/contact`,
+			url: `${SITE_URL}/contact`,
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.8,

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { SITE_URL } from "@/constants/site-config";
 import { BlogPostView } from "@/features/blogs/blog-post-view";
 import { BLOG_POSTS } from "@/features/blogs/constants";
 import { JsonLd } from "@/features/seo/json-ld";
-
-const SITE_URL = "https://vilaventures.com";
 
 export function generateStaticParams() {
 	return BLOG_POSTS.map((post) => ({

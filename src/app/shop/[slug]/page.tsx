@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
 import { SHOP_PRODUCTS } from "@/features/shop/constants";
 import { ProductDetailView } from "@/features/shop/product-detail-view";
-
-const SITE_URL = "https://vilaventures.com";
 
 export function generateStaticParams() {
 	return SHOP_PRODUCTS.map((product) => ({
