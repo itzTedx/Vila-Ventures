@@ -58,17 +58,25 @@
 	--destructive: oklch(0.577 0.245 27.325);
 	--border: oklch(0.922 0.005 34.3);
 	--input: oklch(0.922 0.005 34.3);
-	--ring: oklch(0.714 0.014 41.2);
+	--ring: oklch(0.6996 0.201959 44.4414);
 
 	/* Footer theme */
 	--footer-bg: color-mix(in oklch, black 82%, var(--primary) 18%);
 	--footer-bg-alt: color-mix(in oklch, black 68%, var(--primary) 32%);
 	--footer-surface: color-mix(in oklch, black 86%, var(--primary) 14%);
-	--footer-surface-border: color-mix(in oklch, var(--footer-surface) 70%, white 30%);
+	--footer-surface-border: color-mix(
+		in oklch,
+		var(--footer-surface) 70%,
+		white 30%
+	);
 	--footer-text: oklch(0.97 0.01 80);
 	--footer-muted: oklch(0.76 0.02 50);
 	--footer-accent: var(--primary);
-	--footer-accent-soft: color-mix(in oklch, var(--primary) 26%, transparent 74%);
+	--footer-accent-soft: color-mix(
+		in oklch,
+		var(--primary) 26%,
+		transparent 74%
+	);
 
 	--radius: 0.625rem;
 }

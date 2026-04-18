@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -21,14 +23,22 @@ export const ProductsSection = () => {
 							anywhere, at your own pace.
 						</p>
 
-						<Button size="lg">Shop the Collection</Button>
+						<Button
+							nativeButton={false}
+							render={<Link href="/shop" />}
+							size="lg"
+						>
+							Shop the Collection
+						</Button>
 					</div>
 				</div>
 			</div>
 
 			<ProductsGrid />
 
-			<Button size="lg">Shop the Collection</Button>
+			<Button nativeButton={false} render={<Link href="/shop" />} size="lg">
+				Shop the Collection
+			</Button>
 		</section>
 	);
 };

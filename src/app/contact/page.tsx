@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { ContactView } from "@/features/contact/contact-view";
 import { CONTACT_FAQS } from "@/features/contact/constants";
+import { ContactView } from "@/features/contact/contact-view";
 import { JsonLd } from "@/features/seo/json-ld";
 
 const SITE_URL = "https://vilaventures.com";

@@ -56,15 +56,15 @@ export const AboutSection = () => {
 
 				<div className="flex flex-col gap-6">
 					<ul>
-					{ABOUT_DETAILS.map((item) => (
-						<li
-							className="flex items-center justify-between gap-3 border-b py-4"
-							key={item.label}
-						>
-							<span className="text-muted-foreground">{item.label}</span>
-							<span className="font-medium">{item.value}</span>
-						</li>
-					))}
+						{ABOUT_DETAILS.map((item) => (
+							<li
+								className="flex items-center justify-between gap-3 border-b py-4"
+								key={item.label}
+							>
+								<span className="text-muted-foreground">{item.label}</span>
+								<span className="font-medium">{item.value}</span>
+							</li>
+						))}
 					</ul>
 					<Card className="h-full flex-1 justify-between bg-primary text-card">
 						<CardHeader>

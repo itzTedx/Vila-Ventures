@@ -15,15 +15,14 @@ export const ClassesHero = () => {
 						Yoga Classes in Abu Dhabi
 					</Badge>
 					<div className="col-span-1 md:col-span-3">
-						<h1 className="max-w-3xl text-balance font-display text-4xl text-primary uppercase leading-snug sm:text-5xl lg:text-6xl">
-							Classes designed for real bodies, real life, and real
-							connection
+						<h1 className="max-w-3xl text-balance font-display text-4xl text-primary uppercase leading-tight sm:text-5xl lg:text-6xl">
+							Classes designed for real bodies, real life, and real connection
 						</h1>
 						<p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed lg:mt-8 lg:text-xl">
-							Whether you're stepping onto a mat for the first time or
-							deepening a practice you've carried for years — there's a place
-							for you here. Every session is guided by Vila in Abu Dhabi, built
-							around presence over perfection.
+							Whether you're stepping onto a mat for the first time or deepening
+							a practice you've carried for years - there's a place for you
+							here. Every session is guided by Vila in Abu Dhabi, built around
+							presence over perfection.
 						</p>
 					</div>
 				</div>

@@ -10,14 +10,14 @@ import {
 import { ProgressiveBlur } from "@/components/common/progressive-blur";
 import { Badge } from "@/components/ui/badge";
 
-import { BLOG_POSTS } from "../constants";
 import { BlogCard } from "../components/blog-card";
+import { BLOG_POSTS } from "../constants";
 
 export const BlogGrid = () => {
 	const featuredPost =
 		BLOG_POSTS.find((post) => post.isFeatured) ?? BLOG_POSTS[0];
 	const remainingPosts = BLOG_POSTS.filter(
-		(post) => post.slug !== featuredPost.slug,
+		(post) => post.slug !== featuredPost.slug
 	);
 
 	return (

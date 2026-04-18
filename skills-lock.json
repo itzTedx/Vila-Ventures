@@ -1,55 +1,55 @@
 {
-  "version": 1,
-  "skills": {
-    "frontend-design": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
-    },
-    "meta-tags-optimizer": {
-      "source": "aaron-he-zhu/seo-geo-claude-skills",
-      "sourceType": "github",
-      "computedHash": "40b5b100dd6dc4cef71ed257f080045ac80c7a5c727526403f840ef698511ea0"
-    },
-    "motion": {
-      "source": "hairyf/skills",
-      "sourceType": "github",
-      "computedHash": "a4315de5710fa67fbbe66eba991f1bac1fc1e41e6d6d74f10d4cd1702377b580"
-    },
-    "seo-aeo-best-practices": {
-      "source": "sanity-io/agent-toolkit",
-      "sourceType": "github",
-      "computedHash": "b6b2dd3af3c92f82f04b830dab2cc323f299d7c2e57f7d3619a5886caa7eeb08"
-    },
-    "seo-content-writer": {
-      "source": "aaron-he-zhu/seo-geo-claude-skills",
-      "sourceType": "github",
-      "computedHash": "7397986459a8cbe84f764fca99c6330bd47362d324aded9c11af73fb22273468"
-    },
-    "seo-geo": {
-      "source": "resciencelab/opc-skills",
-      "sourceType": "github",
-      "computedHash": "1d38520f453282af8712874c360e3e34a379827f737fb536bd45055e2d60d964"
-    },
-    "shadcn": {
-      "source": "shadcn/ui",
-      "sourceType": "github",
-      "computedHash": "642a177bee320618caa49f5106cadb4e7594c606e867f61ba7b56d19cf745cd5"
-    },
-    "tailwindcss": {
-      "source": "hairyf/skills",
-      "sourceType": "github",
-      "computedHash": "78937e1d72496af3e902292eb66b8ad2cdd2d34b90b5428257aae9056678d465"
-    },
-    "ui-ux-pro-max": {
-      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "sourceType": "github",
-      "computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
-    },
-    "web-design-guidelines": {
-      "source": "vercel-labs/agent-skills",
-      "sourceType": "github",
-      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
-    }
-  }
+	"version": 1,
+	"skills": {
+		"frontend-design": {
+			"source": "anthropics/skills",
+			"sourceType": "github",
+			"computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+		},
+		"meta-tags-optimizer": {
+			"source": "aaron-he-zhu/seo-geo-claude-skills",
+			"sourceType": "github",
+			"computedHash": "40b5b100dd6dc4cef71ed257f080045ac80c7a5c727526403f840ef698511ea0"
+		},
+		"motion": {
+			"source": "hairyf/skills",
+			"sourceType": "github",
+			"computedHash": "a4315de5710fa67fbbe66eba991f1bac1fc1e41e6d6d74f10d4cd1702377b580"
+		},
+		"seo-aeo-best-practices": {
+			"source": "sanity-io/agent-toolkit",
+			"sourceType": "github",
+			"computedHash": "b6b2dd3af3c92f82f04b830dab2cc323f299d7c2e57f7d3619a5886caa7eeb08"
+		},
+		"seo-content-writer": {
+			"source": "aaron-he-zhu/seo-geo-claude-skills",
+			"sourceType": "github",
+			"computedHash": "7397986459a8cbe84f764fca99c6330bd47362d324aded9c11af73fb22273468"
+		},
+		"seo-geo": {
+			"source": "resciencelab/opc-skills",
+			"sourceType": "github",
+			"computedHash": "1d38520f453282af8712874c360e3e34a379827f737fb536bd45055e2d60d964"
+		},
+		"shadcn": {
+			"source": "shadcn/ui",
+			"sourceType": "github",
+			"computedHash": "642a177bee320618caa49f5106cadb4e7594c606e867f61ba7b56d19cf745cd5"
+		},
+		"tailwindcss": {
+			"source": "hairyf/skills",
+			"sourceType": "github",
+			"computedHash": "78937e1d72496af3e902292eb66b8ad2cdd2d34b90b5428257aae9056678d465"
+		},
+		"ui-ux-pro-max": {
+			"source": "nextlevelbuilder/ui-ux-pro-max-skill",
+			"sourceType": "github",
+			"computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
+		},
+		"web-design-guidelines": {
+			"source": "vercel-labs/agent-skills",
+			"sourceType": "github",
+			"computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+		}
+	}
 }

@@ -17,7 +17,10 @@ import { FAQS } from "../constants";
 
 export const FaqSection = () => {
 	return (
-		<section className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2" id="faq">
+		<section
+			className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2"
+			id="faq"
+		>
 			<div className="flex flex-col justify-between gap-4">
 				<div className="max-w-md">
 					<Badge
@@ -39,7 +42,10 @@ export const FaqSection = () => {
 						Whether it's about the program, accommodation, or anything in
 						between - we're happy to help
 					</p>
-					<Link className="flex items-center justify-between gap-2" href="/contact">
+					<Link
+						className="flex items-center justify-between gap-2"
+						href="/contact"
+					>
 						Contact us <ArrowUpRightIcon />
 					</Link>
 				</div>

@@ -20,8 +20,8 @@ export const TrustSection = () => {
 					<span className="text-foreground">
 						Real impact from real practice
 					</span>{" "}
-					— not metrics for the sake of metrics, but milestones that
-					mean something.
+					— not metrics for the sake of metrics, but milestones that mean
+					something.
 				</p>
 			</div>
 
@@ -57,10 +57,7 @@ export const TrustSection = () => {
 				</h3>
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					{SERVES.map((item) => (
-						<div
-							className="rounded-lg border bg-card p-6"
-							key={item.audience}
-						>
+						<div className="rounded-lg border bg-card p-6" key={item.audience}>
 							<h4 className="font-semibold text-lg">{item.audience}</h4>
 							<p className="mt-2 text-muted-foreground">{item.detail}</p>
 						</div>

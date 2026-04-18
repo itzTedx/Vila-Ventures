@@ -17,7 +17,8 @@ export const BLOG_POSTS: BlogPost[] = [
 			"Woman practicing a gentle yoga pose on a mat in a bright Abu Dhabi studio with natural light",
 		isFeatured: true,
 		content: {
-			intro: "Starting yoga can feel intimidating — especially when you're browsing class schedules filled with words like Vinyasa, Hatha, and Pranayama. If you've been curious about yoga but haven't quite taken the leap, you're not alone. Abu Dhabi's wellness scene has grown tremendously over the past few years, and there's never been a better time to step onto a mat for the first time.\n\nThis guide walks you through everything you need to know before your first class, from understanding different styles to practical tips that will help you feel confident and prepared.",
+			intro:
+				"Starting yoga can feel intimidating — especially when you're browsing class schedules filled with words like Vinyasa, Hatha, and Pranayama. If you've been curious about yoga but haven't quite taken the leap, you're not alone. Abu Dhabi's wellness scene has grown tremendously over the past few years, and there's never been a better time to step onto a mat for the first time.\n\nThis guide walks you through everything you need to know before your first class, from understanding different styles to practical tips that will help you feel confident and prepared.",
 			sections: [
 				{
 					heading: "Why Abu Dhabi Is a Great Place to Start Yoga",
@@ -95,7 +96,8 @@ export const BLOG_POSTS: BlogPost[] = [
 		imageAlt:
 			"Group of women practicing yoga outdoors at sunrise in a park setting in the UAE",
 		content: {
-			intro: "There's something about rolling out your mat under an open sky that changes the entire experience of yoga. The breeze on your skin, the sound of birds, the warmth of natural light — it adds a sensory dimension that no studio, no matter how beautiful, can fully replicate.\n\nIn the UAE, outdoor yoga has become increasingly popular, especially during the cooler months from October through April. Whether you're practicing on a quiet beach in Abu Dhabi or in a shaded park at sunrise, moving your body outside brings a set of benefits that go beyond the physical.",
+			intro:
+				"There's something about rolling out your mat under an open sky that changes the entire experience of yoga. The breeze on your skin, the sound of birds, the warmth of natural light — it adds a sensory dimension that no studio, no matter how beautiful, can fully replicate.\n\nIn the UAE, outdoor yoga has become increasingly popular, especially during the cooler months from October through April. Whether you're practicing on a quiet beach in Abu Dhabi or in a shaded park at sunrise, moving your body outside brings a set of benefits that go beyond the physical.",
 			sections: [
 				{
 					heading: "1. Natural Light Boosts Your Mood and Energy",
@@ -157,7 +159,8 @@ export const BLOG_POSTS: BlogPost[] = [
 		imageAlt:
 			"Woman rolling out a yoga mat in a calm, minimally decorated living room with soft morning light",
 		content: {
-			intro: "You bought the mat. You downloaded the app. Maybe you even cleared a corner of your living room. But somehow, that home yoga routine you imagined hasn't quite materialized — or it lasted three days before life got in the way.\n\nYou're not alone. Building a consistent home practice is one of the most common challenges yoga students face. Without the structure of a scheduled class, it's easy to push your practice to \"later\" until later never comes. But here's the thing: home practice doesn't have to be long, intense, or perfect. It just has to happen.",
+			intro:
+				"You bought the mat. You downloaded the app. Maybe you even cleared a corner of your living room. But somehow, that home yoga routine you imagined hasn't quite materialized — or it lasted three days before life got in the way.\n\nYou're not alone. Building a consistent home practice is one of the most common challenges yoga students face. Without the structure of a scheduled class, it's easy to push your practice to \"later\" until later never comes. But here's the thing: home practice doesn't have to be long, intense, or perfect. It just has to happen.",
 			sections: [
 				{
 					heading: "Start Smaller Than You Think",
@@ -200,8 +203,7 @@ export const BLOG_POSTS: BlogPost[] = [
 			],
 			faqs: [
 				{
-					question:
-						"How long should a home yoga session be for beginners?",
+					question: "How long should a home yoga session be for beginners?",
 					answer:
 						"Start with 10–15 minutes. As the habit becomes natural, you'll find yourself wanting to extend it. Even 10 minutes of mindful practice delivers real benefits.",
 				},
@@ -211,8 +213,7 @@ export const BLOG_POSTS: BlogPost[] = [
 						"Not necessarily. A mat is helpful but not essential. Household items work well as substitutes — a folded blanket for a bolster, a belt for a strap, books stacked for a block.",
 				},
 				{
-					question:
-						"What if I miss a day? Should I make up for it?",
+					question: "What if I miss a day? Should I make up for it?",
 					answer:
 						"No. Missing a day is completely normal. Simply practice the next day as planned. Trying to compensate creates pressure that undermines the habit.",
 				},
@@ -225,12 +226,7 @@ export const BLOG_POSTS: BlogPost[] = [
 		excerpt:
 			"Nervous about your first class? Here's an honest look at what happens from the moment you walk in — no surprises, no pressure.",
 		category: "Vila Ventures",
-		tags: [
-			"first class",
-			"vila ventures",
-			"abu dhabi yoga",
-			"what to expect",
-		],
+		tags: ["first class", "vila ventures", "abu dhabi yoga", "what to expect"],
 		author: { name: "Vila", role: "Founder & Yoga Instructor" },
 		date: "February 5, 2026",
 		publishedAt: "2026-02-05",
@@ -239,7 +235,8 @@ export const BLOG_POSTS: BlogPost[] = [
 		imageAlt:
 			"Welcoming yoga studio space at Vila Ventures with mats laid out and warm ambient lighting",
 		content: {
-			intro: "Walking into a new yoga class — or any fitness class, really — can trigger a surprising amount of anxiety. What if everyone else is more advanced? What if I can't keep up? What if I do something wrong?\n\nWe hear these concerns all the time, and we want to put them to rest. This is an honest walkthrough of what your first visit to Vila Ventures actually looks like — from arrival to savasana.",
+			intro:
+				"Walking into a new yoga class — or any fitness class, really — can trigger a surprising amount of anxiety. What if everyone else is more advanced? What if I can't keep up? What if I do something wrong?\n\nWe hear these concerns all the time, and we want to put them to rest. This is an honest walkthrough of what your first visit to Vila Ventures actually looks like — from arrival to savasana.",
 			sections: [
 				{
 					heading: "Before You Arrive",
@@ -264,7 +261,7 @@ export const BLOG_POSTS: BlogPost[] = [
 						"We won't push you into poses your body isn't ready for.",
 						"We won't single you out or draw attention to what you can't do.",
 						"We won't use jargon without explaining it.",
-						"We won't make you feel like you need to \"earn\" your place in the room.",
+						'We won\'t make you feel like you need to "earn" your place in the room.',
 					],
 					quote: {
 						text: "The practice is about presence, not performance. You belong here from the moment you walk in.",
@@ -281,8 +278,7 @@ export const BLOG_POSTS: BlogPost[] = [
 			],
 			faqs: [
 				{
-					question:
-						"Can I join if I've never done yoga before?",
+					question: "Can I join if I've never done yoga before?",
 					answer:
 						"Absolutely. Many of our students start with zero experience. Vila adapts every session to the people in the room, and beginners always receive extra guidance.",
 				},
@@ -319,7 +315,8 @@ export const BLOG_POSTS: BlogPost[] = [
 		imageAlt:
 			"Professional woman doing a gentle seated yoga stretch at a desk in a modern office environment",
 		content: {
-			intro: "If your idea of stress relief is scrolling your phone for 20 minutes before bed, you're not alone — but there's a better option. Chronic stress doesn't just affect your mood. It shows up in your body: tight shoulders, a clenched jaw, shallow breathing, lower back pain. These are signals, not just symptoms.\n\nYoga is one of the most effective tools for interrupting the stress cycle, and you don't need an hour to feel a difference. The following poses are specifically chosen for people who spend most of their day sitting, typing, and thinking. They can be done in under 15 minutes, at home or even at the office.",
+			intro:
+				"If your idea of stress relief is scrolling your phone for 20 minutes before bed, you're not alone — but there's a better option. Chronic stress doesn't just affect your mood. It shows up in your body: tight shoulders, a clenched jaw, shallow breathing, lower back pain. These are signals, not just symptoms.\n\nYoga is one of the most effective tools for interrupting the stress cycle, and you don't need an hour to feel a difference. The following poses are specifically chosen for people who spend most of their day sitting, typing, and thinking. They can be done in under 15 minutes, at home or even at the office.",
 			sections: [
 				{
 					heading: "Why Yoga Works for Stress (The Science)",
@@ -370,7 +367,8 @@ export const BLOG_POSTS: BlogPost[] = [
 		imageAlt:
 			"Close-up of a premium yoga mat with natural texture, rolled partially on a wooden studio floor",
 		content: {
-			intro: "A yoga mat seems like a simple purchase — until you start looking at the options. Natural rubber vs. PVC. 4mm vs. 6mm. Open-cell vs. closed-cell. Suddenly, what felt like a straightforward decision has turned into a research project.\n\nHere's the truth: the right mat depends on how you practice, where you practice, and what matters most to you (grip, cushioning, portability, or sustainability). This guide cuts through the noise and helps you make a decision you'll be happy with.",
+			intro:
+				"A yoga mat seems like a simple purchase — until you start looking at the options. Natural rubber vs. PVC. 4mm vs. 6mm. Open-cell vs. closed-cell. Suddenly, what felt like a straightforward decision has turned into a research project.\n\nHere's the truth: the right mat depends on how you practice, where you practice, and what matters most to you (grip, cushioning, portability, or sustainability). This guide cuts through the noise and helps you make a decision you'll be happy with.",
 			sections: [
 				{
 					heading: "Thickness: Finding Your Sweet Spot",

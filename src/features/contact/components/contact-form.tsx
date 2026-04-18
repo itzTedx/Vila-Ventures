@@ -2,11 +2,11 @@
 
 import { useId, useTransition } from "react";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { SpinnerGapIcon, PaperPlaneTiltIcon } from "@phosphor-icons/react";
-import { useForm, Controller } from "react-hook-form";
+import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
+import { PaperPlaneTiltIcon, SpinnerGapIcon } from "@phosphor-icons/react";
+import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { z } from "zod/v4";
+import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -55,7 +55,7 @@ export function ContactForm() {
 		reset,
 		formState: { errors },
 	} = useForm<ContactFormData>({
-		resolver: zodResolver(contactSchema),
+		resolver: standardSchemaResolver(contactSchema),
 		defaultValues: {
 			name: "",
 			email: "",
@@ -74,7 +74,7 @@ export function ContactForm() {
 				reset();
 			} catch {
 				toast.error(
-					"Something went wrong. Please try again or email us directly.",
+					"Something went wrong. Please try again or email us directly."
 				);
 			}
 		});
@@ -120,10 +120,7 @@ export function ContactForm() {
 							<FieldLabel htmlFor={`${formId}-subject`}>
 								What can we help with?
 							</FieldLabel>
-							<Select
-								onValueChange={field.onChange}
-								value={field.value}
-							>
+							<Select onValueChange={field.onChange} value={field.value}>
 								<SelectTrigger
 									aria-invalid={!!errors.subject || undefined}
 									className="w-full"

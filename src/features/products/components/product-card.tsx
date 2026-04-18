@@ -39,7 +39,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 			<div className="mt-2 rounded-lg bg-card p-4">
 				<h3 className="font-display text-2xl text-primary">{product.title}</h3>
 				{product.shortDescription && (
-					<p className="mt-1 line-clamp-1 text-sm text-muted-foreground">
+					<p className="mt-1 line-clamp-1 text-muted-foreground text-sm">
 						{product.shortDescription}
 					</p>
 				)}

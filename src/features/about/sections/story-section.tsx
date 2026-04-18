@@ -18,14 +18,14 @@ export const StorySection = () => {
 
 					<div className="flex flex-col gap-5">
 						<p className="font-medium text-lg text-muted-foreground leading-relaxed">
-							Vila Ventures didn't start with a business plan. It started with
-							a feeling — the kind you get when you finally stop rushing and
-							let yourself just be. For Vila, that moment came on a yoga mat
-							in Abu Dhabi, after years of working as a designer.
+							Vila Ventures didn't start with a business plan. It started with a
+							feeling — the kind you get when you finally stop rushing and let
+							yourself just be. For Vila, that moment came on a yoga mat in Abu
+							Dhabi, after years of working as a designer.
 						</p>
 						<p className="text-lg text-muted-foreground leading-relaxed">
-							The practice changed everything. Not all at once, but slowly —
-							the way real change usually happens. Mornings felt different.
+							The practice changed everything. Not all at once, but slowly — the
+							way real change usually happens. Mornings felt different.
 							Creativity came easier. There was more space for the things that
 							actually mattered.
 						</p>
@@ -35,9 +35,9 @@ export const StorySection = () => {
 								what if everyday objects could carry that same feeling of
 								intentionality?
 							</span>{" "}
-							What if a yoga mat, a journal, or a simple mug could remind you
-							to slow down? That's how Vila Ventures was born — at the
-							intersection of mindful movement and thoughtful design.
+							What if a yoga mat, a journal, or a simple mug could remind you to
+							slow down? That's how Vila Ventures was born — at the intersection
+							of mindful movement and thoughtful design.
 						</p>
 					</div>
 

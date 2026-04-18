@@ -34,9 +34,7 @@ export const BlogPostHero = ({ post }: { post: BlogPost }) => {
 						Blog
 					</Link>
 					<CaretRightIcon size={12} />
-					<span className="line-clamp-1 text-foreground">
-						{post.title}
-					</span>
+					<span className="line-clamp-1 text-foreground">{post.title}</span>
 				</nav>
 
 				<div className="max-w-3xl">

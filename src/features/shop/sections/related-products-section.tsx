@@ -11,9 +11,10 @@ interface RelatedProductsSectionProps {
 export const RelatedProductsSection = ({
 	currentProduct,
 }: RelatedProductsSectionProps) => {
-	const related = SHOP_PRODUCTS.filter(
-		(p) => p.id !== currentProduct.id,
-	).slice(0, 3);
+	const related = SHOP_PRODUCTS.filter((p) => p.id !== currentProduct.id).slice(
+		0,
+		3
+	);
 
 	return (
 		<section className="container mx-auto py-14 lg:py-28">
@@ -26,8 +27,8 @@ export const RelatedProductsSection = ({
 					You Might Also Like
 				</Badge>
 				<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-2 lg:text-5xl">
-					<span className="text-foreground">A few more things</span>{" "}
-					that pair well with your practice.
+					<span className="text-foreground">A few more things</span> that pair
+					well with your practice.
 				</p>
 			</div>
 

@@ -14,10 +14,7 @@ import type { BlogPost } from "../types";
 export const BlogCard = ({ post }: { post: BlogPost }) => {
 	return (
 		<article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border/60 bg-card transition-shadow duration-300 hover:shadow-md">
-			<Link
-				className="contents"
-				href={`/blog/${post.slug}` as never}
-			>
+			<Link className="contents" href={`/blog/${post.slug}` as never}>
 				<div className="relative aspect-video overflow-hidden">
 					<Image
 						alt={post.imageAlt}

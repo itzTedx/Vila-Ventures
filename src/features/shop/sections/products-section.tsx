@@ -33,7 +33,9 @@ export const ShopProductsSection = () => {
 						The Collection
 					</Badge>
 					<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-2 lg:text-5xl">
-						<span className="text-foreground">Mats, apparel, and everyday objects</span>{" "}
+						<span className="text-foreground">
+							Mats, apparel, and everyday objects
+						</span>{" "}
 						designed for people who take their practice seriously — and
 						everything else lightly.
 					</p>
@@ -43,9 +45,7 @@ export const ShopProductsSection = () => {
 					{SHOP_CATEGORIES.map((category) => (
 						<Button
 							className={
-								activeCategory === category
-									? ""
-									: "text-muted-foreground"
+								activeCategory === category ? "" : "text-muted-foreground"
 							}
 							key={category}
 							onClick={() => setActiveCategory(category)}

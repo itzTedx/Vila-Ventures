@@ -19,8 +19,8 @@ export const ShopHero = () => {
 						<p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed lg:mt-8 lg:text-xl">
 							Every piece in our collection was designed alongside our yoga
 							practice — tested in real classes, refined by real feedback, and
-							made from materials we'd choose for ourselves. Nothing here
-							exists just to fill a shelf.
+							made from materials we'd choose for ourselves. Nothing here exists
+							just to fill a shelf.
 						</p>
 					</div>
 				</div>

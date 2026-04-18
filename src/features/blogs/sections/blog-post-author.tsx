@@ -10,12 +10,8 @@ export const BlogPostAuthor = ({ post }: { post: BlogPost }) => {
 					<UserCircleIcon size={32} />
 				</div>
 				<div>
-					<p className="font-medium text-foreground">
-						{post.author.name}
-					</p>
-					<p className="text-muted-foreground text-sm">
-						{post.author.role}
-					</p>
+					<p className="font-medium text-foreground">{post.author.name}</p>
+					<p className="text-muted-foreground text-sm">{post.author.role}</p>
 				</div>
 			</div>
 		</div>

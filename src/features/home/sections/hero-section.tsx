@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRightIcon, Link } from "@phosphor-icons/react/dist/ssr";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,13 @@ export const HeroSection = () => {
 							>
 								Book a class <ArrowRightIcon data-icon="inline-end" />
 							</Button>
-							<Button className="hover:px-8" size="lg" variant="secondary">
+							<Button
+								className="hover:px-8"
+								nativeButton={false}
+								render={<Link href="/shop" />}
+								size="lg"
+								variant="secondary"
+							>
 								Shop Products
 							</Button>
 						</div>

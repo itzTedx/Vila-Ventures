@@ -3,7 +3,7 @@
 import type React from "react";
 
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
+import { CaretDownIcon } from "@phosphor-icons/react";
 
 import { cn } from "@/lib/utils";
 

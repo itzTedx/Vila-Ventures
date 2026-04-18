@@ -58,9 +58,7 @@ export const ProductDetailsSection = ({
 						Product Details
 					</Badge>
 					<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-2 lg:text-5xl">
-						<span className="text-foreground">
-							The details that matter,
-						</span>{" "}
+						<span className="text-foreground">The details that matter,</span>{" "}
 						because you should know exactly what you're getting.
 					</p>
 				</div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { BLOG_POSTS } from "@/features/blogs/constants";
 import { BlogPostView } from "@/features/blogs/blog-post-view";
+import { BLOG_POSTS } from "@/features/blogs/constants";
 import { JsonLd } from "@/features/seo/json-ld";
 
 const SITE_URL = "https://vilaventures.com";
@@ -156,8 +156,7 @@ export default async function BlogPostPage({
 }
 
 function estimateWordCount(post: (typeof BLOG_POSTS)[number]): number {
-	const countWords = (text: string) =>
-		text.split(/\s+/).filter(Boolean).length;
+	const countWords = (text: string) => text.split(/\s+/).filter(Boolean).length;
 	let total = countWords(post.content.intro);
 	for (const section of post.content.sections) {
 		total += countWords(section.heading);

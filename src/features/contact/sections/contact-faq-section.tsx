@@ -26,8 +26,8 @@ export const ContactFaqSection = () => {
 						Answers before you even have to ask
 					</h2>
 					<p className="mt-4 text-muted-foreground leading-relaxed lg:text-lg">
-						We've gathered the questions people ask most when reaching out.
-						If yours isn't here, that's exactly what the form above is for.
+						We've gathered the questions people ask most when reaching out. If
+						yours isn't here, that's exactly what the form above is for.
 					</p>
 				</div>
 			</div>

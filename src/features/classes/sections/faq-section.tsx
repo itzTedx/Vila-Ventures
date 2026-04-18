@@ -42,7 +42,10 @@ export const ClassesFaqSection = () => {
 						We're happy to help — whether it's about a specific class, your
 						first session, or anything else.
 					</p>
-					<Link className="flex items-center justify-between gap-2" href="/contact">
+					<Link
+						className="flex items-center justify-between gap-2"
+						href="/contact"
+					>
 						Contact us <ArrowUpRightIcon />
 					</Link>
 				</div>

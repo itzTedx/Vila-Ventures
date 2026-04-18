@@ -162,7 +162,9 @@ interface TermsBlockProps {
 function TermsBlock({ title, content }: TermsBlockProps) {
 	return (
 		<section className="space-y-2">
-			<h2 className="font-display text-xl leading-tight sm:text-2xl">{title}</h2>
+			<h2 className="font-display text-xl leading-tight sm:text-2xl">
+				{title}
+			</h2>
 			<p className="text-muted-foreground leading-relaxed">{content}</p>
 		</section>
 	);

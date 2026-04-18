@@ -39,10 +39,13 @@ export const ShopFaqSection = () => {
 					</div>
 					<h3 className="mt-6 font-medium text-lg">Need help choosing?</h3>
 					<p className="mt-2 mb-6 text-balance text-muted-foreground">
-						Not sure which mat, size, or product is right for you? We're
-						happy to help you figure it out.
+						Not sure which mat, size, or product is right for you? We're happy
+						to help you figure it out.
 					</p>
-					<Link className="flex items-center justify-between gap-2" href="mailto:hello@withvila.com">
+					<Link
+						className="flex items-center justify-between gap-2"
+						href="mailto:hello@withvila.com"
+					>
 						Email us <ArrowUpRightIcon />
 					</Link>
 				</div>

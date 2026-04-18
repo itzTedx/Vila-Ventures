@@ -18,8 +18,8 @@ export const ContactHero = () => {
 						</h1>
 						<p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed lg:mt-8 lg:text-xl">
 							Whether you're curious about yoga classes, interested in our
-							products, or exploring a collaboration — reach out. No question
-							is too small, and every message gets a real, personal reply.
+							products, or exploring a collaboration — reach out. No question is
+							too small, and every message gets a real, personal reply.
 						</p>
 					</div>
 				</div>

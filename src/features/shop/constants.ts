@@ -23,7 +23,8 @@ export const SHOP_PRODUCTS = [
 		details: {
 			material: "100% GOTS-certified organic cotton, 180 GSM",
 			care: "Machine wash cold, tumble dry low. Iron inside-out to protect print.",
-			sizing: "Unisex S–XL. Relaxed fit — order your usual size for an oversized look, or size down for a closer fit.",
+			sizing:
+				"Unisex S–XL. Relaxed fit — order your usual size for an oversized look, or size down for a closer fit.",
 		},
 	},
 	{
@@ -50,7 +51,8 @@ export const SHOP_PRODUCTS = [
 		details: {
 			material: "12 oz washed canvas with cotton lining. Metal hardware.",
 			care: "Spot clean with damp cloth. Air dry. Do not machine wash.",
-			dimensions: "50 × 22 × 18 cm (L × W × H). Mat sleeve fits mats up to 68″ long.",
+			dimensions:
+				"50 × 22 × 18 cm (L × W × H). Mat sleeve fits mats up to 68″ long.",
 		},
 	},
 	{
@@ -75,7 +77,8 @@ export const SHOP_PRODUCTS = [
 			"Comes with a carrying strap and cotton storage bag",
 		],
 		details: {
-			material: "Natural tree rubber base, recycled microfibre suede surface. Free from PVC, TPE, and toxic glues.",
+			material:
+				"Natural tree rubber base, recycled microfibre suede surface. Free from PVC, TPE, and toxic glues.",
 			care: "Wipe with water and mild soap after use. Hang to dry away from direct sunlight. Deep clean monthly with mat spray.",
 			dimensions: "183 × 68 × 0.5 cm. Weight: 2.5 kg.",
 		},
@@ -102,7 +105,8 @@ export const SHOP_PRODUCTS = [
 			"Leak-proof bamboo cap with silicone seal",
 		],
 		details: {
-			material: "18/8 food-grade stainless steel. Bamboo cap with silicone seal. BPA-free throughout.",
+			material:
+				"18/8 food-grade stainless steel. Bamboo cap with silicone seal. BPA-free throughout.",
 			care: "Hand wash with warm soapy water. Not dishwasher safe (bamboo cap).",
 			dimensions: "26 cm tall × 7 cm diameter. 600ml capacity. 340g empty.",
 		},
@@ -129,7 +133,8 @@ export const SHOP_PRODUCTS = [
 			"Dense enough to bear full body weight without compressing",
 		],
 		details: {
-			material: "100% natural cork, sustainably harvested. No synthetic coatings.",
+			material:
+				"100% natural cork, sustainably harvested. No synthetic coatings.",
 			care: "Wipe with a damp cloth after use. Allow to air dry. Cork naturally resists bacteria and odour.",
 			dimensions: "23 × 15 × 10 cm. Weight: 680g.",
 		},
@@ -156,7 +161,8 @@ export const SHOP_PRODUCTS = [
 			"Soft-touch linen cover with debossed Vila Ventures mark",
 		],
 		details: {
-			material: "Linen-wrapped hardcover with debossed branding. 100gsm acid-free cream paper. Thread-sewn binding.",
+			material:
+				"Linen-wrapped hardcover with debossed branding. 100gsm acid-free cream paper. Thread-sewn binding.",
 			care: "Keep away from direct moisture. Store flat or upright.",
 			dimensions: "A5 format (21 × 14.8 cm). 120 pages. Weight: 280g.",
 		},

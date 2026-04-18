@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { JsonLd } from "@/features/seo/json-ld";
 import { SHOP_PRODUCTS } from "@/features/shop/constants";
 import { ProductDetailView } from "@/features/shop/product-detail-view";
-import { JsonLd } from "@/features/seo/json-ld";
 
 const SITE_URL = "https://vilaventures.com";
 

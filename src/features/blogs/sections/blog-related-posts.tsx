@@ -1,23 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 
-import { BLOG_POSTS } from "../constants";
 import { BlogCard } from "../components/blog-card";
+import { BLOG_POSTS } from "../constants";
 import type { BlogPost } from "../types";
 
-export const BlogRelatedPosts = ({
-	currentSlug,
-}: {
-	currentSlug: string;
-}) => {
+export const BlogRelatedPosts = ({ currentSlug }: { currentSlug: string }) => {
 	const currentPost = BLOG_POSTS.find((p) => p.slug === currentSlug);
 
 	const related = BLOG_POSTS.filter((post) => {
 		if (post.slug === currentSlug) return false;
 		if (currentPost && post.category === currentPost.category) return true;
-		if (
-			currentPost &&
-			post.tags.some((tag) => currentPost.tags.includes(tag))
-		)
+		if (currentPost && post.tags.some((tag) => currentPost.tags.includes(tag)))
 			return true;
 		return false;
 	}).slice(0, 3);
