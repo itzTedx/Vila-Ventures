@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
 	CalendarBlankIcon,
@@ -24,9 +25,16 @@ import {
 import { Logo } from "@/assets/logo";
 
 import { NAV_LINKS } from "@/constants/layout";
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
+
+	const isActiveRoute = (href: string) => {
+		if (href === "/") return pathname === href;
+		return pathname === href || pathname.startsWith(`${href}/`);
+	};
 
 	return (
 		<header className="fixed inset-x-0 top-4 z-9999">
@@ -40,7 +48,10 @@ export const Navbar = () => {
 						{NAV_LINKS.map((nav) => (
 							<li key={`${nav.href}-${nav.label}`}>
 								<Link
-									className="px-2 py-3 font-display text-foreground transition-colors hover:text-primary"
+									className={cn(
+										"px-2 py-3 font-display text-foreground transition-colors hover:text-primary",
+										isActiveRoute(nav.href) && "text-primary"
+									)}
 									href={nav.href}
 								>
 									{nav.label}
@@ -95,7 +106,10 @@ export const Navbar = () => {
 								<nav className="mt-6 flex flex-col gap-1">
 									{NAV_LINKS.map((nav) => (
 										<Link
-											className="rounded-md px-3 py-2.5 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary"
+											className={cn(
+												"rounded-md px-3 py-2.5 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary",
+												isActiveRoute(nav.href) && "text-primary"
+											)}
 											href={nav.href}
 											key={`mobile-${nav.href}-${nav.label}`}
 											onClick={() => setOpen(false)}

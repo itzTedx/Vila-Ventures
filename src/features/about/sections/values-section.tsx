@@ -63,8 +63,8 @@ export const ValuesSection = () => {
 				</div>
 
 				<div className="mt-12 rounded-xl border bg-background p-8 text-center lg:mt-20 lg:p-12">
-					<p className="mx-auto max-w-2xl font-display text-2xl text-primary uppercase leading-snug lg:text-4xl">
-						"Rooted in Joy" isn't just a tagline — it's how we approach every
+					<p className="mx-auto max-w-3xl text-balance font-medium text-2xl text-primary leading-snug lg:text-4xl">
+						"Rooted in Joy" isn't just a tagline, it's how we approach every
 						mat, every design, every moment we share with you.
 					</p>
 				</div>

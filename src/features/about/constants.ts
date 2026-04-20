@@ -3,19 +3,19 @@ export const VALUES = [
 		id: "01",
 		title: "Mindful Movement",
 		description:
-			"Every class is an invitation to slow down, breathe deeply, and reconnect with your body — no pressure, no perfection.",
+			"Every class is an invitation to slow down, breathe deeply, and reconnect with your body - no pressure, no perfection.",
 	},
 	{
 		id: "02",
 		title: "Intentional Design",
 		description:
-			"From yoga mats to journals, every product is created with care — blending function, beauty, and meaning into everyday objects.",
+			"From yoga mats to journals, every product is created with care - blending function, beauty, and meaning into everyday objects.",
 	},
 	{
 		id: "03",
 		title: "Community & Joy",
 		description:
-			"We build spaces where people feel welcome, seen, and inspired — whether in a group class, a workshop, or an online session.",
+			"We build spaces where people feel welcome, seen, and inspired - whether in a group class, a workshop, or an online session.",
 	},
 	{
 		id: "04",

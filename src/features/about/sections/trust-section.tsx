@@ -30,7 +30,7 @@ export const TrustSection = () => {
 			<div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
 				{TRUST_STATS.map((stat) => (
 					<div className="group flex flex-col" key={stat.id}>
-						<div className="flex justify-between gap-3 rounded-lg bg-card px-6 py-4 transition-colors duration-300 ease-out group-hover:bg-primary group-hover:text-card">
+						<div className="flex justify-between gap-3 rounded-lg bg-card px-9 py-4 transition-colors duration-300 ease-out group-hover:bg-primary group-hover:text-card">
 							<p className="font-semibold text-2xl">
 								<NumberCounter
 									suffix={stat.count.suffix}
@@ -41,11 +41,11 @@ export const TrustSection = () => {
 								{stat.id}
 							</span>
 						</div>
-						<div className="mt-2 flex flex-1 flex-col justify-between gap-3 rounded-lg bg-card p-6 transition-colors duration-300 ease-out group-hover:bg-primary group-hover:text-card">
+						<div className="mt-2 flex flex-1 flex-col gap-3 rounded-lg bg-card p-9 transition-colors duration-300 ease-out group-hover:bg-primary group-hover:text-card">
 							<h3 className="font-semibold text-xl lg:text-2xl">
 								{stat.label}
 							</h3>
-							<p className="text-muted-foreground transition-colors duration-300 group-hover:text-muted/80 lg:text-lg">
+							<p className="text-muted-foreground transition-colors duration-300 group-hover:text-muted/80 lg:text-xl">
 								{stat.description}
 							</p>
 						</div>

@@ -13,7 +13,7 @@ export const FounderSection = () => {
 			<div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12">
 				<div className="relative aspect-3/4 overflow-hidden rounded-xl lg:col-span-2">
 					<Image
-						alt="Vila, founder of Vila Ventures — yoga instructor and designer based in Abu Dhabi"
+						alt="Vila, founder of Vila Ventures yoga instructor and designer based in Abu Dhabi"
 						className="object-cover"
 						fill
 						sizes="(max-width: 1024px) 100vw, 40vw"
@@ -32,7 +32,7 @@ export const FounderSection = () => {
 					<blockquote className="border-primary/40 border-l-2 pl-6">
 						<p className="font-display text-2xl text-primary leading-snug lg:text-3xl">
 							"I don't teach yoga to be perfect at it. I teach it because it
-							taught me how to be present — and that changed how I design, how I
+							taught me how to be present and that changed how I design, how I
 							create, how I live."
 						</p>
 					</blockquote>
@@ -45,7 +45,7 @@ export const FounderSection = () => {
 							combination of creativity and calm to everything she does.
 						</p>
 						<p className="text-lg text-muted-foreground leading-relaxed">
-							Her classes aren't about nailing a pose — they're about finding
+							Her classes aren't about nailing a pose they're about finding
 							space to breathe, move honestly, and leave feeling a little more
 							like yourself. Whether it's a group flow for women, a playful kids
 							session, or a corporate workshop, Vila meets every student exactly
@@ -53,18 +53,18 @@ export const FounderSection = () => {
 						</p>
 					</div>
 
-					<Card className="bg-primary text-card">
-						<CardHeader>
+					<Card className="w-fit bg-primary text-card">
+						<CardHeader className="px-9">
 							<h3 className="font-semibold text-lg">Training & Credentials</h3>
 						</CardHeader>
-						<CardContent>
+						<CardContent className="px-9">
 							<ul className="flex flex-col gap-2.5">
 								{CREDENTIALS.map((credential) => (
 									<li
 										className="flex items-center gap-2.5 text-card/90"
 										key={credential}
 									>
-										<CheckIcon className="shrink-0" />
+										<CheckIcon className="shrink-0" weight="bold" />
 										<span>{credential}</span>
 									</li>
 								))}

@@ -20,7 +20,7 @@ interface ProductHeroProps {
 
 export const ProductHero = ({ product }: ProductHeroProps) => {
 	return (
-		<section className="pt-28 pb-14 lg:pt-36 lg:pb-20">
+		<section className="pt-28 pb-14 lg:pt-24 lg:pb-20">
 			<div className="container mx-auto">
 				<Link
 					className="ease mb-8 inline-flex items-center gap-2 text-muted-foreground text-sm transition-colors duration-200 hover:text-foreground"
@@ -108,7 +108,7 @@ export const ProductHero = ({ product }: ProductHeroProps) => {
 							</Button>
 						</div>
 
-						<div className="mt-8 grid grid-cols-2 gap-4 rounded-lg border bg-card p-4 sm:grid-cols-3">
+						{/* <div className="mt-8 grid grid-cols-2 gap-4 rounded-lg border bg-card p-4 sm:grid-cols-3">
 							<div className="text-center">
 								<p className="font-medium text-sm">Free shipping</p>
 								<p className="text-muted-foreground text-xs">Over 200 AED</p>
@@ -121,7 +121,7 @@ export const ProductHero = ({ product }: ProductHeroProps) => {
 								<p className="font-medium text-sm">Secure checkout</p>
 								<p className="text-muted-foreground text-xs">SSL encrypted</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
