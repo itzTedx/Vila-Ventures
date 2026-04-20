@@ -18,10 +18,9 @@ import { fileURLToPath } from "url";
 import { Categories } from "@/payload/collections/categories";
 import { Media } from "@/payload/collections/media";
 import { Users } from "@/payload/collections/users";
-import { Footer } from "@/payload/globals/footer";
-import { Header } from "@/payload/globals/header";
 import { plugins } from "@/payload/plugins";
 
+import { Blogs } from "../collections/blogs";
 import { Classes } from "../collections/classes";
 
 const filename = fileURLToPath(import.meta.url);
@@ -30,8 +29,18 @@ const dirname = path.dirname(filename);
 export default buildConfig({
 	admin: {
 		user: Users.slug,
+		meta: {
+			icons: [
+				{
+					rel: "icon",
+					type: "image/png",
+					url: "/icon1.png",
+				},
+			],
+			robots: "noindex, nofollow",
+		},
 	},
-	collections: [Users, Classes, Categories, Media],
+	collections: [Users, Classes, Blogs, Categories, Media],
 	db: sqliteAdapter({
 		client: {
 			url: process.env.DATABASE_URL || "",
@@ -73,7 +82,9 @@ export default buildConfig({
 		},
 	}),
 	endpoints: [],
-	globals: [Header, Footer],
+	globals: [
+		// Header, Footer
+	],
 	plugins,
 	sharp,
 	secret: process.env.PAYLOAD_SECRET || "",
