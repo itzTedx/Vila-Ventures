@@ -31,9 +31,9 @@ export const Navbar = () => {
 	return (
 		<header className="fixed inset-x-0 top-4 z-9999">
 			<div className="container mx-auto flex h-14 items-center justify-between px-4">
-				<div className="flex flex-1 items-center gap-2">
+				<Link className="flex flex-1 items-center gap-2" href="/">
 					<Logo />
-				</div>
+				</Link>
 
 				<nav className="hidden h-full items-center rounded-lg border bg-card px-6 shadow-lg lg:flex">
 					<ul className="flex items-center gap-4">

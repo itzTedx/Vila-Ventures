@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
+import Script from "next/script";
+
 import { Toaster } from "sonner";
 
 import { CalEmbed } from "@/components/cal-embed";
@@ -90,6 +92,15 @@ export default function RootLayout({
 			className={cn("h-full antialiased", serif.variable, inter.className)}
 			lang="en"
 		>
+			<head>
+				{process.env.NODE_ENV === "development" && (
+					<Script
+						crossOrigin="anonymous"
+						src="//unpkg.com/react-scan/dist/auto.global.js"
+						strategy="beforeInteractive"
+					/>
+				)}
+			</head>
 			<body>
 				<CalEmbed />
 				<Navbar />

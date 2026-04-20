@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import Autoplay from "embla-carousel-autoplay";
+
 import { Button } from "@/components/ui/button";
 import {
 	Carousel,
@@ -47,6 +49,7 @@ export const FeedbackSection = () => {
 					opts={{
 						align: "start",
 					}}
+					plugins={[Autoplay({ delay: 2000 })]}
 					setApi={setCarouselApi}
 				>
 					<div className="mb-12 flex items-center justify-between">

@@ -18,7 +18,7 @@ export const BlogHero = () => {
 						</h1>
 						<p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed lg:mt-8 lg:text-xl">
 							Practical insights on yoga, wellness, and building a practice that
-							fits your real life — written from experience, not textbooks.
+							fits your real life written from experience, not textbooks.
 						</p>
 					</div>
 				</div>

@@ -68,17 +68,21 @@ export const SERVES = [
 	{
 		audience: "Women",
 		detail: "Gentle, empowering sessions in a supportive space",
+		image: "/images/types/women-yoga.webp",
 	},
 	{
 		audience: "Kids",
 		detail: "Playful, age-appropriate yoga that builds confidence",
+		image: "/images/types/kids-yoga.webp",
 	},
 	{
 		audience: "Corporate Teams",
 		detail: "Wellness workshops that reduce stress and build team cohesion",
+		image: "/images/types/corporate-yoga.webp",
 	},
 	{
 		audience: "Online Students",
 		detail: "Virtual classes from anywhere, live and guided",
+		image: "/images/types/online-yoga.webp",
 	},
 ] as const;

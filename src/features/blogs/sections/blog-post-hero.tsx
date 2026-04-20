@@ -18,7 +18,7 @@ export const BlogPostHero = ({ post }: { post: BlogPost }) => {
 			<div className="container mx-auto">
 				<nav
 					aria-label="Breadcrumb"
-					className="mb-8 flex items-center gap-1.5 text-muted-foreground text-sm"
+					className="flex items-center gap-1.5 text-muted-foreground/50 text-sm"
 				>
 					<Link
 						className="transition-colors duration-200 hover:text-foreground"
@@ -37,20 +37,12 @@ export const BlogPostHero = ({ post }: { post: BlogPost }) => {
 					<span className="line-clamp-1 text-foreground">{post.title}</span>
 				</nav>
 
-				<div className="max-w-3xl">
-					<Badge
-						className="bg-primary/10 text-primary"
-						render={<span />}
-						variant="secondary"
-					>
-						{post.category}
-					</Badge>
-
-					<h1 className="mt-4 text-balance font-display text-3xl text-primary uppercase leading-snug sm:text-4xl lg:text-5xl">
+				<div className="max-w-7xl">
+					<h1 className="mt-2 text-balance font-display text-3xl text-primary uppercase leading-snug sm:text-4xl lg:text-5xl">
 						{post.title}
 					</h1>
 
-					<div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground text-sm">
+					<div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground text-sm">
 						<span className="flex items-center gap-1.5">
 							<UserIcon size={16} />
 							{post.author.name}
@@ -63,6 +55,13 @@ export const BlogPostHero = ({ post }: { post: BlogPost }) => {
 							<ClockIcon size={16} />
 							{post.readingTime}
 						</span>
+						<Badge
+							className="bg-primary/10 text-primary"
+							render={<span />}
+							variant="secondary"
+						>
+							{post.category}
+						</Badge>
 					</div>
 				</div>
 

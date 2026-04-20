@@ -22,6 +22,8 @@ import { Footer } from "@/payload/globals/footer";
 import { Header } from "@/payload/globals/header";
 import { plugins } from "@/payload/plugins";
 
+import { Classes } from "../collections/classes";
+
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
@@ -29,7 +31,7 @@ export default buildConfig({
 	admin: {
 		user: Users.slug,
 	},
-	collections: [Users, Categories, Media],
+	collections: [Users, Classes, Categories, Media],
 	db: sqliteAdapter({
 		client: {
 			url: process.env.DATABASE_URL || "",

@@ -8,11 +8,11 @@ import { CLASS_OFFERINGS } from "../constants";
 
 export const OfferingsSection = () => {
 	return (
-		<section className="bg-card" id="offerings">
+		<section id="offerings">
 			<div className="container mx-auto py-14 lg:py-28">
 				<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 					<Badge
-						className="bg-background text-muted-foreground!"
+						className="bg-card text-muted-foreground!"
 						render={<h2 />}
 						variant="secondary"
 					>
@@ -27,7 +27,7 @@ export const OfferingsSection = () => {
 				<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-20">
 					{CLASS_OFFERINGS.map((item) => (
 						<div className="group" key={item.id}>
-							<div className="mb-2 flex items-center justify-between gap-3 rounded-lg bg-background p-6">
+							<div className="mb-2 flex items-center justify-between gap-3 rounded-lg bg-card p-6">
 								<div>
 									<h3 className="font-bold text-xl">{item.name}</h3>
 									<p className="mt-0.5 text-muted-foreground text-sm">
@@ -36,13 +36,13 @@ export const OfferingsSection = () => {
 								</div>
 								<Button
 									className="shrink-0 bg-background"
-									data-cal-link="vilaventures/discovery"
+									data-cal-link="zironpro/15min"
 									variant="outline"
 								>
 									Book a Session
 								</Button>
 							</div>
-							<div className="rounded-[calc(var(--radius)+4px)] bg-background p-1">
+							<div className="rounded-[calc(var(--radius)+4px)] bg-card p-1">
 								<div className="relative aspect-4/3 size-full overflow-hidden rounded-lg">
 									<div className="absolute inset-x-0 bottom-0 z-20 flex flex-col gap-3 p-6 text-card">
 										<p className="font-medium text-lg tracking-wide">

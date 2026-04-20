@@ -20,8 +20,8 @@ const STEP_ICONS = [
 
 export const ExperienceSection = () => {
 	return (
-		<section className="container mx-auto py-14 lg:py-28" id="what-to-expect">
-			<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+		<section className="container mx-auto pb-14 lg:pb-28" id="what-to-expect">
+			<div className="grid grid-cols-1 gap-4 md:grid-cols-5">
 				<Badge
 					className="bg-card text-muted-foreground!"
 					render={<h2 />}
@@ -29,7 +29,7 @@ export const ExperienceSection = () => {
 				>
 					What to Expect
 				</Badge>
-				<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-2 lg:text-5xl">
+				<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-4 lg:text-5xl">
 					<span className="text-foreground">
 						Your first class should feel welcoming,
 					</span>{" "}
