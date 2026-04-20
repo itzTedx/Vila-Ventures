@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import { ArrowRightIcon, Link } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ export const HeroSection = () => {
 				<div className="flex h-full max-w-full flex-col justify-between sm:max-w-xl lg:max-w-3xl">
 					<div className="py-14 text-center md:text-start lg:py-16">
 						<Badge>Rooted in Joy. Designed for Balance.</Badge>
+
 						<h1 className="mt-2 font-display text-5xl text-card tracking-tight sm:text-5xl lg:text-6xl">
 							Yoga Classes & Mindful Lifestyle Products in UAE
 						</h1>
@@ -19,9 +21,10 @@ export const HeroSection = () => {
 							Discover mindful yoga classes, creative lifestyle products, and a
 							space where movement, design, and joy come together - with Vila.
 						</p>
+
 						<div className="flex items-start gap-3">
 							<Button
-								className="flex-1 font-semibold hover:gap-9! hover:px-9 md:flex-none"
+								className="flex-1 cursor-pointer font-semibold hover:gap-9! hover:px-9 md:flex-none"
 								data-cal-config='{"layout":"month_view"}'
 								data-cal-link="zironpro/15min"
 								size="lg"
@@ -39,6 +42,7 @@ export const HeroSection = () => {
 							</Button>
 						</div>
 					</div>
+
 					<div className="max-w-full rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-sm">
 						<div className="flex gap-3 p-3 text-card">
 							<div className="aspect-4/3 size-full rounded-md bg-card/40" />
@@ -63,6 +67,7 @@ export const HeroSection = () => {
 								</div>
 							</div>
 							<Button
+								className="cursor-pointer"
 								data-cal-config='{"layout":"month_view"}'
 								data-cal-link="zironpro/15min"
 								variant="secondary"
