@@ -1,27 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import type { CallToActionBlock as CTABlockProps } from '@/payload-types'
-import { RichText } from '@/components/RichText'
-import { CMSLink } from '@/components/Link'
+import { CMSLink } from "@/components/link";
+import { RichText } from "@/components/rich-text";
+
+import type { CallToActionBlock as CTABlockProps } from "@/payload-types";
 
 export const CallToActionBlock: React.FC<
-  CTABlockProps & {
-    id?: string | number
-    className?: string
-  }
+	CTABlockProps & {
+		id?: string | number;
+		className?: string;
+	}
 > = ({ links, richText }) => {
-  return (
-    <div className="container">
-      <div className="bg-card rounded border-border border p-4 flex flex-col gap-8 md:flex-row md:justify-between md:items-center">
-        <div className="max-w-3xl flex items-center">
-          {richText && <RichText className="mb-0" data={richText} enableGutter={false} />}
-        </div>
-        <div className="flex flex-col gap-8">
-          {(links || []).map(({ link }, i) => {
-            return <CMSLink key={i} size="lg" {...link} />
-          })}
-        </div>
-      </div>
-    </div>
-  )
-}
+	return (
+		<div className="container">
+			<div className="flex flex-col gap-8 rounded border border-border bg-card p-4 md:flex-row md:items-center md:justify-between">
+				<div className="flex max-w-3xl items-center">
+					{richText && (
+						<RichText className="mb-0" data={richText} enableGutter={false} />
+					)}
+				</div>
+				<div className="flex flex-col gap-8">
+					{(links || []).map(({ link }) => {
+						return (
+							<CMSLink key={`${link.url}-${link.label}`} size="lg" {...link} />
+						);
+					})}
+				</div>
+			</div>
+		</div>
+	);
+};

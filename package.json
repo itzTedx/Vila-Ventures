@@ -34,6 +34,7 @@
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"cross-env": "^10.1.0",
+		"embla-carousel-auto-scroll": "^8.6.0",
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"graphql": "^16.13.2",
@@ -67,6 +68,8 @@
 		"node": "^18.20.2 || >=20.9.0"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["sharp"]
+		"onlyBuiltDependencies": [
+			"sharp"
+		]
 	}
 }
