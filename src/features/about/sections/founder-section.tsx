@@ -3,6 +3,7 @@ import { CheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
+import { FounderStoryVideo } from "../components/founder-story-video";
 import { CREDENTIALS } from "../constants";
 
 export const FounderSection = () => {
@@ -10,7 +11,7 @@ export const FounderSection = () => {
 		<section className="container mx-auto py-14 lg:py-28" id="meet-vila">
 			<div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12">
 				<div className="relative aspect-9/16 overflow-hidden rounded-xl lg:col-span-2">
-					<video autoPlay src="/videos/founder-story.webm" />
+					<FounderStoryVideo src="/videos/founder-story.webm" />
 				</div>
 
 				<div className="flex flex-col justify-between gap-8 lg:col-span-3">
