@@ -22,16 +22,8 @@ export const ProductHero = ({ product }: ProductHeroProps) => {
 	return (
 		<section className="pt-28 pb-14 lg:pt-24 lg:pb-20">
 			<div className="container mx-auto">
-				<Link
-					className="ease mb-8 inline-flex items-center gap-2 text-muted-foreground text-sm transition-colors duration-200 hover:text-foreground"
-					href="/shop"
-				>
-					<ArrowLeftIcon className="size-4" />
-					Back to shop
-				</Link>
-
 				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-					<div className="relative aspect-4/5 overflow-hidden rounded-xl lg:aspect-3/4">
+					<div className="relative aspect-4/5 overflow-hidden rounded-xl">
 						<Image
 							alt={product.title}
 							className="object-cover"
@@ -48,6 +40,14 @@ export const ProductHero = ({ product }: ProductHeroProps) => {
 					</div>
 
 					<div className="flex flex-col justify-center">
+						<Link
+							className="ease mb-8 inline-flex items-center gap-2 text-muted-foreground text-sm transition-colors duration-200 hover:text-foreground"
+							href="/shop"
+						>
+							<ArrowLeftIcon className="size-4" />
+							Back to shop
+						</Link>
+
 						<div className="flex items-center gap-3">
 							<Badge
 								className="bg-card text-muted-foreground!"

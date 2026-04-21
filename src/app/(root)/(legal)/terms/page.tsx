@@ -76,7 +76,7 @@ export default function TermsPage() {
 	return (
 		<>
 			<JsonLd data={termsSchema} />
-			<main className="pt-32 pb-20 md:pt-36">
+			<main className="pt-24 pb-20 md:pt-30">
 				<div className="container max-w-4xl space-y-8">
 					<header className="space-y-4 rounded-2xl border border-border/70 bg-card p-6 shadow-sm md:p-8">
 						<p className="font-medium text-primary text-xs uppercase tracking-[0.2em]">

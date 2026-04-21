@@ -13,7 +13,7 @@ import type { BlogPost } from "../types";
 
 export const BlogCard = ({ post }: { post: BlogPost }) => {
 	return (
-		<article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border/60 bg-card transition-shadow duration-300 hover:shadow-md">
+		<article className="group flex h-full flex-col overflow-hidden rounded-lg border bg-card transition-[box-shadow_scale_border-color] duration-300 hover:scale-105 hover:border-primary hover:shadow-lg">
 			<Link className="contents" href={`/blog/${post.slug}` as never}>
 				<div className="relative aspect-video overflow-hidden">
 					<Image
@@ -26,11 +26,7 @@ export const BlogCard = ({ post }: { post: BlogPost }) => {
 				</div>
 				<div className="flex flex-1 flex-col p-5">
 					<div className="mb-3 flex items-center gap-3">
-						<Badge
-							className="bg-primary/10 text-primary"
-							render={<span />}
-							variant="secondary"
-						>
+						<Badge className="bg-primary/10 text-primary" variant="secondary">
 							{post.category}
 						</Badge>
 						<div className="flex items-center gap-1.5 text-muted-foreground text-xs">
@@ -38,7 +34,7 @@ export const BlogCard = ({ post }: { post: BlogPost }) => {
 							<span>{post.readingTime}</span>
 						</div>
 					</div>
-					<h3 className="mb-2 line-clamp-2 font-medium text-lg leading-snug group-hover:text-primary">
+					<h3 className="mb-2 line-clamp-2 font-medium text-xl leading-snug group-hover:text-primary">
 						{post.title}
 					</h3>
 					<p className="mb-4 line-clamp-2 flex-1 text-muted-foreground text-sm leading-relaxed">

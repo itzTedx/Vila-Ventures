@@ -83,7 +83,7 @@ export const ContactFormSection = () => {
 					<div className="rounded-xl border bg-card p-6 sm:p-8">
 						<h3 className="font-semibold text-lg">Prefer a live chat?</h3>
 						<p className="mt-2 text-muted-foreground leading-relaxed">
-							Book a free 15-minute discovery call — no prep needed. We'll talk
+							Book a free 15-minute discovery call no prep needed. We'll talk
 							about your goals, answer your questions, and figure out the best
 							next step together.
 						</p>
@@ -99,11 +99,11 @@ export const ContactFormSection = () => {
 
 					<div className="rounded-xl border border-primary/20 bg-primary/5 p-6 sm:p-8">
 						<p className="font-display text-lg text-primary uppercase leading-snug lg:text-xl">
-							"Every question is the beginning of a conversation — and every
+							"Every question is the beginning of a conversation and every
 							conversation is the start of something meaningful."
 						</p>
 						<p className="mt-4 font-medium text-muted-foreground text-sm">
-							— Vila, Founder
+							- Vila, Founder
 						</p>
 					</div>
 				</div>

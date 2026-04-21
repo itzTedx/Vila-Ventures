@@ -8,12 +8,12 @@ import { JsonLd } from "@/features/seo/json-ld";
 export const metadata: Metadata = {
 	title: "Contact Vila Ventures | Yoga Inquiries & Collaborations in Abu Dhabi",
 	description:
-		"Get in touch with Vila Ventures for yoga class bookings, corporate wellness inquiries, product questions, or collaboration proposals. Based in Abu Dhabi, UAE — personal replies within 24 hours.",
+		"Get in touch with Vila Ventures for yoga class bookings, corporate wellness inquiries, product questions, or collaboration proposals. Based in Abu Dhabi, UAE - personal replies within 24 hours.",
 	openGraph: {
 		url: `${SITE_URL}/contact`,
 		title: "Contact Vila Ventures | Let's Start a Conversation",
 		description:
-			"Reach out for yoga class bookings, corporate wellness, product questions, or collaboration ideas. Based in Abu Dhabi — every message gets a personal reply.",
+			"Reach out for yoga class bookings, corporate wellness, product questions, or collaboration ideas. Based in Abu Dhabi - every message gets a personal reply.",
 		type: "website",
 		images: [
 			{
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Contact Vila Ventures | Let's Start a Conversation",
 		description:
-			"Yoga classes, corporate wellness, products, or collaborations — reach out to Vila Ventures in Abu Dhabi.",
+			"Yoga classes, corporate wellness, products, or collaborations - reach out to Vila Ventures in Abu Dhabi.",
 		images: ["/og-image.png"],
 	},
 	alternates: {

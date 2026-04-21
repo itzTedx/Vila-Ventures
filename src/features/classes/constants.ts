@@ -25,7 +25,7 @@ export const CLASS_OFFERINGS = [
 		tagline: "Play meets presence",
 		description:
 			"Yoga made fun - with animal poses, storytelling, and games that help children develop body awareness, focus, and confidence. Sessions are age-adapted and designed to hold attention without forcing stillness.",
-		bestFor: "Children ages 4–12, school groups, family sessions",
+		bestFor: "Children ages 4-12, school groups, family sessions",
 		format: "45-minute sessions · In-person",
 		image: "/images/classes/other-yoga.webp",
 	},
@@ -35,8 +35,8 @@ export const CLASS_OFFERINGS = [
 		tagline: "Bring calm to the office",
 		description:
 			"Workplace wellness sessions designed to reduce tension, improve focus, and help teams reset during the workday. No gym clothes required - these are accessible, chair-friendly, and built for real office environments.",
-		bestFor: "Teams of 5–30, companies investing in employee well-being",
-		format: "30–60 minutes · On-site or virtual",
+		bestFor: "Teams of 5-30, companies investing in employee well-being",
+		format: "30-60 minutes · On-site or virtual",
 		image: "/images/classes/virtual-yoga.webp",
 	},
 	{

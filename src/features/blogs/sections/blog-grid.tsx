@@ -23,23 +23,25 @@ export const BlogGrid = () => {
 	return (
 		<section className="container mx-auto pb-14 lg:pb-28">
 			<Link
-				className="group relative block min-h-80 overflow-hidden rounded-xl sm:min-h-96 lg:min-h-112"
+				className="group relative grid min-h-80 grid-cols-2 overflow-hidden rounded-xl sm:min-h-96 lg:min-h-112"
 				href={`/blog/${featuredPost.slug}` as never}
 			>
-				<Image
-					alt={featuredPost.imageAlt}
-					className="object-cover transition-transform duration-300 group-hover:scale-105"
-					fill
-					priority
-					sizes="(max-width: 768px) 100vw, 90vw"
-					src={featuredPost.image}
-				/>
-				<ProgressiveBlur className="[--height:60%]" position="bottom" />
-				<div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
-				<div className="absolute inset-x-0 bottom-0 z-10 p-5 text-card sm:p-9">
+				<div className="relative">
+					<Image
+						alt={featuredPost.imageAlt}
+						className="object-cover transition-transform duration-300 group-hover:scale-105"
+						fill
+						priority
+						sizes="(max-width: 768px) 100vw, 90vw"
+						src={featuredPost.image}
+					/>
+					<ProgressiveBlur className="[--height:60%]" position="bottom" />
+					<div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
+				</div>
+				<div className="z-10 flex flex-col justify-between bg-card p-5 text-foreground sm:p-9">
 					<div className="mb-3 flex flex-wrap items-center gap-3">
-						<Badge render={<span />}>{featuredPost.category}</Badge>
-						<div className="flex items-center gap-4 text-card/90 text-sm">
+						<Badge variant="outline">{featuredPost.category}</Badge>
+						<div className="flex items-center gap-4 text-muted-foreground text-sm">
 							<span className="flex items-center gap-1.5">
 								<ClockIcon size={16} />
 								{featuredPost.readingTime}
@@ -49,17 +51,16 @@ export const BlogGrid = () => {
 								{featuredPost.date}
 							</span>
 						</div>
+						<h2 className="mb-2 max-w-2xl font-medium text-xl leading-tight sm:text-2xl lg:text-4xl">
+							{featuredPost.title}
+						</h2>
 					</div>
-					<div className="flex items-end justify-between gap-6">
-						<div className="flex-1">
-							<h2 className="mb-2 max-w-2xl font-medium text-xl leading-tight sm:text-2xl lg:text-3xl">
-								{featuredPost.title}
-							</h2>
-							<p className="hidden max-w-xl text-card/80 text-sm leading-relaxed sm:block sm:text-base">
-								{featuredPost.excerpt}
-							</p>
-						</div>
-						<span className="flex shrink-0 items-center gap-1 font-medium text-card text-sm transition-colors">
+					<div className="flex flex-col gap-6">
+						<p className="hidden max-w-xl text-muted-foreground text-sm leading-relaxed sm:block sm:text-lg">
+							{featuredPost.excerpt}
+						</p>
+
+						<span className="flex shrink-0 items-center gap-1 font-medium text-muted-foreground text-sm transition-colors">
 							Read article
 							<ArrowRightIcon
 								className="transition-transform duration-200 group-hover:translate-x-0.5"

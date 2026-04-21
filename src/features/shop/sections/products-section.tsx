@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { ProductCard } from "@/features/products/components/product-card";
@@ -22,31 +21,11 @@ export const ShopProductsSection = () => {
 			: SHOP_PRODUCTS.filter((p) => p.category === activeCategory);
 
 	return (
-		<section className="bg-card" id="products">
-			<div className="container mx-auto py-14 lg:py-28">
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-					<Badge
-						className="bg-background text-muted-foreground!"
-						render={<h2 />}
-						variant="secondary"
-					>
-						The Collection
-					</Badge>
-					<p className="col-span-1 font-medium text-2xl text-muted-foreground leading-snug sm:text-3xl md:col-span-2 lg:text-5xl">
-						<span className="text-foreground">
-							Mats, apparel, and everyday objects
-						</span>{" "}
-						designed for people who take their practice seriously — and
-						everything else lightly.
-					</p>
-				</div>
-
-				<div className="mt-10 flex flex-wrap gap-2 lg:mt-16">
+		<section id="products">
+			<div className="container mx-auto py-14 lg:py-20">
+				<div className="flex w-fit flex-wrap gap-2 rounded-lg bg-primary/10 p-1">
 					{SHOP_CATEGORIES.map((category) => (
 						<Button
-							className={
-								activeCategory === category ? "" : "text-muted-foreground"
-							}
 							key={category}
 							onClick={() => setActiveCategory(category)}
 							size="sm"
