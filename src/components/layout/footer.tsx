@@ -20,7 +20,7 @@ const footerNav = [
 			{ label: "Classes", href: "/classes" },
 			{ label: "Shop", href: "/shop" },
 			{ label: "Stories", href: "/blog" },
-			{ label: "FAQ", href: "#faq" },
+			{ label: "FAQ", href: "/#faq" },
 		],
 	},
 	{

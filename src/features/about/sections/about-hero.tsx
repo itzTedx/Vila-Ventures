@@ -15,10 +15,10 @@ export const AboutHero = () => {
 						About Vila Ventures
 					</Badge>
 					<div className="col-span-1 md:col-span-3">
-						<h1 className="max-w-3xl text-balance font-display text-4xl text-primary uppercase leading-snug sm:text-5xl lg:text-6xl">
+						<h1 className="text-balance font-display text-4xl text-primary uppercase leading-[1.1] sm:text-5xl lg:text-6xl">
 							Where mindfulness meets design — and joy becomes a practice
 						</h1>
-						<p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed lg:mt-8 lg:text-xl">
+						<p className="mt-4 text-balance text-lg text-muted-foreground leading-relaxed lg:text-xl">
 							Vila Ventures began as a personal practice and grew into a
 							community. We blend yoga, creativity, and thoughtful design to
 							help people in the UAE reconnect with what matters.
@@ -26,7 +26,7 @@ export const AboutHero = () => {
 					</div>
 				</div>
 
-				<div className="relative mt-10 aspect-video overflow-hidden rounded-xl lg:mt-16 lg:aspect-21/9">
+				<div className="relative mt-6 aspect-video overflow-hidden rounded-xl md:mt-10 lg:aspect-21/9">
 					<Image
 						alt="Vila Ventures yoga studio space in Abu Dhabi with warm natural light and mindful design elements"
 						className="object-cover"

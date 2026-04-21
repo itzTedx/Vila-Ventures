@@ -89,7 +89,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
-			className={cn("h-full antialiased", serif.variable, inter.className)}
+			className={cn(
+				"h-full scroll-smooth antialiased",
+				serif.variable,
+				inter.className
+			)}
 			lang="en"
 		>
 			<head>
