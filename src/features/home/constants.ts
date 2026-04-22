@@ -133,29 +133,29 @@ export const FEEDBACKS = [
 	{
 		id: 1,
 		content:
-			"I never thought I could stick to yoga until I joined Vila’s classes. The sessions are calm, easy to follow, and fit perfectly into my daily routine. I’ve noticed a huge difference in my stress levels and flexibility. It feels less like a class and more like a space to breathe and reset. Truly something I look forward to every week.",
-		author: "Simona",
-		role: "Working Professional",
+			"I’ve been attending Vila’s outdoor yoga class every weekend, and it has been a great experience. As someone in my 60s, I simply wanted a way to stay active once a week, and this class has been perfect. The one-hour sessions are well-prepared and effective—I always leave feeling refreshed. Vila teaches a mix of Hatha yoga and Vinyasa flows, which have worked very well for me. She also ends each class with breathing exercises and short insights, making it a great way to start the morning. I’ve seen a clear improvement in both my physical health and overall well-being.",
+		author: "Sam, 66",
+		role: "Malaysia",
 	},
 	{
 		id: 2,
 		content:
-			"Joining Vila’s yoga classes has been a game-changer for me. The sessions are challenging yet accessible, and the instructors always create a supportive environment. I’ve seen improvements in my flexibility, strength, and overall well-being. Highly recommend it!",
-		author: "Maria",
-		role: "Yoga Enthusiast",
+			"I’m a housewife and, apart from my daily chores, I’ve never really been involved in any physical activities. When I came across Vila’s yoga class, I decided to give it a try. In the beginning, I found it quite challenging—even simple asanas and Surya Namaskar were difficult for me. However, Vila is a very encouraging teacher. She gently motivates and supports us, helping me build my stamina over time. From struggling to complete a few rounds, I can now do 10 rounds of Surya Namaskar in one go. She encourages us to keep going without ever making us feel pressured, while still giving us the space to improve at our own pace.",
+		author: "Amutha, 45",
+		role: "Malaysia",
 	},
 	{
 		id: 3,
 		content:
 			"Vila’s yoga classes are not just about the physical practice they’re about the mental and emotional journey. The instructors provide thoughtful guidance and create a supportive atmosphere that makes every session feel like a retreat. I’ve seen my focus and concentration improve, and I’ve gained a deeper sense of peace and calm.",
 		author: "John",
-		role: "Corporate Wellness Manager",
+		role: "Malaysia",
 	},
 	{
 		id: 4,
 		content:
 			"The creativity and mindfulness elements of Vila’s yoga classes have added a whole new dimension to my practice. I’ve discovered new ways to connect with my body and mind through art, writing, and guided meditations. It’s not just about the physical movement it’s about the journey of self-discovery and growth.",
 		author: "Emily",
-		role: "Creative Professional",
+		role: "Malaysia",
 	},
 ] as const;
