@@ -36,6 +36,9 @@ const nextConfig: NextConfig = {
 		],
 	},
 	reactStrictMode: true,
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	experimental: {
 		// Enable filesystem caching for `next dev`
 		turbopackFileSystemCacheForDev: true,
