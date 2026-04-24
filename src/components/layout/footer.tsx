@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 import {
-	InstagramLogo,
-	LinkedinLogo,
-	TwitterLogo,
-} from "@phosphor-icons/react/dist/ssr";
+	InstagramLogoIcon,
+	LinkedinLogoIcon,
+	TwitterLogoIcon,
+} from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "motion/react";
 
 import { Button } from "@/components/ui/button";
@@ -27,30 +27,30 @@ const footerNav = [
 		title: "Studio",
 		links: [
 			{ label: "About Vila", href: "/about" },
-			{ label: "Why Vila", href: "#why-vila" },
-			{ label: "Feedback", href: "#feedback" },
+			{ label: "Why Vila", href: "/#why-vila" },
+			{ label: "Feedback", href: "/#feedback" },
 			{ label: "Contact", href: "/contact" },
 		],
 	},
-];
+] as const;
 
 const socialLinks = [
 	{
 		label: "Visit Vila on Instagram",
 		href: "https://instagram.com/vilaventures",
-		Icon: InstagramLogo,
+		Icon: InstagramLogoIcon,
 	},
 	{
 		label: "Connect on LinkedIn",
 		href: "https://linkedin.com/company/vilaventures",
-		Icon: LinkedinLogo,
+		Icon: LinkedinLogoIcon,
 	},
 	{
 		label: "Follow on X (Twitter)",
 		href: "https://x.com/vilaventures",
-		Icon: TwitterLogo,
+		Icon: TwitterLogoIcon,
 	},
-];
+] as const;
 
 export const Footer = () => {
 	const prefersReducedMotion = useReducedMotion();
@@ -165,7 +165,7 @@ export const Footer = () => {
 									<ul className="space-y-2.5 text-(--footer-muted) text-sm">
 										{section.links.map((link) => (
 											<li key={link.label}>
-												<a
+												<Link
 													className="group inline-flex items-center gap-1.5 rounded-full px-1 py-0.5 text-sm transition hover:text-(--footer-accent) focus-visible:outline-none focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
 													href={link.href}
 												>
@@ -174,7 +174,7 @@ export const Footer = () => {
 														aria-hidden="true"
 														className="h-0.5 w-3 rounded-full bg-(--footer-accent-soft) transition group-hover:w-4"
 													/>
-												</a>
+												</Link>
 											</li>
 										))}
 									</ul>
@@ -185,13 +185,13 @@ export const Footer = () => {
 								<h4 className="font-semibold text-(--footer-muted) text-xs uppercase tracking-[0.22em]">
 									Connect with Vila
 								</h4>
-								<p className="text-(--footer-muted) text-sm">
+								<p className="text-balance text-(--footer-muted) text-sm tracking-wide">
 									Occasional notes, studio moments, and Vila happenings in the
-									UAE — shared through our social spaces.
+									UAE shared through our social spaces.
 								</p>
 								<div className="mt-3 flex flex-wrap gap-3">
 									{socialLinks.map(({ href, label, Icon }) => (
-										<a
+										<Link
 											aria-label={label}
 											className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--footer-surface-border) bg-black/35 text-(--footer-muted) shadow-[0_8px_18px_rgba(0,0,0,0.35)] outline-none transition hover:-translate-y-0.5 hover:border-(--footer-accent) hover:bg-(--footer-accent-soft) hover:text-(--footer-accent) focus-visible:ring-(--footer-accent) focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
 											href={href}
@@ -200,7 +200,7 @@ export const Footer = () => {
 											target="_blank"
 										>
 											<Icon className="h-4 w-4" weight="fill" />
-										</a>
+										</Link>
 									))}
 								</div>
 							</div>

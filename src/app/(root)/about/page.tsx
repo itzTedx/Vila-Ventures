@@ -7,12 +7,12 @@ import { JsonLd } from "@/features/seo/json-ld";
 export const metadata: Metadata = {
 	title: "About Vila Ventures | Our Story, Mission & Mindful Approach",
 	description:
-		"Meet Vila, a yoga instructor and designer in Abu Dhabi creating mindful yoga classes and lifestyle products. Discover our story, values, and what makes Vila Ventures different.",
+		"Meet Vila, the founder of Vila Ventures, whose yoga journey opened a more intentional path to design. Learn how mindful practice shaped her creativity and inspired products like yoga mats and yoga cards from the UAE.",
 	openGraph: {
 		url: `${SITE_URL}/about`,
 		title: "About Vila Ventures | Our Story & Mission",
 		description:
-			"Discover the story behind Vila Ventures — a community rooted in joy, blending mindful yoga with thoughtfully designed lifestyle products in Abu Dhabi.",
+			"Discover how Vila's yoga journey shaped her creative path and inspired a mindful brand blending yoga experiences with thoughtfully designed products in the UAE.",
 		type: "website",
 		images: [
 			{
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "About Vila Ventures | Our Story & Mission",
 		description:
-			"Meet Vila — yoga instructor, designer, and the heart behind Vila Ventures in Abu Dhabi.",
+			"Meet Vila - founder, yoga teacher, and designer behind Vila Ventures in the UAE.",
 		images: ["/og-image.png"],
 	},
 	alternates: {
@@ -46,7 +46,7 @@ const aboutSchema = {
 			isPartOf: { "@id": `${SITE_URL}/#website` },
 			about: { "@id": `${SITE_URL}/#organization` },
 			description:
-				"Meet Vila, a yoga instructor and designer in Abu Dhabi creating mindful yoga classes and lifestyle products. Discover our story, values, and what makes Vila Ventures different.",
+				"Meet Vila, the founder of Vila Ventures, whose yoga journey opened a more intentional path to design and inspired mindful products and experiences in the UAE.",
 			inLanguage: "en-US",
 		},
 		{
@@ -55,7 +55,7 @@ const aboutSchema = {
 			name: "Vila",
 			jobTitle: "Yoga Instructor & Designer",
 			description:
-				"Certified yoga instructor (RYT-200) and multidisciplinary designer based in Abu Dhabi, specializing in Hatha and Vinyasa yoga for women, kids, and corporate teams.",
+				"Yoga instructor and multidisciplinary designer based in the UAE, combining mindful movement with thoughtful product design rooted in intention and presence.",
 			knowsAbout: [
 				"Hatha Yoga",
 				"Vinyasa Yoga",

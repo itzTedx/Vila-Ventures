@@ -16,12 +16,13 @@ export const AboutHero = () => {
 					</Badge>
 					<div className="col-span-1 md:col-span-3">
 						<h1 className="text-balance font-display text-4xl text-primary uppercase leading-[1.1] sm:text-5xl lg:text-6xl">
-							Where mindfulness meets design — and joy becomes a practice
+							From yoga practice to purposeful design
 						</h1>
 						<p className="mt-4 text-balance text-lg text-muted-foreground leading-relaxed lg:text-xl">
-							Vila Ventures began as a personal practice and grew into a
-							community. We blend yoga, creativity, and thoughtful design to
-							help people in the UAE reconnect with what matters.
+							Vila Ventures is built on one lived journey: yoga creating space,
+							and that space giving rise to clearer, more intentional
+							creativity. Today, Vila shares both through mindful classes and
+							thoughtfully made products from the UAE.
 						</p>
 					</div>
 				</div>
