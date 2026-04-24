@@ -15,10 +15,26 @@ import {
 } from "@payloadcms/richtext-lexical";
 import { slugField } from "payload";
 
+import {
+	revalidateShopAfterChange,
+	revalidateShopAfterDelete,
+} from "./hooks/revalidateShop";
+
 export const ProductsCollection: CollectionOverride = ({
 	defaultCollection,
 }) => ({
 	...defaultCollection,
+	hooks: {
+		...defaultCollection.hooks,
+		afterChange: [
+			...(defaultCollection.hooks?.afterChange ?? []),
+			revalidateShopAfterChange,
+		],
+		afterDelete: [
+			...(defaultCollection.hooks?.afterDelete ?? []),
+			revalidateShopAfterDelete,
+		],
+	},
 	admin: {
 		...defaultCollection?.admin,
 		defaultColumns: ["title", "enableVariants", "_status", "variants.variants"],

@@ -12,6 +12,7 @@ interface PageProps {
 	params: Promise<{ slug: string }>;
 }
 
+ 
 export async function generateStaticParams() {
 	const slugs = await getProductSlugs();
 

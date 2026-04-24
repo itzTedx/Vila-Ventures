@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 
 import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
-import {
-	getShopCategories,
-	getShopProducts,
-} from "@/features/shop/actions";
+import { getShopCategories, getShopProducts } from "@/features/shop/actions";
 import { SHOP_FAQS } from "@/features/shop/constants";
 import { ShopView } from "@/features/shop/shop-view";
+
+ 
 
 export const metadata: Metadata = {
 	title: "Shop Yoga Essentials | Mats, Apparel & Accessories | Vila Ventures",
@@ -40,17 +39,9 @@ export const metadata: Metadata = {
 	},
 };
 
-interface PageProps {
-	searchParams: Promise<{ category?: string }>;
-}
-
-export default async function ShopPage({ searchParams }: PageProps) {
-	const { category } = await searchParams;
-	const activeCategorySlug =
-		typeof category === "string" && category.length > 0 ? category : undefined;
-
+export default async function ShopPage() {
 	const [products, categories] = await Promise.all([
-		getShopProducts(activeCategorySlug),
+		getShopProducts(),
 		getShopCategories(),
 	]);
 
@@ -65,7 +56,7 @@ export default async function ShopPage({ searchParams }: PageProps) {
 				isPartOf: { "@id": `${SITE_URL}/#website` },
 				about: { "@id": `${SITE_URL}/#organization` },
 				description:
-					"Thoughtfully designed yoga mats, organic cotton apparel, and mindful accessories — made for daily practice and everyday life.",
+					"Thoughtfully designed yoga mats, organic cotton apparel, and mindful accessories - made for daily practice and everyday life.",
 				inLanguage: "en-US",
 			},
 			{
@@ -118,11 +109,7 @@ export default async function ShopPage({ searchParams }: PageProps) {
 	return (
 		<>
 			<JsonLd data={shopSchema} />
-			<ShopView
-				activeCategorySlug={activeCategorySlug}
-				categories={categories}
-				products={products}
-			/>
+			<ShopView categories={categories} products={products} />
 		</>
 	);
 }
