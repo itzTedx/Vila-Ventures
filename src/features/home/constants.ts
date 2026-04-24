@@ -147,21 +147,21 @@ export const FEEDBACKS = [
 	{
 		id: 3,
 		content:
-			"I am a veterinarian and work six days a week, so I was looking for an activity to do at least once a week outside of work. That’s when I joined Vila’s yoga class. Vila is friendly, jovial, and creates a fun, welcoming environment. She ensures every posture is clearly understood and has strong knowledge of both yoga asanas and the philosophy behind them. Her classes feel like a two-way interaction—beyond just learning asanas, she brings up relatable life topics and encourages discussion. She also emphasizes pranayama, which helps calm my mind and body for the rest of the day. Her instructions are clear and easy to follow, making it possible to practice independently at home.",
+			"I am a veterinarian and work six days a week, so I was looking for an activity to do at least once a week outside of work. That’s when I joined Vila’s yoga class. Vila is friendly, jovial, and creates a fun, welcoming environment. She ensures every posture is clearly understood and has strong knowledge of both yoga asanas and the philosophy behind them. Her classes feel like a two-way interaction beyond just learning asanas, she brings up relatable life topics and encourages discussion. She also emphasizes pranayama, which helps calm my mind and body for the rest of the day. Her instructions are clear and easy to follow, making it possible to practice independently at home.",
 		author: "Mei Mei, 27",
 		role: "Malaysia",
 	},
 	{
 		id: 4,
 		content:
-			"I am a behavioural therapist working with children with autism, a role that requires a great deal of patience. After hearing about the benefits of yoga, I decided to enroll in Vila’s class. She is excellent at what she does. Despite having a mixed group of different age ranges, she manages the class with ease. I started off quite inflexible, but with consistent practice, I’m now able to perform several asanas comfortably. Her classes go beyond just physical practice—they include breathing techniques and meaningful discussions on yoga philosophy, which make the sessions engaging and enjoyable. It has also helped me manage the stress from my work much better, and I’ve noticed a real improvement in my patience as well.",
+			"I am a behavioral therapist working with children with autism, a role that requires a great deal of patience. After hearing about the benefits of yoga, I decided to enroll in Vila’s class. She is excellent at what she does. Despite having a mixed group of different age ranges, she manages the class with ease. I started off quite inflexible, but with consistent practice, I’m now able to perform several asanas comfortably. Her classes go beyond just physical practice they include breathing techniques and meaningful discussions on yoga philosophy, which make the sessions engaging and enjoyable. It has also helped me manage the stress from my work much better, and I’ve noticed a real improvement in my patience as well.",
 		author: "Varrsha, 25",
 		role: "Malaysia",
 	},
 	{
 		id: 5,
 		content:
-			"I was diagnosed with PCOS, which led me to try yoga. My cycle used to be very unpredictable with a heavy flow, and I was also gaining weight. With regular practice, yoga has helped me significantly. Vila has been a great teacher from the very beginning—she checks on my progress, ensures I’m comfortable during class, and is always supportive. She doesn’t push you beyond your limits but gently encourages you, which really helps you improve over time. Her classes are both fun and informative, and I always leave each session feeling lighter and happier.",
+			"I was diagnosed with PCOS, which led me to try yoga. My cycle used to be very unpredictable with a heavy flow, and I was also gaining weight. With regular practice, yoga has helped me significantly. Vila has been a great teacher from the very beginning she checks on my progress, ensures I’m comfortable during class, and is always supportive. She doesn’t push you beyond your limits but gently encourages you, which really helps you improve over time. Her classes are both fun and informative, and I always leave each session feeling lighter and happier.",
 		author: "Veronica, 27",
 		role: "Malaysia",
 	},
@@ -182,7 +182,7 @@ export const FEEDBACKS = [
 	{
 		id: 8,
 		content:
-			"I attended a personalised morning yoga session with Vila after coming off a night shift, and I was honestly surprised at how good I felt showing up for class despite being quite tired. Even though I had worked through the night and was feeling quite lethargic, the session helped me feel refreshed almost immediately. Vila guided the class with so much calmness and clarity that it became easy to stay present despite my exhaustion. By the end of the class, I felt lighter, more awake, and mentally refreshed. It was a great reminder of how powerful yoga can be, even after a tiring night shift.",
+			"I attended a personalized morning yoga session with Vila after coming off a night shift, and I was honestly surprised at how good I felt showing up for class despite being quite tired. Even though I had worked through the night and was feeling quite lethargic, the session helped me feel refreshed almost immediately. Vila guided the class with so much calmness and clarity that it became easy to stay present despite my exhaustion. By the end of the class, I felt lighter, more awake, and mentally refreshed. It was a great reminder of how powerful yoga can be, even after a tiring night shift.",
 		author: "Michelle, 27",
 		role: "Malaysia",
 	},
@@ -203,7 +203,7 @@ export const FEEDBACKS = [
 	{
 		id: 11,
 		content:
-			"My daughter and I attended a private yoga session with Vila, and it was a very positive experience. She arrived on time and conducted the class with great professionalism and warmth. The session felt well-balanced, as she blended different elements I had experienced before—yoga asanas, breathing techniques, and gentle philosophical insights—into a smooth and easy flow. Even though it was a private class, she made it feel comfortable and engaging, adapting naturally to our pace. My daughter and I both felt supported throughout the session, and Vila’s calm and encouraging approach made it easy to stay motivated and involved. Overall, it was a meaningful and enjoyable class that left us feeling refreshed and connected.",
+			"My daughter and I attended a private yoga session with Vila, and it was a very positive experience. She arrived on time and conducted the class with great professionalism and warmth. The session felt well-balanced, as she blended different elements I had experienced before yoga asanas, breathing techniques, and gentle philosophical insights into a smooth and easy flow. Even though it was a private class, she made it feel comfortable and engaging, adapting naturally to our pace. My daughter and I both felt supported throughout the session, and Vila’s calm and encouraging approach made it easy to stay motivated and involved. Overall, it was a meaningful and enjoyable class that left us feeling refreshed and connected.",
 		author: "Divya, 18 & Shamala, 50",
 		role: "Malaysia",
 	},

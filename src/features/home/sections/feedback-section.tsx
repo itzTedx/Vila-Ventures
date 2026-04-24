@@ -40,10 +40,10 @@ export const FeedbackSection = () => {
 
 	return (
 		<section
-			className="bg-radial-[50%_100%_at_50%_-40%] from-primary/40 to-white md:bg-radial-[50%_80%_at_50%_100%]"
+			className="w-full overflow-x-clip bg-radial-[50%_100%_at_50%_-40%] from-primary/40 to-white md:bg-radial-[50%_80%_at_50%_100%]"
 			id="feedback"
 		>
-			<div className="container mx-auto max-w-7xl py-12 md:py-16 lg:py-24">
+			<div className="container w-full py-12 md:py-16 lg:py-24">
 				<Carousel
 					className="w-full"
 					opts={{
@@ -61,7 +61,7 @@ export const FeedbackSection = () => {
 							<CarouselNext className="static translate-y-0" />
 						</div>
 					</div>
-					<div className="relative flex flex-col-reverse md:flex-row">
+					<div className="relative flex flex-col-reverse overflow-x-clip md:flex-row">
 						<div className="inset-y-0 right-16 z-10 space-y-4 p-4 md:absolute md:w-1/2 md:max-w-md">
 							<h3 className="text-3xl">Leave us a review too</h3>
 							<Separator className="bg-primary" />
@@ -77,11 +77,11 @@ export const FeedbackSection = () => {
 								Write us a review on Google
 							</Button>
 						</div>
-						<div className="md:mask-r-from-80% md:mask-r-to-95%">
-							<CarouselContent className="-ml-2 md:-ml-20">
+						<div className="min-w-0">
+							<CarouselContent className="-ml-2 md:-ml-8 lg:-ml-20">
 								{FEEDBACKS.map((feedback, index) => (
 									<CarouselItem
-										className="pl-2 md:basis-1/2 md:pl-20"
+										className="pl-2 md:basis-1/2 md:pl-8 lg:pl-20"
 										key={`feedback-item-${feedback.id}`}
 									>
 										<div
@@ -96,7 +96,6 @@ export const FeedbackSection = () => {
 											</blockquote>
 
 											<div className="mt-6 flex items-center gap-4">
-												<div className="size-12 rounded-full bg-muted" />
 												<div>
 													<h3 className="font-display text-lg">
 														{feedback.author}
