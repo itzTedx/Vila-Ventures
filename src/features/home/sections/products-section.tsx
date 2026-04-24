@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { ProductsGrid } from "../components/products-grid";
+import { ProductsGrid } from "@/features/products/components/products-grid";
 
 export const ProductsSection = () => {
 	return (

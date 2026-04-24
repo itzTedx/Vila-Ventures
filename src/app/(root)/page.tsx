@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { SITE_URL } from "@/constants/site-config";
+import { SITE_URL, SOCIALS } from "@/constants/site-config";
 import { FAQS } from "@/features/home/constants";
 import { HomeView } from "@/features/home/home-view";
 import { JsonLd } from "@/features/seo/json-ld";
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 	description:
 		"Discover mindful yoga classes, creative lifestyle products & a community rooted in joy. Group, private & corporate sessions in Abu Dhabi. Book your session today.",
 	openGraph: {
-		url: "https://vilaventures.com",
+		url: SITE_URL,
 	},
 	alternates: {
-		canonical: "https://vilaventures.com",
+		canonical: SITE_URL,
 	},
 };
 
@@ -48,11 +48,7 @@ const homepageSchema = {
 				contactType: "customer service",
 				email: "hello@withvila.com",
 			},
-			sameAs: [
-				"https://instagram.com/vilaventures",
-				"https://linkedin.com/company/vilaventures",
-				"https://x.com/vilaventures",
-			],
+			sameAs: SOCIALS.map((social) => social.url),
 		},
 		{
 			"@type": "WebSite",

@@ -13,13 +13,7 @@ import {
 	InlineToolbarFeature,
 	lexicalEditor,
 } from "@payloadcms/richtext-lexical";
-import { DefaultDocumentIDType, slugField, Where } from "payload";
-
-import {
-	CallToAction,
-	Content,
-	MediaBlock,
-} from "@/payload/features/content/blocks/configs";
+import { slugField } from "payload";
 
 export const ProductsCollection: CollectionOverride = ({
 	defaultCollection,
@@ -40,6 +34,7 @@ export const ProductsCollection: CollectionOverride = ({
 		gallery: true,
 		priceInUSD: true,
 		inventory: true,
+		detailsSection: true,
 		meta: true,
 	},
 	fields: [
@@ -79,67 +74,81 @@ export const ProductsCollection: CollectionOverride = ({
 									relationTo: "media",
 									required: true,
 								},
-								{
-									name: "variantOption",
-									type: "relationship",
-									relationTo: "variantOptions",
-									admin: {
-										condition: (data) => {
-											return (
-												data?.enableVariants === true &&
-												data?.variantTypes?.length > 0
-											);
-										},
-									},
-									filterOptions: ({ data }) => {
-										if (data?.enableVariants && data?.variantTypes?.length) {
-											const variantTypeIDs = data.variantTypes.map(
-												// biome-ignore lint/suspicious/noExplicitAny: expected any type
-												(item: any) => {
-													if (typeof item === "object" && item?.id) {
-														return item.id;
-													}
-													return item;
-												}
-											) as DefaultDocumentIDType[];
-
-											if (variantTypeIDs.length === 0)
-												return {
-													variantType: {
-														in: [],
-													},
-												};
-
-											const query: Where = {
-												variantType: {
-													in: variantTypeIDs,
-												},
-											};
-
-											return query;
-										}
-
-										return {
-											variantType: {
-												in: [],
-											},
-										};
-									},
-								},
 							],
-						},
-
-						{
-							name: "layout",
-							type: "blocks",
-							blocks: [CallToAction, Content, MediaBlock],
 						},
 					],
 					label: "Content",
 				},
 				{
 					fields: [
-						...defaultCollection.fields,
+						{
+							type: "group",
+							fields: [
+								{
+									name: "price",
+									type: "number",
+									required: true,
+								},
+								{
+									name: "inventory",
+									type: "number",
+								},
+							],
+						},
+						{
+							name: "detailsSection",
+							type: "group",
+							label: "Details Section",
+							fields: [
+								{
+									name: "heading",
+									type: "richText",
+									editor: lexicalEditor({
+										features: ({ rootFeatures }) => {
+											return [
+												...rootFeatures,
+												HeadingFeature({
+													enabledHeadingSizes: ["h1", "h2", "h3", "h4"],
+												}),
+												FixedToolbarFeature(),
+												InlineToolbarFeature(),
+												HorizontalRuleFeature(),
+											];
+										},
+									}),
+								},
+
+								{
+									name: "items",
+									type: "array",
+									label: "Detail Items",
+									fields: [
+										{
+											name: "title",
+											type: "text",
+											required: true,
+										},
+										{
+											name: "content",
+											type: "richText",
+											editor: lexicalEditor({
+												features: ({ rootFeatures }) => {
+													return [
+														...rootFeatures,
+														HeadingFeature({
+															enabledHeadingSizes: ["h1", "h2", "h3", "h4"],
+														}),
+														FixedToolbarFeature(),
+														InlineToolbarFeature(),
+														HorizontalRuleFeature(),
+													];
+												},
+											}),
+										},
+									],
+								},
+							],
+						},
 						{
 							name: "relatedProducts",
 							type: "relationship",
@@ -205,5 +214,15 @@ export const ProductsCollection: CollectionOverride = ({
 			relationTo: "categories",
 		},
 		slugField(),
+		{
+			name: "tags",
+			type: "relationship",
+			relationTo: "tags",
+			admin: {
+				position: "sidebar",
+				sortOptions: "title",
+			},
+			hasMany: true,
+		},
 	],
 });

@@ -7,6 +7,7 @@ import {
 	JSXConvertersFunction,
 	RichText as RichTextWithoutBlocks,
 } from "@payloadcms/richtext-lexical/react";
+import { CheckIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { cn } from "@/lib/utils";
 import type {
@@ -27,6 +28,25 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({
 	defaultConverters,
 }) => ({
 	...defaultConverters,
+	ul: ({ node, nodesToJSX }) => (
+		<ul className="list-none pl-0">{nodesToJSX({ nodes: node.children })}</ul>
+	),
+	li: ({ node, nodesToJSX }) => (
+		<li className="relative pl-8">
+			<span className="absolute top-[0.45em] left-0 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white">
+				<CheckIcon aria-hidden className="size-3" weight="bold" />
+			</span>
+			{nodesToJSX({ nodes: node.children })}
+		</li>
+	),
+	listitem: ({ node, nodesToJSX }) => (
+		<li className="relative pl-8">
+			<span className="absolute top-[0.45em] left-0 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white">
+				<CheckIcon aria-hidden className="size-3" weight="bold" />
+			</span>
+			{nodesToJSX({ nodes: node.children })}
+		</li>
+	),
 	blocks: {
 		banner: ({ node }) => (
 			<BannerBlock className="col-start-2 mb-4" {...node.fields} />
@@ -59,7 +79,8 @@ export const RichText: React.FC<Props> = (props) => {
 				{
 					container: enableGutter,
 					"max-w-none": !enableGutter,
-					"prose md:prose-md dark:prose-invert mx-auto": enableProse,
+					"prose md:prose-md lg:prose-lg prose-stone dark:prose-invert mx-auto":
+						enableProse,
 				},
 				className
 			)}

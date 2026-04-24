@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 
 import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
-import { SHOP_FAQS, SHOP_PRODUCTS } from "@/features/shop/constants";
+import {
+	getShopCategories,
+	getShopProducts,
+} from "@/features/shop/actions";
+import { SHOP_FAQS } from "@/features/shop/constants";
 import { ShopView } from "@/features/shop/shop-view";
 
 export const metadata: Metadata = {
@@ -36,70 +40,89 @@ export const metadata: Metadata = {
 	},
 };
 
-const shopSchema = {
-	"@context": "https://schema.org",
-	"@graph": [
-		{
-			"@type": "CollectionPage",
-			"@id": `${SITE_URL}/shop#webpage`,
-			url: `${SITE_URL}/shop`,
-			name: "Shop Yoga Essentials | Vila Ventures",
-			isPartOf: { "@id": `${SITE_URL}/#website` },
-			about: { "@id": `${SITE_URL}/#organization` },
-			description:
-				"Thoughtfully designed yoga mats, organic cotton apparel, and mindful accessories — made for daily practice and everyday life.",
-			inLanguage: "en-US",
-		},
-		{
-			"@type": "ItemList",
-			"@id": `${SITE_URL}/shop#product-list`,
-			name: "Vila Ventures Product Collection",
-			numberOfItems: SHOP_PRODUCTS.length,
-			itemListElement: SHOP_PRODUCTS.map((product, index) => ({
-				"@type": "ListItem",
-				position: index + 1,
-				url: `${SITE_URL}/shop/${product.slug}`,
-				name: product.title,
-			})),
-		},
-		{
-			"@type": "FAQPage",
-			"@id": `${SITE_URL}/shop#faq`,
-			mainEntity: SHOP_FAQS.map((faq) => ({
-				"@type": "Question",
-				name: faq.title,
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: faq.content,
-				},
-			})),
-		},
-		{
-			"@type": "BreadcrumbList",
-			"@id": `${SITE_URL}/shop#breadcrumb`,
-			itemListElement: [
-				{
-					"@type": "ListItem",
-					position: 1,
-					name: "Home",
-					item: SITE_URL,
-				},
-				{
-					"@type": "ListItem",
-					position: 2,
-					name: "Shop",
-					item: `${SITE_URL}/shop`,
-				},
-			],
-		},
-	],
-};
+interface PageProps {
+	searchParams: Promise<{ category?: string }>;
+}
 
-export default function ShopPage() {
+export default async function ShopPage({ searchParams }: PageProps) {
+	const { category } = await searchParams;
+	const activeCategorySlug =
+		typeof category === "string" && category.length > 0 ? category : undefined;
+
+	const [products, categories] = await Promise.all([
+		getShopProducts(activeCategorySlug),
+		getShopCategories(),
+	]);
+
+	const shopSchema = {
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "CollectionPage",
+				"@id": `${SITE_URL}/shop#webpage`,
+				url: `${SITE_URL}/shop`,
+				name: "Shop Yoga Essentials | Vila Ventures",
+				isPartOf: { "@id": `${SITE_URL}/#website` },
+				about: { "@id": `${SITE_URL}/#organization` },
+				description:
+					"Thoughtfully designed yoga mats, organic cotton apparel, and mindful accessories — made for daily practice and everyday life.",
+				inLanguage: "en-US",
+			},
+			{
+				"@type": "ItemList",
+				"@id": `${SITE_URL}/shop#product-list`,
+				name: "Vila Ventures Product Collection",
+				numberOfItems: products.length,
+				itemListElement: products
+					.filter((product) => typeof product.slug === "string")
+					.map((product, index) => ({
+						"@type": "ListItem",
+						position: index + 1,
+						url: `${SITE_URL}/shop/${product.slug}`,
+						name: product.title,
+					})),
+			},
+			{
+				"@type": "FAQPage",
+				"@id": `${SITE_URL}/shop#faq`,
+				mainEntity: SHOP_FAQS.map((faq) => ({
+					"@type": "Question",
+					name: faq.title,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: faq.content,
+					},
+				})),
+			},
+			{
+				"@type": "BreadcrumbList",
+				"@id": `${SITE_URL}/shop#breadcrumb`,
+				itemListElement: [
+					{
+						"@type": "ListItem",
+						position: 1,
+						name: "Home",
+						item: SITE_URL,
+					},
+					{
+						"@type": "ListItem",
+						position: 2,
+						name: "Shop",
+						item: `${SITE_URL}/shop`,
+					},
+				],
+			},
+		],
+	};
+
 	return (
 		<>
 			<JsonLd data={shopSchema} />
-			<ShopView />
+			<ShopView
+				activeCategorySlug={activeCategorySlug}
+				categories={categories}
+				products={products}
+			/>
 		</>
 	);
 }

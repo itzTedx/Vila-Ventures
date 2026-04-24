@@ -78,8 +78,7 @@ export const HeroSection = () => {
 					</div>
 				</div>
 			</div>
-
-			{/* <div className="absolute inset-0 h-full w-full">
+			{/* <div className="relative z-10 h-1/3 w-1/3 overflow-hidden rounded-lg">
 				<video
 					autoPlay
 					className="h-full w-full object-cover"
@@ -88,6 +87,7 @@ export const HeroSection = () => {
 					src="/videos/villa-animation.mp4"
 				/>
 			</div> */}
+
 			<Image
 				alt="Woman meditating in yoga pose against an orange backdrop"
 				blurDataURL="data:image/webp;base64,UklGRvAAAABXRUJQVlA4WAoAAAAAAAAATwAANAAAVlA4IHwAAABwBQCdASpQADUAP/3+/3+/uza7pmmD8D+JZADUUCqqt7vGvyyxjYJgz9l5RJYAYYfsHv2wAP6XF8YTH9X8CStWbWm/GfBNHomOFRej/2dL4ESvccsb5CF1FDNo/Xun35tVGjcFYkQtaU8PidFrN+65BJyuvr4NElPazAAAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAAOUGJlVwEQAAYAAAAAAAA="

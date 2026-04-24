@@ -1,4 +1,4 @@
-import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { postgresAdapter } from "@payloadcms/db-postgres";
 import {
 	BoldFeature,
 	EXPERIMENTAL_TableFeature,
@@ -17,6 +17,7 @@ import { fileURLToPath } from "url";
 
 import { Categories } from "@/payload/collections/categories";
 import { Media } from "@/payload/collections/media";
+import { Tags } from "@/payload/collections/products/tags";
 import { Users } from "@/payload/collections/users";
 import { plugins } from "@/payload/plugins";
 
@@ -40,10 +41,15 @@ export default buildConfig({
 			robots: "noindex, nofollow",
 		},
 	},
-	collections: [Users, Classes, Blogs, Categories, Media],
-	db: sqliteAdapter({
-		client: {
-			url: process.env.DATABASE_URL || "",
+	collections: [Users, Classes, Blogs, Categories, Tags, Media],
+	// db: sqliteAdapter({
+	// 	client: {
+	// 		url: process.env.DATABASE_URL || "",
+	// 	},
+	// }),
+	db: postgresAdapter({
+		pool: {
+			connectionString: process.env.DATABASE_URL,
 		},
 	}),
 	editor: lexicalEditor({

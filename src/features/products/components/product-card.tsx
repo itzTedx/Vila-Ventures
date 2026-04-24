@@ -1,56 +1,43 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
-import { Badge } from "@/components/ui/badge";
+import { Media } from "@/components/media";
 import { Button } from "@/components/ui/button";
 
 import { Currency } from "@/assets/icons/currency";
 
+import { Product } from "@/payload-types";
+
 interface ProductCardProps {
-	product: {
-		title: string;
-		price: string;
-		image: string;
-		slug?: string;
-		badge?: string | null;
-		shortDescription?: string;
-	};
+	product: Product;
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
 	const content = (
 		<div className="group text-start">
-			<div className="relative aspect-5/6 overflow-hidden rounded-lg">
-				<Image
+			<div className="relative aspect-5/6 overflow-hidden rounded-lg border border-primary">
+				<Media
 					alt={product.title}
-					className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
 					fill
-					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-					src={product.image}
+					imgClassName="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+					resource={product.gallery?.[0].image}
+					size="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
 				/>
-				{product.badge && (
-					<Badge className="absolute top-3 left-3 bg-card/90 text-foreground backdrop-blur-sm">
-						{product.badge}
-					</Badge>
-				)}
 			</div>
-			<div className="mt-2 rounded-lg bg-card p-4">
-				<h3 className="font-display text-2xl text-primary">{product.title}</h3>
-				{product.shortDescription && (
-					<p className="mt-1 line-clamp-1 text-muted-foreground text-sm">
-						{product.shortDescription}
-					</p>
-				)}
+			<div className="mt-2 rounded-lg bg-card p-4 transition-colors ease-out group-hover:bg-primary group-hover:text-white">
+				<h3 className="font-display text-2xl text-primary transition-colors ease-out group-hover:text-white">
+					{product.title}
+				</h3>
+
 				<div className="mt-2 flex items-center justify-between gap-3">
 					<div className="flex items-center gap-1">
 						<Currency />
-						<p className="font-medium text-xl">{product.price}</p>
+						<p className="font-medium text-xl">{product.price.toFixed(2)}</p>
 					</div>
 					<Button variant="ghost">
-						{product.slug ? "View" : "Buy now"}{" "}
-						<ArrowRightIcon className="text-muted-foreground" />
+						Buy now
+						<ArrowRightIcon className="size-3 text-muted-foreground transition-colors ease-out group-hover:text-white" />
 					</Button>
 				</div>
 			</div>

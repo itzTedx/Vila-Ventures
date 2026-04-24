@@ -1,20 +1,23 @@
 import { Badge } from "@/components/ui/badge";
 
 import { ProductCard } from "@/features/products/components/product-card";
-
-import { SHOP_PRODUCTS, type ShopProduct } from "../constants";
+import type { Product } from "@/payload-types";
 
 interface RelatedProductsSectionProps {
-	currentProduct: ShopProduct;
+	currentProduct: Product;
 }
 
 export const RelatedProductsSection = ({
 	currentProduct,
 }: RelatedProductsSectionProps) => {
-	const related = SHOP_PRODUCTS.filter((p) => p.id !== currentProduct.id).slice(
-		0,
-		3
-	);
+	const related =
+		currentProduct.relatedProducts
+			?.filter((product): product is Product => typeof product === "object")
+			.slice(0, 3) ?? [];
+
+	if (!related.length) {
+		return null;
+	}
 
 	return (
 		<section className="container mx-auto py-14 lg:py-28">

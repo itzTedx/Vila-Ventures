@@ -3,49 +3,56 @@ import { notFound } from "next/navigation";
 
 import { SITE_URL } from "@/constants/site-config";
 import { JsonLd } from "@/features/seo/json-ld";
-import { SHOP_PRODUCTS } from "@/features/shop/constants";
+import { getProductBySlug, getProductSlugs } from "@/features/shop/actions";
 import { ProductDetailView } from "@/features/shop/product-detail-view";
+import { getProductDescription } from "@/features/shop/utils/get-product-description";
+import { getProductImage } from "@/features/shop/utils/get-product-image";
 
-export function generateStaticParams() {
-	return SHOP_PRODUCTS.map((product) => ({
-		slug: product.slug,
-	}));
+interface PageProps {
+	params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+	const slugs = await getProductSlugs();
+
+	return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
 	params,
-}: {
-	params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
 	const { slug } = await params;
-	const product = SHOP_PRODUCTS.find((p) => p.slug === slug);
+	const product = await getProductBySlug(slug);
 
 	if (!product) {
 		return { title: "Product Not Found | Vila Ventures" };
 	}
 
+	const description = getProductDescription(product);
+	const imageUrl = getProductImage(product);
+
 	return {
 		title: `${product.title} | Vila Ventures Shop`,
-		description: product.shortDescription,
+		description,
 		openGraph: {
 			url: `${SITE_URL}/shop/${product.slug}`,
 			title: `${product.title} — ${product.price} AED | Vila Ventures`,
-			description: product.shortDescription,
+			description,
 			type: "website",
-			images: [
-				{
-					url: product.image,
-					width: 800,
-					height: 1000,
-					alt: product.title,
-				},
-			],
+			images: imageUrl
+				? [
+						{
+							url: imageUrl,
+							alt: product.title,
+						},
+					]
+				: [],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: `${product.title} | Vila Ventures Shop`,
-			description: product.shortDescription,
-			images: [product.image],
+			description,
+			images: imageUrl ? [imageUrl] : [],
 		},
 		alternates: {
 			canonical: `${SITE_URL}/shop/${product.slug}`,
@@ -53,13 +60,9 @@ export async function generateMetadata({
 	};
 }
 
-export default async function ProductPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>;
-}) {
+export default async function ProductPage({ params }: PageProps) {
 	const { slug } = await params;
-	const product = SHOP_PRODUCTS.find((p) => p.slug === slug);
+	const product = await getProductBySlug(slug);
 
 	if (!product) {
 		notFound();
@@ -72,8 +75,8 @@ export default async function ProductPage({
 				"@type": "Product",
 				"@id": `${SITE_URL}/shop/${product.slug}#product`,
 				name: product.title,
-				description: product.description,
-				image: `${SITE_URL}${product.image}`,
+				description: getProductDescription(product),
+				image: getProductImage(product),
 				brand: {
 					"@type": "Brand",
 					name: "Vila Ventures",
@@ -81,18 +84,22 @@ export default async function ProductPage({
 				offers: {
 					"@type": "Offer",
 					url: `${SITE_URL}/shop/${product.slug}`,
-					priceCurrency: product.currency,
+					priceCurrency: "AED",
 					price: product.price,
-					availability: product.inStock
-						? "https://schema.org/InStock"
-						: "https://schema.org/OutOfStock",
+					availability:
+						product.inventory && product.inventory > 0
+							? "https://schema.org/InStock"
+							: "https://schema.org/OutOfStock",
 					seller: {
 						"@type": "Organization",
 						"@id": `${SITE_URL}/#organization`,
 						name: "Vila Ventures",
 					},
 				},
-				category: product.category,
+				category:
+					product.categories?.[0] && typeof product.categories[0] === "object"
+						? product.categories[0].title
+						: undefined,
 			},
 			{
 				"@type": "BreadcrumbList",

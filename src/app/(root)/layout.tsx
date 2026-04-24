@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
-import Script from "next/script";
-
 import { Toaster } from "sonner";
 
 import { CalEmbed } from "@/components/cal-embed";
@@ -96,7 +94,7 @@ export default function RootLayout({
 			)}
 			lang="en"
 		>
-			<head>
+			{/* <head>
 				{process.env.NODE_ENV === "development" && (
 					<Script
 						crossOrigin="anonymous"
@@ -104,7 +102,7 @@ export default function RootLayout({
 						strategy="beforeInteractive"
 					/>
 				)}
-			</head>
+			</head> */}
 			<body>
 				<CalEmbed />
 				<Navbar />

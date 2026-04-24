@@ -11,8 +11,6 @@ const NEXT_PUBLIC_SERVER_URL =
 	process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
 
 const nextConfig: NextConfig = {
-	// Temporarily required on Windows until Next.js fixes Turbopack Sass resolution.
-	// See: https://github.com/vercel/next.js/issues/86431
 	sassOptions: {
 		loadPaths: ["./node_modules/@payloadcms/ui/dist/scss/"],
 	},
@@ -25,7 +23,7 @@ const nextConfig: NextConfig = {
 				pathname: "/images/**",
 			},
 		],
-		qualities: [90, 100],
+		qualities: [90, 75, 100],
 		remotePatterns: [
 			...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
 				const url = new URL(item);

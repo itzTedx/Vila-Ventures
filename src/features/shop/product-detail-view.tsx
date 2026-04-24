@@ -1,12 +1,13 @@
 import { Cta } from "@/components/layout/cta";
 
-import type { ShopProduct } from "./constants";
+import { Product } from "@/payload-types";
+
 import { ProductDetailsSection } from "./sections/product-details-section";
 import { ProductHero } from "./sections/product-hero";
 import { RelatedProductsSection } from "./sections/related-products-section";
 
 interface ProductDetailViewProps {
-	product: ShopProduct;
+	product: Product;
 }
 
 export const ProductDetailView = ({ product }: ProductDetailViewProps) => {

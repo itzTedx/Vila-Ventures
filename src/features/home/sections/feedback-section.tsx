@@ -40,7 +40,7 @@ export const FeedbackSection = () => {
 
 	return (
 		<section
-			className="w-full overflow-x-clip bg-radial-[50%_100%_at_50%_-40%] from-primary/40 to-white md:bg-radial-[50%_80%_at_50%_100%]"
+			className="w-full overflow-x-clip bg-radial-[50%_100%_at_50%_-40%] from-primary/40 md:bg-radial-[50%_80%_at_50%_100%]"
 			id="feedback"
 		>
 			<div className="container w-full py-12 md:py-16 lg:py-24">
@@ -53,7 +53,7 @@ export const FeedbackSection = () => {
 					setApi={setCarouselApi}
 				>
 					<div className="mb-12 flex items-center justify-between">
-						<h2 className="max-w-xs font-display text-4xl">
+						<h2 className="max-w-xs font-display text-4xl md:text-5xl">
 							A Community Rooted in Joy
 						</h2>
 						<div className="flex items-center gap-2">
