@@ -6,6 +6,7 @@ import {
 	PreviewField,
 } from "@payloadcms/plugin-seo/fields";
 import {
+	BlocksFeature,
 	FixedToolbarFeature,
 	HeadingFeature,
 	HorizontalRuleFeature,
@@ -19,6 +20,15 @@ import { slugField } from "payload";
 
 import { adminOrPublishedStatus } from "@/payload/access/content/adminOrPublishedStatus";
 import { adminOnly } from "@/payload/access/shared/adminOnly";
+import {
+	Archive,
+	Banner,
+	CallToAction,
+	Carousel,
+	Content,
+	MediaBlock,
+	ThreeItemGrid,
+} from "@/payload/features/content/blocks/configs";
 import { populatePublishedAt } from "@/payload/features/content/hooks/populatePublishedAt";
 
 import {
@@ -98,6 +108,17 @@ export const Blogs: CollectionConfig = {
 										UnorderedListFeature(),
 										OrderedListFeature(),
 										HorizontalRuleFeature(),
+										BlocksFeature({
+											blocks: [
+												Archive,
+												Banner,
+												CallToAction,
+												Carousel,
+												Content,
+												MediaBlock,
+												ThreeItemGrid,
+											],
+										}),
 									];
 								},
 							}),

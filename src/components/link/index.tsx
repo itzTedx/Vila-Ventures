@@ -8,7 +8,7 @@ import type { VariantProps } from "class-variance-authority";
 import { Button, type buttonVariants } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
-import type { Page, Product } from "@/payload-types";
+import type { Product } from "@/payload-types";
 
 type ButtonVariant = NonNullable<
 	VariantProps<typeof buttonVariants>["variant"]
@@ -22,8 +22,8 @@ type CMSLinkType = {
 	label?: string | null;
 	newTab?: boolean | null;
 	reference?: {
-		relationTo: "pages" | "posts";
-		value: Page | Product | string | number;
+		relationTo: "pages" | "posts" | "products";
+		value: Product | string | number;
 	} | null;
 	size?: ButtonSize | null;
 	type?: "custom" | "reference" | null;

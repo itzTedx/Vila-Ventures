@@ -69,12 +69,8 @@
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	},
-	"engines": {
-		"node": "^18.20.2 || >=20.9.0"
-	},
+
 	"pnpm": {
-		"onlyBuiltDependencies": [
-			"sharp"
-		]
+		"onlyBuiltDependencies": ["sharp"]
 	}
 }

@@ -2,6 +2,8 @@ import React from "react";
 
 import type { StaticImageData } from "next/image";
 
+import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical";
+
 import { Media } from "@/components/media";
 import { RichText } from "@/components/rich-text";
 
@@ -30,8 +32,12 @@ export const MediaBlock: React.FC<
 		disableInnerContainer,
 	} = props;
 
-	let caption;
-	if (media && typeof media === "object") caption = media.caption;
+	let caption: SerializedEditorState | undefined;
+	if (media && typeof media === "object" && "caption" in media) {
+		caption =
+			(media as { caption?: SerializedEditorState | null }).caption ??
+			undefined;
+	}
 
 	return (
 		<div

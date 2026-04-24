@@ -1,6 +1,21 @@
 import React, { Fragment } from "react";
 
-import type { Page } from "@/payload-types";
+import type {
+	BannerBlock as BannerBlockData,
+	CallToActionBlock as CallToActionBlockData,
+	CarouselBlock as CarouselBlockData,
+	ContentBlock as ContentBlockData,
+	MediaBlock as MediaBlockData,
+	ThreeItemGridBlock as ThreeItemGridBlockData,
+} from "@/payload-types";
+
+type PageLayoutBlock =
+	| BannerBlockData
+	| CallToActionBlockData
+	| CarouselBlockData
+	| ContentBlockData
+	| MediaBlockData
+	| ThreeItemGridBlockData;
 
 import { BannerBlock } from "./Banner/Component";
 import { CallToActionBlock } from "./CallToAction/Component";
@@ -25,7 +40,7 @@ function isBlockType(value: unknown): value is BlockType {
 }
 
 export const RenderBlocks: React.FC<{
-	blocks: Page["layout"][0][];
+	blocks: PageLayoutBlock[];
 }> = (props) => {
 	const { blocks } = props;
 

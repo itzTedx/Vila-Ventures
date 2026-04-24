@@ -15,7 +15,7 @@ import type { Media, Product } from "@/payload-types";
 
 import { GridTileImage } from "../Grid/tile";
 
-export const CarouselClient: React.FC<{ products: Product[] }> = async ({
+export const CarouselClient: React.FC<{ products: Product[] }> = ({
 	products,
 }) => {
 	if (!products?.length) return null;
@@ -48,7 +48,7 @@ export const CarouselClient: React.FC<{ products: Product[] }> = async ({
 						>
 							<GridTileImage
 								label={{
-									amount: product.priceInUSD!,
+									amount: product.price,
 									title: product.title,
 								}}
 								media={product.meta?.image as Media}
