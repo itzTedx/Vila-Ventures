@@ -55,7 +55,7 @@ export const HeroSection = () => {
 								/>
 							</div>
 							<div>
-								<h2 className="font-semibold text-lg sm:text-2xl">
+								<h2 className="font-semibold text-base md:text-lg xl:text-2xl">
 									Virtual & Physical Yoga
 								</h2>
 								<p className="mt-1.5 text-balance tracking-wide">
@@ -94,15 +94,6 @@ export const HeroSection = () => {
 					</div>
 				</div>
 			</div>
-			{/* <div className="relative z-10 h-1/3 w-1/3 overflow-hidden rounded-lg">
-				<video
-					autoPlay
-					className="h-full w-full object-cover"
-					loop
-					muted
-					src="/videos/villa-animation.mp4"
-				/>
-			</div> */}
 
 			<Image
 				alt="Woman meditating in yoga pose against an orange backdrop"
