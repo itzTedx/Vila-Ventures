@@ -1,4 +1,6 @@
-export const Logo = (props: SVGProps) => {
+import Image from "next/image";
+
+export const LogoSVG = (props: SVGProps) => {
 	return (
 		<svg
 			{...props}
@@ -89,5 +91,17 @@ export const LogoIcon = (props: SVGProps) => {
 				fill="currentColor"
 			/>
 		</svg>
+	);
+};
+
+export const Logo = () => {
+	return (
+		<Image
+			alt="Vila Ventures Logo"
+			className="drop-shadow-2xl"
+			height={64}
+			src="/vila-logo.svg"
+			width={64}
+		/>
 	);
 };

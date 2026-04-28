@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ArrowRightIcon, PhoneCallIcon } from "@phosphor-icons/react/dist/ssr";
 
@@ -31,12 +32,19 @@ export const Cta = () => {
 					<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center lg:mt-12">
 						<Button
 							className="w-full justify-between sm:w-48"
+							nativeButton={false}
+							render={<Link href="/contact" />}
 							size="lg"
 							variant="secondary"
 						>
 							Contact us <PhoneCallIcon />
 						</Button>
-						<Button size="lg" variant="ghost">
+						<Button
+							nativeButton={false}
+							render={<Link href="/classes" />}
+							size="lg"
+							variant="ghost"
+						>
 							Explore classes <ArrowRightIcon />
 						</Button>
 					</div>

@@ -92,7 +92,7 @@ export const Footer = () => {
 								<Button
 									className="shadow-[0_12px_28px_rgba(203,89,27,0.38)] transition hover:-translate-y-0.5 hover:bg-orange-500 hover:shadow-[0_16px_36px_rgba(203,89,27,0.5)]"
 									nativeButton={false}
-									render={<Link href="#contact" />}
+									render={<Link href="/contact" />}
 									size="lg"
 								>
 									<span>Book a discovery call</span>
@@ -172,7 +172,7 @@ export const Footer = () => {
 													<span>{link.label}</span>
 													<span
 														aria-hidden="true"
-														className="h-0.5 w-3 rounded-full bg-(--footer-accent-soft) transition group-hover:w-4"
+														className="h-0.5 w-3 rounded-full bg-(--footer-accent-soft) transition group-hover:w-5 group-hover:bg-(--footer-accent)"
 													/>
 												</Link>
 											</li>

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 export const HeroSection = () => {
 	return (
 		<section className="relative flex min-h-screen w-full bg-primary">
-			<div className="container relative z-10 mx-auto flex-1 py-20 lg:py-28">
+			<div className="container relative z-10 mx-auto flex-1 py-20 lg:py-24 xl:py-16 2xl:py-28">
 				<div className="flex h-full max-w-full flex-col justify-between sm:max-w-xl lg:max-w-3xl">
 					<div className="py-14 text-center md:text-start lg:py-16">
 						<Badge>Rooted in Joy. Designed for Balance.</Badge>
@@ -43,22 +43,38 @@ export const HeroSection = () => {
 						</div>
 					</div>
 
-					<div className="max-w-full rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-sm">
-						<div className="flex gap-3 p-3 text-card">
-							<div className="aspect-4/3 size-full rounded-md bg-card/40" />
+					<div className="max-w-full rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-md">
+						<div className="grid grid-cols-2 gap-6 p-3 text-card">
+							<div className="aspect-square size-full overflow-hidden rounded-md bg-card/40">
+								<video
+									autoPlay
+									className="size-full"
+									loop
+									muted
+									src="/videos/villa-animation.mp4"
+								/>
+							</div>
 							<div>
-								<h2 className="font-semibold text-lg sm:text-xl">
+								<h2 className="font-semibold text-lg sm:text-2xl">
 									Virtual & Physical Yoga
 								</h2>
-								<p className="mt-1.5 text-sm tracking-wide">
+								<p className="mt-1.5 text-balance tracking-wide">
 									Classes for women, kids, and corporate - plus thoughtfully
 									designed yoga mats, journals, and lifestyle essentials.
 								</p>
 							</div>
 						</div>
-						<div className="flex flex-wrap justify-between gap-3 bg-card/20 p-3 text-card">
+						<div className="flex flex-wrap items-center justify-between gap-3 bg-card/30 p-3 text-card">
 							<div className="flex items-center gap-3">
-								<div className="aspect-square size-10 rounded-md bg-card/40" />
+								<div className="aspect-square size-10 overflow-hidden rounded-md bg-card/40">
+									<video
+										autoPlay
+										className="size-full object-cover"
+										loop
+										muted
+										src="/videos/vila-loop.webm"
+									/>
+								</div>
 								<div className="shrink-0">
 									<h3 className="font-semibold text-sm">Talk with Vila</h3>
 									<p className="font-medium text-muted/80 text-xs tracking-wide">

@@ -6,8 +6,6 @@ import { getShopCategories, getShopProducts } from "@/features/shop/actions";
 import { SHOP_FAQS } from "@/features/shop/constants";
 import { ShopView } from "@/features/shop/shop-view";
 
- 
-
 export const metadata: Metadata = {
 	title: "Shop Yoga Essentials | Mats, Apparel & Accessories | Vila Ventures",
 	description:

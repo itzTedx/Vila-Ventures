@@ -22,7 +22,7 @@ export const AboutSection = () => {
 				<div className="flex flex-col justify-between">
 					<div>
 						<Badge variant="secondary">A Journey to Mindful Living</Badge>
-						<h2 className="mt-3 text-balance font-display font-semibold text-3xl text-primary uppercase leading-snug sm:text-4xl lg:text-5xl">
+						<h2 className="mt-3 text-balance font-display font-semibold text-2xl text-primary uppercase leading-snug sm:text-3xl lg:text-4xl">
 							A journey back to yourself - through yoga, creativity & joy
 						</h2>
 						<ul className="my-6 flex flex-wrap items-center gap-2.5 text-xs">
@@ -44,7 +44,7 @@ export const AboutSection = () => {
 						</p>
 					</div>
 
-					<Link className="flex items-center gap-2" href="/">
+					<Link className="flex items-center gap-2" href="/classes">
 						Join the Experience{" "}
 						<div className="flex size-7 items-center justify-center rounded-full bg-muted-foreground/20">
 							<ArrowUpRightIcon />
