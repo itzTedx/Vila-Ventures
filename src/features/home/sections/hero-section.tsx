@@ -17,7 +17,7 @@ export const HeroSection = () => {
 						<h1 className="mt-2 font-display text-5xl text-card tracking-tight sm:text-5xl lg:text-6xl">
 							Yoga Classes & Mindful Lifestyle Products in UAE
 						</h1>
-						<p className="hero-description my-6 text-balance text-card text-lg leading-snug sm:text-xl lg:my-8 lg:text-2xl">
+						<p className="my-6 text-balance text-card text-lg leading-snug sm:text-xl lg:my-8 lg:text-2xl">
 							Discover mindful yoga classes, creative lifestyle products, and a
 							space where movement, design, and joy come together - with Vila.
 						</p>

@@ -16,10 +16,10 @@ export const HomeView = () => {
 			<HeroSection />
 			<AboutSection />
 			<ClassesSection />
-			<WhyChooseSection />
+			<FeedbackSection />
 			<FeaturedProductSection />
 			<ProductsSection />
-			<FeedbackSection />
+			<WhyChooseSection />
 			<BlogsSection />
 			<FaqSection />
 			<Cta />

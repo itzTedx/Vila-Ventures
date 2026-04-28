@@ -129,9 +129,9 @@ export const Footer = () => {
 									evening unwinds in the UAE.
 								</p>
 							</div>
-							<dl className="grid gap-3 text-(--footer-muted) text-sm sm:max-w-xs">
+							<dl className="grid gap-3 text-(--footer-muted) text-sm sm:max-w-sm">
 								<div className="flex items-center gap-2">
-									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase tracking-[0.2em]">
+									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase">
 										Contact
 									</dt>
 									<dd>
@@ -144,7 +144,7 @@ export const Footer = () => {
 									</dd>
 								</div>
 								<div className="flex items-center gap-2">
-									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase tracking-[0.2em]">
+									<dt className="min-w-18 text-(--footer-muted) text-xs uppercase">
 										Location
 									</dt>
 									<dd>UAE • In-person & curated experiences</dd>
