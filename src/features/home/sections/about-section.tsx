@@ -3,14 +3,6 @@ import Link from "next/link";
 import { ArrowUpRightIcon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { Badge } from "@/components/ui/badge";
-import {
-	Card,
-	CardContent,
-	CardFooter,
-	CardHeader,
-} from "@/components/ui/card";
-
-import { Logo } from "@/assets/logo";
 
 import { FeaturedCarousel } from "../components/featured-carousel";
 import { ABOUT_DETAILS, ABOUT_LIST } from "../constants";
@@ -58,7 +50,7 @@ export const AboutSection = () => {
 					<ul>
 						{ABOUT_DETAILS.map((item) => (
 							<li
-								className="flex items-center justify-between gap-3 border-b py-4"
+								className="flex items-center justify-between gap-3 border-b py-3"
 								key={item.label}
 							>
 								<span className="text-muted-foreground">{item.label}</span>
@@ -66,7 +58,16 @@ export const AboutSection = () => {
 							</li>
 						))}
 					</ul>
-					<Card className="h-full flex-1 justify-between bg-primary text-card">
+					<div className="relative aspect-square size-full overflow-hidden rounded-lg border">
+						<video
+							autoPlay
+							className="absolute inset-0 size-full object-cover"
+							loop
+							muted
+							src="/videos/villa-animation.mp4"
+						/>
+					</div>
+					{/* <Card className="relative h-full flex-1 justify-between bg-primary text-card">
 						<CardHeader>
 							<Logo />
 						</CardHeader>
@@ -92,7 +93,7 @@ export const AboutSection = () => {
 								</div>
 							</Link>
 						</CardFooter>
-					</Card>
+					</Card> */}
 				</div>
 			</div>
 		</section>

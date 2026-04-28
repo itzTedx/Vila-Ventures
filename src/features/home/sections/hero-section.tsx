@@ -43,22 +43,22 @@ export const HeroSection = () => {
 						</div>
 					</div>
 
-					<div className="max-w-full rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-md">
-						<div className="grid grid-cols-2 gap-6 p-3 text-card">
-							<div className="aspect-square size-full overflow-hidden rounded-md bg-card/40">
+					<div className="max-w-full overflow-hidden rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-md">
+						<div className="grid grid-cols-[minmax(140px,40%)_1fr] gap-3 p-3 text-card">
+							<div className="aspect-square size-full overflow-hidden rounded-md bg-card/40 shadow-md">
 								<video
 									autoPlay
-									className="size-full"
+									className="size-full object-cover"
 									loop
 									muted
-									src="/videos/villa-animation.mp4"
+									src="/videos/vila-loop.webm"
 								/>
 							</div>
-							<div>
-								<h2 className="font-semibold text-base md:text-lg xl:text-2xl">
+							<div className="p-2">
+								<h2 className="font-display text-base md:text-lg lg:text-xl">
 									Virtual & Physical Yoga
 								</h2>
-								<p className="mt-1.5 text-balance tracking-wide">
+								<p className="mt-1.5 text-balance text-base tracking-wide">
 									Classes for women, kids, and corporate - plus thoughtfully
 									designed yoga mats, journals, and lifestyle essentials.
 								</p>
@@ -66,7 +66,7 @@ export const HeroSection = () => {
 						</div>
 						<div className="flex flex-wrap items-center justify-between gap-3 bg-card/30 p-3 text-card">
 							<div className="flex items-center gap-3">
-								<div className="aspect-square size-10 overflow-hidden rounded-md bg-card/40">
+								{/* <div className="aspect-square size-10 overflow-hidden rounded-md bg-card/40">
 									<video
 										autoPlay
 										className="size-full object-cover"
@@ -74,7 +74,7 @@ export const HeroSection = () => {
 										muted
 										src="/videos/vila-loop.webm"
 									/>
-								</div>
+								</div> */}
 								<div className="shrink-0">
 									<h3 className="font-semibold text-sm">Talk with Vila</h3>
 									<p className="font-medium text-muted/80 text-xs tracking-wide">

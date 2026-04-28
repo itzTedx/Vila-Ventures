@@ -18,17 +18,17 @@ import { FEATURED_CAROUSEL_ITEMS } from "../constants";
 export const FeaturedCarousel = () => {
 	return (
 		<Carousel
-			className="relative w-full overflow-hidden rounded-lg"
+			className="relative size-full overflow-hidden rounded-lg"
 			plugins={[
 				Autoplay({
 					delay: 3500,
 				}),
 			]}
 		>
-			<CarouselContent>
+			<CarouselContent className="aspect-3/4">
 				{FEATURED_CAROUSEL_ITEMS.map(({ id, image, alt, content }) => (
-					<CarouselItem key={id}>
-						<div className="relative aspect-3/4 h-full w-full overflow-hidden rounded-lg">
+					<CarouselItem className="overflow-hidden" key={id}>
+						<div className="relative h-full w-full overflow-hidden rounded-lg">
 							<div className="absolute inset-x-0 bottom-0 z-20 p-9 text-card">
 								<h3 className="font-display font-semibold text-3xl">
 									{content.title}
