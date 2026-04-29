@@ -6,6 +6,8 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import { MembershipModal } from "@/features/classes/components/booking-modal";
+
 export const HeroSection = () => {
 	return (
 		<section className="relative flex min-h-screen w-full bg-primary">
@@ -14,7 +16,7 @@ export const HeroSection = () => {
 					<div className="py-14 text-center md:text-start lg:py-16">
 						<Badge>Rooted in Joy. Designed for Balance.</Badge>
 
-						<h1 className="mt-2 font-display text-5xl text-card tracking-tight sm:text-5xl lg:text-6xl">
+						<h1 className="mt-2 font-display text-5xl text-card sm:text-5xl lg:text-6xl">
 							Yoga Classes & Mindful Lifestyle Products in UAE
 						</h1>
 						<p className="my-6 text-balance text-card text-lg leading-snug sm:text-xl lg:my-8 lg:text-2xl">
@@ -23,14 +25,17 @@ export const HeroSection = () => {
 						</p>
 
 						<div className="flex items-start gap-3">
-							<Button
-								className="flex-1 cursor-pointer font-semibold hover:gap-9! hover:px-9 md:flex-none"
-								data-cal-config='{"layout":"month_view"}'
-								data-cal-link="zironpro/15min"
-								size="lg"
-							>
-								Book a class <ArrowRightIcon data-icon="inline-end" />
-							</Button>
+							<MembershipModal
+								trigger={
+									<Button
+										className="flex-1 cursor-pointer font-semibold hover:gap-9! hover:px-9 md:flex-none"
+										size="lg"
+									>
+										Book a class <ArrowRightIcon data-icon="inline-end" />
+									</Button>
+								}
+							/>
+
 							<Button
 								className="hover:px-8"
 								nativeButton={false}
@@ -82,12 +87,7 @@ export const HeroSection = () => {
 									</p>
 								</div>
 							</div>
-							<Button
-								className="cursor-pointer"
-								data-cal-config='{"layout":"month_view"}'
-								data-cal-link="zironpro/15min"
-								variant="secondary"
-							>
+							<Button className="cursor-pointer" variant="secondary">
 								Book 15-min call
 							</Button>
 						</div>

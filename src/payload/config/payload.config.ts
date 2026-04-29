@@ -16,6 +16,8 @@ import sharp from "sharp";
 import { fileURLToPath } from "url";
 
 import { Categories } from "@/payload/collections/categories";
+import { ClassBookingLeads } from "@/payload/collections/class-booking-leads";
+import { ClassPlans } from "@/payload/collections/class-plans";
 import { Media } from "@/payload/collections/media";
 import { Tags } from "@/payload/collections/products/tags";
 import { Users } from "@/payload/collections/users";
@@ -41,7 +43,16 @@ export default buildConfig({
 			robots: "noindex, nofollow",
 		},
 	},
-	collections: [Users, Classes, Blogs, Categories, Tags, Media],
+	collections: [
+		Users,
+		Classes,
+		ClassPlans,
+		ClassBookingLeads,
+		Blogs,
+		Categories,
+		Tags,
+		Media,
+	],
 	// db: sqliteAdapter({
 	// 	client: {
 	// 		url: process.env.DATABASE_URL || "",

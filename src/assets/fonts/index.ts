@@ -5,6 +5,7 @@ export const inter = Google_Sans({
 	display: "swap",
 	subsets: ["latin"],
 	preload: true,
+	fallback: ["sans-serif"],
 });
 
 export const serif = DM_Serif_Display({

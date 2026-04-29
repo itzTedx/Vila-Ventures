@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 
 import { Toaster } from "sonner";
 
-import { CalEmbed } from "@/components/cal-embed";
 import { BreakpointIndicator } from "@/components/layout/breakpoint-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
@@ -96,7 +95,6 @@ export default function RootLayout({
 			lang="en"
 		>
 			<body>
-				<CalEmbed />
 				<Navbar />
 				{children}
 				<Footer />

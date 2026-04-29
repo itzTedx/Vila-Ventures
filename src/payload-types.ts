@@ -74,6 +74,8 @@ export interface Config {
   collections: {
     users: User;
     classes: Class;
+    'class-plans': ClassPlan;
+    'class-booking-leads': ClassBookingLead;
     blogs: Blog;
     categories: Category;
     tags: Tag;
@@ -104,6 +106,8 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     classes: ClassesSelect<false> | ClassesSelect<true>;
+    'class-plans': ClassPlansSelect<false> | ClassPlansSelect<true>;
+    'class-booking-leads': ClassBookingLeadsSelect<false> | ClassBookingLeadsSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     tags: TagsSelect<false> | TagsSelect<true>;
@@ -574,6 +578,7 @@ export interface Address {
  */
 export interface Class {
   id: number;
+  _order?: string | null;
   image: number | Media;
   title: string;
   tagline: string;
@@ -588,12 +593,78 @@ export interface Class {
     image?: (number | null) | Media;
     description?: string | null;
   };
-  sortOrder: number;
   /**
    * When enabled, the slug will auto-generate from the title field on save and autosave.
    */
   generateSlug?: boolean | null;
   slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "class-plans".
+ */
+export interface ClassPlan {
+  id: number;
+  _order?: string | null;
+  /**
+   * Short, clear plan name shown to users.
+   */
+  planName: string;
+  /**
+   * Choose whether this is a group or private plan.
+   */
+  pricingType: 'group' | 'private';
+  /**
+   * How this plan is delivered.
+   */
+  deliveryMode: 'virtual' | 'physical';
+  /**
+   * Display label for number of classes.
+   */
+  classes: string;
+  /**
+   * Display label for frequency.
+   */
+  frequency: string;
+  price: string;
+  /**
+   * Only shown for private plans. Example: Max 3 Students
+   */
+  maxStudents?: string | null;
+  isBestValue?: boolean | null;
+  isPopular?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "class-booking-leads".
+ */
+export interface ClassBookingLead {
+  id: number;
+  /**
+   * Lead contact name submitted from the booking form.
+   */
+  fullName: string;
+  email: string;
+  phone: string;
+  /**
+   * Additional context shared by the lead.
+   */
+  notes?: string | null;
+  /**
+   * Plan details captured at the time of lead submission.
+   */
+  selectedPlan: {
+    name: string;
+    classes: number;
+    frequency: string;
+    price: number;
+    classType: 'virtual' | 'physical';
+    formatType: 'group' | 'private';
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -678,6 +749,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'classes';
         value: number | Class;
+      } | null)
+    | ({
+        relationTo: 'class-plans';
+        value: number | ClassPlan;
+      } | null)
+    | ({
+        relationTo: 'class-booking-leads';
+        value: number | ClassBookingLead;
       } | null)
     | ({
         relationTo: 'blogs';
@@ -801,6 +880,7 @@ export interface UsersSelect<T extends boolean = true> {
  * via the `definition` "classes_select".
  */
 export interface ClassesSelect<T extends boolean = true> {
+  _order?: T;
   image?: T;
   title?: T;
   tagline?: T;
@@ -814,9 +894,48 @@ export interface ClassesSelect<T extends boolean = true> {
         image?: T;
         description?: T;
       };
-  sortOrder?: T;
   generateSlug?: T;
   slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "class-plans_select".
+ */
+export interface ClassPlansSelect<T extends boolean = true> {
+  _order?: T;
+  planName?: T;
+  pricingType?: T;
+  deliveryMode?: T;
+  classes?: T;
+  frequency?: T;
+  price?: T;
+  maxStudents?: T;
+  isBestValue?: T;
+  isPopular?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "class-booking-leads_select".
+ */
+export interface ClassBookingLeadsSelect<T extends boolean = true> {
+  fullName?: T;
+  email?: T;
+  phone?: T;
+  notes?: T;
+  selectedPlan?:
+    | T
+    | {
+        name?: T;
+        classes?: T;
+        frequency?: T;
+        price?: T;
+        classType?: T;
+        formatType?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

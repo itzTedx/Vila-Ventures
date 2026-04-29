@@ -18,6 +18,7 @@ export const Classes: CollectionConfig = {
 		read: () => true,
 		update: adminOnly,
 	},
+	orderable: true,
 	admin: {
 		useAsTitle: "title",
 		group: "Content",
@@ -97,16 +98,7 @@ export const Classes: CollectionConfig = {
 				},
 			],
 		},
-		{
-			name: "sortOrder",
-			type: "number",
-			required: true,
-			defaultValue: 0,
-			admin: {
-				position: "sidebar",
-				step: 1,
-			},
-		},
+
 		slugField({
 			position: "sidebar",
 		}),

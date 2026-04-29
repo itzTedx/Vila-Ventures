@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,14 +8,15 @@ import {
 	ListIcon,
 	MagnifyingGlassIcon,
 	ShoppingCartIcon,
-	XIcon,
 } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
 import {
 	Drawer,
 	DrawerClose,
-	DrawerContent,
+	DrawerHeader,
+	DrawerPanel,
+	DrawerPopup,
 	DrawerTitle,
 	DrawerTrigger,
 } from "@/components/ui/drawer";
@@ -28,7 +27,6 @@ import { NAV_LINKS } from "@/constants/layout";
 import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
-	const [open, setOpen] = useState(false);
 	const pathname = usePathname();
 
 	const isActiveRoute = (href: string) => {
@@ -70,8 +68,8 @@ export const Navbar = () => {
 							<ShoppingCartIcon size={24} />
 						</Button>
 						<Button
-							data-cal-config='{"layout":"month_view"}'
-							data-cal-link="zironpro/15min"
+							nativeButton={false}
+							render={<Link href="/classes" />}
 							size="lg"
 						>
 							<CalendarBlankIcon data-icon="inline-start" size={24} /> Book a
@@ -86,51 +84,37 @@ export const Navbar = () => {
 							<ShoppingCartIcon size={20} />
 						</Button>
 
-						<Drawer direction="right" onOpenChange={setOpen} open={open}>
-							<DrawerTrigger asChild>
-								<Button size="icon-lg" variant="ghost">
-									<ListIcon size={20} />
-								</Button>
+						<Drawer position="left">
+							<DrawerTrigger render={<Button size="icon-lg" variant="ghost" />}>
+								<ListIcon size={20} />
 							</DrawerTrigger>
-							<DrawerContent className="p-6">
-								<div className="flex items-center justify-between">
-									<DrawerTitle className="font-display text-lg">
-										Menu
+							<DrawerPopup showCloseButton variant="inset">
+								<DrawerHeader>
+									<DrawerTitle>
+										<Logo className="text-primary" />
+										<span className="sr-only">Vila Ventures</span>
 									</DrawerTitle>
-									<DrawerClose asChild>
-										<Button size="icon-lg" variant="ghost">
-											<XIcon size={20} />
-										</Button>
-									</DrawerClose>
-								</div>
-								<nav className="mt-6 flex flex-col gap-1">
-									{NAV_LINKS.map((nav) => (
-										<Link
-											className={cn(
-												"rounded-md px-3 py-2.5 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary",
-												isActiveRoute(nav.href) && "text-primary"
-											)}
-											href={nav.href}
-											key={`mobile-${nav.href}-${nav.label}`}
-											onClick={() => setOpen(false)}
-										>
-											{nav.label}
-										</Link>
-									))}
-								</nav>
-								<div className="mt-auto flex flex-col gap-3 pt-6">
-									<Button
-										className="w-full"
-										data-cal-config='{"layout":"month_view"}'
-										data-cal-link="zironpro/15min"
-										onClick={() => setOpen(false)}
-										size="lg"
-									>
-										<CalendarBlankIcon data-icon="inline-start" size={20} />{" "}
-										Book a class
-									</Button>
-								</div>
-							</DrawerContent>
+								</DrawerHeader>
+								<DrawerPanel>
+									<nav className="-mx-[calc(--spacing(3)-1px)] flex flex-col gap-0.5">
+										{NAV_LINKS.map((nav) => (
+											<DrawerClose
+												key={`${nav.href}-${nav.label}`}
+												nativeButton={false}
+												render={
+													<Button
+														className="justify-start"
+														render={<Link href={nav.href} />}
+														variant="ghost"
+													/>
+												}
+											>
+												{nav.label}
+											</DrawerClose>
+										))}
+									</nav>
+								</DrawerPanel>
+							</DrawerPopup>
 						</Drawer>
 					</div>
 				</div>

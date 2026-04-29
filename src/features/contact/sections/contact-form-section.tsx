@@ -87,14 +87,12 @@ export const ContactFormSection = () => {
 							about your goals, answer your questions, and figure out the best
 							next step together.
 						</p>
-						<button
+						<Link
 							className="mt-5 inline-flex h-10 items-center justify-center rounded-lg bg-primary px-5 font-medium text-primary-foreground text-sm transition hover:bg-primary/90"
-							data-cal-config='{"layout":"month_view"}'
-							data-cal-link="zironpro/15min"
-							type="button"
+							href="/classes"
 						>
 							Book a discovery call
-						</button>
+						</Link>
 					</div>
 
 					<div className="rounded-xl border border-primary/20 bg-primary/5 p-6 sm:p-8">

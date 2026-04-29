@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const LogoSVG = (props: SVGProps) => {
+export const Logo = (props: SVGProps) => {
 	return (
 		<svg
 			{...props}
@@ -94,7 +94,7 @@ export const LogoIcon = (props: SVGProps) => {
 	);
 };
 
-export const Logo = () => {
+export const LogoImage = () => {
 	return (
 		<Image
 			alt="Vila Ventures Logo"
