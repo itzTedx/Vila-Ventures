@@ -26,6 +26,8 @@ import { Logo } from "@/assets/logo";
 import { NAV_LINKS } from "@/constants/layout";
 import { cn } from "@/lib/utils";
 
+import { ProgressiveBlur } from "../common/progressive-blur";
+
 export const Navbar = () => {
 	const pathname = usePathname();
 
@@ -35,13 +37,13 @@ export const Navbar = () => {
 	};
 
 	return (
-		<header className="fixed inset-x-0 top-4 z-9999">
-			<div className="container mx-auto flex h-14 items-center justify-between px-4">
+		<header className="fixed inset-x-0 top-0 z-9999">
+			<div className="container relative z-10 mx-auto mt-4 flex h-14 items-center justify-between px-4">
 				<Link className="flex flex-1 items-center gap-2" href="/">
 					<Logo />
 				</Link>
 
-				<nav className="hidden h-full items-center rounded-lg border bg-card px-6 shadow-lg lg:flex">
+				<nav className="hidden h-full items-center rounded-lg bg-card px-6 shadow-lg lg:flex">
 					<ul className="flex items-center gap-4">
 						{NAV_LINKS.map((nav) => (
 							<li key={`${nav.href}-${nav.label}`}>
@@ -119,6 +121,7 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</div>
+			<ProgressiveBlur className="[--height:200%]" position="top" />
 		</header>
 	);
 };

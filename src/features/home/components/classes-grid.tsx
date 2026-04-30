@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { ProgressiveBlur } from "@/components/common/progressive-blur";
-import { Button } from "@/components/ui/button";
 
 import { CLASSES } from "@/constants/classes";
 
@@ -12,9 +11,6 @@ export const ClassesGrid = () => {
 				<div className="group" key={item.id}>
 					<div className="mb-2 flex items-center justify-between gap-3 rounded-lg bg-card p-6">
 						<h3 className="font-bold text-xl">{item.name}</h3>
-						<Button className="bg-card" variant="outline">
-							{item.button}
-						</Button>
 					</div>
 					<div className="rounded-[calc(var(--radius)+4px)] bg-card p-1">
 						<div className="relative aspect-4/3 size-full overflow-hidden rounded-lg">

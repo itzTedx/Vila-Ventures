@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { SITE_URL } from "@/constants/site-config";
-import { getClasses, getClassPricingPlans } from "@/features/classes/actions";
+import { getClasses } from "@/features/classes/actions";
 import { ClassesView } from "@/features/classes/classes-view";
 import { CLASSES_FAQS } from "@/features/classes/constants";
 import { JsonLd } from "@/features/seo/json-ld";
@@ -55,16 +55,16 @@ const getClassesSchema = (classes: Awaited<ReturnType<typeof getClasses>>) => ({
 		...classes.map((cls) => ({
 			"@type": "Course",
 			"@id": `${SITE_URL}/classes#${cls.id}`,
-			name: cls.name,
+			name: cls.title,
 			description: cls.description,
 			provider: {
 				"@type": "Organization",
 				"@id": `${SITE_URL}/#organization`,
 				name: "Vila Ventures",
 			},
-			courseMode: cls.format.includes("virtual")
+			courseMode: cls.format?.includes("virtual")
 				? ["Onsite", "Online"]
-				: cls.format.includes("Virtual") || cls.format.includes("Zoom")
+				: cls.format?.includes("Virtual") || cls.format?.includes("Zoom")
 					? ["Online"]
 					: ["Onsite"],
 			location: {
@@ -111,16 +111,13 @@ const getClassesSchema = (classes: Awaited<ReturnType<typeof getClasses>>) => ({
 });
 
 export default async function ClassesPage() {
-	const [classes, plans] = await Promise.all([
-		getClasses(),
-		getClassPricingPlans(),
-	]);
+	const classes = await getClasses();
 	const classesSchema = getClassesSchema(classes);
 
 	return (
 		<>
 			<JsonLd data={classesSchema} />
-			<ClassesView classes={classes} plans={plans} />
+			<ClassesView classes={classes} />
 		</>
 	);
 }

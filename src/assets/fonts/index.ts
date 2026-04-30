@@ -1,6 +1,6 @@
-import { DM_Serif_Display, Google_Sans } from "next/font/google";
+import { DM_Serif_Display, Inter_Tight } from "next/font/google";
 
-export const inter = Google_Sans({
+export const inter = Inter_Tight({
 	variable: "--font-sans",
 	display: "swap",
 	subsets: ["latin"],
