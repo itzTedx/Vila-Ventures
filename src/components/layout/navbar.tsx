@@ -43,7 +43,7 @@ export const Navbar = () => {
 					<Logo />
 				</Link>
 
-				<nav className="hidden h-full items-center rounded-lg bg-card px-6 shadow-lg lg:flex">
+				<nav className="hidden h-full items-center rounded-lg bg-card px-6 shadow-lg transition-[padding] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:px-12 lg:flex">
 					<ul className="flex items-center gap-4">
 						{NAV_LINKS.map((nav) => (
 							<li key={`${nav.href}-${nav.label}`}>
