@@ -111,7 +111,7 @@ export const AboutSection = () => {
 					className="absolute inset-0 size-full object-cover"
 					loop
 					muted
-					src="/videos/villa-animation.mp4"
+					src="/videos/vila-logo-animation.webm"
 				/>
 			</div>
 		</section>
