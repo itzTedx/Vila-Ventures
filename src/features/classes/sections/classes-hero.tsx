@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Badge } from "@/components/ui/badge";
 
 export const ClassesHero = () => {
@@ -22,7 +20,7 @@ export const ClassesHero = () => {
 					</p>
 				</div>
 
-				<div className="relative mt-10 aspect-video overflow-hidden rounded-xl lg:mt-16 lg:aspect-21/9">
+				{/* <div className="relative mt-10 aspect-video overflow-hidden rounded-xl lg:mt-16 lg:aspect-21/9">
 					<Image
 						alt="Yoga class in session at Vila Ventures studio in Abu Dhabi with warm natural lighting"
 						className="object-cover"
@@ -31,7 +29,7 @@ export const ClassesHero = () => {
 						sizes="(max-width: 768px) 100vw, 90vw"
 						src="/images/hero-yoga.webp"
 					/>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

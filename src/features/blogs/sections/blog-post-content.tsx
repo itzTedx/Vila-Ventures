@@ -3,7 +3,7 @@ import type { BlogPostContent as ContentType } from "../types";
 
 export const BlogPostContent = ({ content }: { content: ContentType }) => {
 	return (
-		<div className="container mx-auto max-w-3xl py-10 lg:py-14">
+		<div className="container mx-auto max-w-4xl py-10 lg:py-14">
 			<div className="text-foreground text-lg leading-relaxed">
 				{content.intro.split("\n\n").map((paragraph, i) => (
 					<p className="mb-6" key={`intro-${i}`}>

@@ -20,7 +20,7 @@ const STEP_ICONS = [
 
 export const ExperienceSection = () => {
 	return (
-		<section className="container mx-auto pb-14 lg:pb-28" id="what-to-expect">
+		<section className="container mx-auto py-14 lg:py-20" id="what-to-expect">
 			<div className="grid grid-cols-1 gap-4 md:grid-cols-5">
 				<Badge
 					className="bg-card text-muted-foreground!"
