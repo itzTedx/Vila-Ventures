@@ -98,13 +98,13 @@ export const HeroSection = () => {
 			<Image
 				alt="Woman meditating in yoga pose against an orange backdrop"
 				blurDataURL="data:image/webp;base64,UklGRvAAAABXRUJQVlA4WAoAAAAAAAAATwAANAAAVlA4IHwAAABwBQCdASpQADUAP/3+/3+/uza7pmmD8D+JZADUUCqqt7vGvyyxjYJgz9l5RJYAYYfsHv2wAP6XF8YTH9X8CStWbWm/GfBNHomOFRej/2dL4ESvccsb5CF1FDNo/Xun35tVGjcFYkQtaU8PidFrN+65BJyuvr4NElPazAAAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAAOUGJlVwEQAAYAAAAAAAA="
-				className="object-cover object-right max-md:blur-lg max-md:brightness-85 md:object-center"
+				className="object-cover object-right max-md:blur-lg max-md:brightness-85 md:object-bottom"
 				fill
 				placeholder="blur"
 				priority
 				quality={100}
 				sizes="100vw"
-				src="/images/hero-yoga.webp"
+				src="/images/vila-hero-banner.webp"
 			/>
 		</section>
 	);
