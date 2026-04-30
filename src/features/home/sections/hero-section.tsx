@@ -48,15 +48,21 @@ export const HeroSection = () => {
 						</div>
 					</div>
 
-					<div className="max-w-full overflow-hidden rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-md">
+					<div className="group max-w-full overflow-hidden rounded-lg border border-card/20 bg-card/30 backdrop-blur-lg transition-transform duration-300 ease-out hover:scale-105 supports-backdrop-filter:bg-card/20 sm:max-w-md">
 						<div className="grid grid-cols-[minmax(140px,40%)_1fr] gap-3 p-3 text-card">
-							<div className="aspect-square size-full overflow-hidden rounded-md bg-card/40 shadow-md">
-								<video
+							<div className="relative aspect-square size-full overflow-hidden rounded-md bg-card/40 shadow-md">
+								{/* <video
 									autoPlay
 									className="size-full object-cover"
 									loop
 									muted
 									src="/videos/vila-loop.webm"
+								/> */}
+								<Image
+									alt=""
+									className="object-cover transition-transform duration-300 ease-out group-hover:scale-110"
+									fill
+									src="/images/vila-profile.webp"
 								/>
 							</div>
 							<div className="p-2">
@@ -71,15 +77,6 @@ export const HeroSection = () => {
 						</div>
 						<div className="flex flex-wrap items-center justify-between gap-3 bg-card/30 p-3 text-card">
 							<div className="flex items-center gap-3">
-								{/* <div className="aspect-square size-10 overflow-hidden rounded-md bg-card/40">
-									<video
-										autoPlay
-										className="size-full object-cover"
-										loop
-										muted
-										src="/videos/vila-loop.webm"
-									/>
-								</div> */}
 								<div className="shrink-0">
 									<h3 className="font-semibold text-sm">Talk with Vila</h3>
 									<p className="font-medium text-muted/80 text-xs tracking-wide">
@@ -98,13 +95,13 @@ export const HeroSection = () => {
 			<Image
 				alt="Woman meditating in yoga pose against an orange backdrop"
 				blurDataURL="data:image/webp;base64,UklGRvAAAABXRUJQVlA4WAoAAAAAAAAATwAANAAAVlA4IHwAAABwBQCdASpQADUAP/3+/3+/uza7pmmD8D+JZADUUCqqt7vGvyyxjYJgz9l5RJYAYYfsHv2wAP6XF8YTH9X8CStWbWm/GfBNHomOFRej/2dL4ESvccsb5CF1FDNo/Xun35tVGjcFYkQtaU8PidFrN+65BJyuvr4NElPazAAAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAAOUGJlVwEQAAYAAAAAAAA="
-				className="object-cover object-right max-md:blur-lg max-md:brightness-85 md:object-bottom"
+				className="object-cover object-right max-md:blur-lg max-md:brightness-85 md:object-center"
 				fill
 				placeholder="blur"
 				priority
 				quality={100}
 				sizes="100vw"
-				src="/images/vila-hero-banner.webp"
+				src="/images/hero-banner.webp"
 			/>
 		</section>
 	);

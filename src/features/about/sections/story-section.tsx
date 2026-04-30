@@ -57,7 +57,7 @@ export const StorySection = () => {
 						className="object-cover"
 						fill
 						sizes="(max-width: 1024px) 100vw, 50vw"
-						src="/images/about-vila-yoga.webp"
+						src="/images/about-story-banner.webp"
 					/>
 				</div>
 			</div>
