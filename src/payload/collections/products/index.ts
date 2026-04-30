@@ -54,7 +54,7 @@ export const ProductsCollection: CollectionOverride = ({
 		meta: true,
 	},
 	fields: [
-		{ name: "title", type: "text", required: true },
+		{ name: "title", type: "text", required: true, index: true },
 		{
 			type: "tabs",
 			tabs: [
@@ -168,6 +168,7 @@ export const ProductsCollection: CollectionOverride = ({
 						{
 							name: "relatedProducts",
 							type: "relationship",
+							index: true,
 							filterOptions: ({ id }) => {
 								if (id) {
 									return {
@@ -222,6 +223,7 @@ export const ProductsCollection: CollectionOverride = ({
 		{
 			name: "categories",
 			type: "relationship",
+			index: true,
 			admin: {
 				position: "sidebar",
 				sortOptions: "title",
@@ -233,6 +235,7 @@ export const ProductsCollection: CollectionOverride = ({
 		{
 			name: "tags",
 			type: "relationship",
+			index: true,
 			relationTo: "tags",
 			admin: {
 				position: "sidebar",

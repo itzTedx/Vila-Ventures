@@ -46,10 +46,9 @@ const LEAD_FORM_DESCRIPTION =
 const leadCaptureDrawerHandle = DrawerCreateHandle();
 const leadCaptureDialogHandle = DialogCreateHandle();
 
-export function BookingFormModal() {
-	const { selectedPlan } = useMembershipSelection();
+export function BookingFormModalTrigger() {
 	const isMobile = useMediaQuery("max-md");
-	const [open, setOpen] = useState(false);
+	const { selectedPlan } = useMembershipSelection();
 
 	const triggerLabel = selectedPlan
 		? "Continue Booking"
@@ -57,58 +56,63 @@ export function BookingFormModal() {
 
 	if (isMobile) {
 		return (
-			<>
-				<DrawerTrigger
-					disabled={!selectedPlan}
-					handle={leadCaptureDrawerHandle}
-					render={<Button className="px-6" type="button" />}
-				>
-					{triggerLabel}
-				</DrawerTrigger>
-				<Drawer
-					handle={leadCaptureDrawerHandle}
-					onOpenChange={setOpen}
-					open={open}
-				>
-					<DrawerPopup showBar>
-						<DrawerHeader>
-							<DrawerTitle>{LEAD_FORM_TITLE}</DrawerTitle>
-							<DrawerDescription>{LEAD_FORM_DESCRIPTION}</DrawerDescription>
-						</DrawerHeader>
-						<DrawerPanel className="grid gap-4">
-							<BookingForm onSubmitted={() => setOpen(false)} />
-						</DrawerPanel>
-					</DrawerPopup>
-				</Drawer>
-			</>
+			<DrawerTrigger
+				disabled={!selectedPlan}
+				handle={leadCaptureDrawerHandle}
+				render={<Button className="px-6" type="button" />}
+			>
+				{triggerLabel}
+			</DrawerTrigger>
 		);
 	}
 
 	return (
-		<>
-			<DialogTrigger
-				disabled={!selectedPlan}
-				handle={leadCaptureDialogHandle}
-				render={<Button className="px-6" type="button" />}
-			>
-				{triggerLabel}
-			</DialogTrigger>
-			<Dialog
-				handle={leadCaptureDialogHandle}
+		<DialogTrigger
+			disabled={!selectedPlan}
+			handle={leadCaptureDialogHandle}
+			render={<Button className="px-6" type="button" />}
+		>
+			{triggerLabel}
+		</DialogTrigger>
+	);
+}
+
+export function BookingFormModal() {
+	const isMobile = useMediaQuery("max-md");
+	const [open, setOpen] = useState(false);
+
+	if (isMobile) {
+		return (
+			<Drawer
+				handle={leadCaptureDrawerHandle}
 				onOpenChange={setOpen}
 				open={open}
 			>
-				<DialogPopup>
-					<DialogHeader className="border-b">
-						<DialogTitle>{LEAD_FORM_TITLE}</DialogTitle>
-						<DialogDescription>{LEAD_FORM_DESCRIPTION}</DialogDescription>
-					</DialogHeader>
-					<DialogPanel className="mt-4 grid gap-4">
+				<DrawerPopup showBar>
+					<DrawerHeader>
+						<DrawerTitle>{LEAD_FORM_TITLE}</DrawerTitle>
+						<DrawerDescription>{LEAD_FORM_DESCRIPTION}</DrawerDescription>
+					</DrawerHeader>
+					<DrawerPanel className="grid gap-4">
 						<BookingForm onSubmitted={() => setOpen(false)} />
-					</DialogPanel>
-				</DialogPopup>
-			</Dialog>
-		</>
+					</DrawerPanel>
+				</DrawerPopup>
+			</Drawer>
+		);
+	}
+
+	return (
+		<Dialog handle={leadCaptureDialogHandle} onOpenChange={setOpen} open={open}>
+			<DialogPopup>
+				<DialogHeader className="border-b">
+					<DialogTitle>{LEAD_FORM_TITLE}</DialogTitle>
+					<DialogDescription>{LEAD_FORM_DESCRIPTION}</DialogDescription>
+				</DialogHeader>
+				<DialogPanel className="mt-4 grid gap-4">
+					<BookingForm onSubmitted={() => setOpen(false)} />
+				</DialogPanel>
+			</DialogPopup>
+		</Dialog>
 	);
 }
 

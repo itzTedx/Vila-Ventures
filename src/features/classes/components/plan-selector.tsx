@@ -121,21 +121,25 @@ export function Selector() {
 								key={plan.name}
 								onClick={() => setSelectedPlan(plan)}
 							>
-								{plan.popular && (
-									<Badge className="absolute -top-3 left-4 z-10 h-6 border border-primary/60 bg-card font-medium text-xs supports-backdrop-filter:bg-card supports-backdrop-filter:text-primary">
-										<StarIcon
-											className="size-3"
-											data-icon="inline-start"
-											weight="fill"
-										/>
-										Best Value
-									</Badge>
-								)}
-
 								<div className="flex items-start justify-between gap-3">
 									<div className="flex-1">
 										<div className="flex items-center gap-3">
-											<h4 className="font-semibold text-xl">{plan.name}</h4>
+											<div className="flex items-center gap-2">
+												<h4 className="font-semibold text-xl">{plan.name}</h4>
+												{plan.popular && (
+													<Badge
+														className="h-5 border border-primary/60 bg-card px-2.5 font-medium text-primary text-xs"
+														variant="secondary"
+													>
+														<StarIcon
+															className="size-2.5"
+															data-icon="inline-start"
+															weight="fill"
+														/>
+														Best Value
+													</Badge>
+												)}
+											</div>
 											{selectedPlan === plan && (
 												<motion.div
 													animate={{ scale: 1 }}

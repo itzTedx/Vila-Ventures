@@ -77,6 +77,7 @@ export interface Config {
     'class-plans': ClassPlan;
     'class-booking-leads': ClassBookingLead;
     blogs: Blog;
+    faqs: Faq;
     categories: Category;
     tags: Tag;
     media: Media;
@@ -109,6 +110,7 @@ export interface Config {
     'class-plans': ClassPlansSelect<false> | ClassPlansSelect<true>;
     'class-booking-leads': ClassBookingLeadsSelect<false> | ClassBookingLeadsSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
+    faqs: FaqsSelect<false> | FaqsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     tags: TagsSelect<false> | TagsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
@@ -720,6 +722,24 @@ export interface Blog {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs".
+ */
+export interface Faq {
+  id: number;
+  _order?: string | null;
+  /**
+   * Question shown in the FAQ accordion.
+   */
+  question: string;
+  /**
+   * Answer shown when the question is expanded.
+   */
+  answer: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -761,6 +781,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'blogs';
         value: number | Blog;
+      } | null)
+    | ({
+        relationTo: 'faqs';
+        value: number | Faq;
       } | null)
     | ({
         relationTo: 'categories';
@@ -969,6 +993,17 @@ export interface BlogsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs_select".
+ */
+export interface FaqsSelect<T extends boolean = true> {
+  _order?: T;
+  question?: T;
+  answer?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

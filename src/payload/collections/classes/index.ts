@@ -52,6 +52,7 @@ export const Classes: CollectionConfig = {
 							name: "title",
 							type: "text",
 							required: true,
+							index: true,
 						},
 						{
 							name: "tagline",

@@ -18,6 +18,7 @@ import { fileURLToPath } from "url";
 import { Categories } from "@/payload/collections/categories";
 import { ClassBookingLeads } from "@/payload/collections/class-booking-leads";
 import { ClassPlans } from "@/payload/collections/class-plans";
+import { Faqs } from "@/payload/collections/faqs";
 import { Media } from "@/payload/collections/media";
 import { Tags } from "@/payload/collections/products/tags";
 import { Users } from "@/payload/collections/users";
@@ -49,6 +50,7 @@ export default buildConfig({
 		ClassPlans,
 		ClassBookingLeads,
 		Blogs,
+		Faqs,
 		Categories,
 		Tags,
 		Media,

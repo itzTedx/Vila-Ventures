@@ -31,7 +31,7 @@ import {
 
 import { useMediaQuery } from "@/hooks/use-media-query";
 
-import { ConfirmationModal } from "./booking-confirmation";
+import { BookingFormModal, BookingFormModalTrigger } from "./booking-form";
 import { Selector } from "./plan-selector";
 
 export type ClassType = "virtual" | "physical";
@@ -166,7 +166,8 @@ export function MembershipModal({ trigger }: PlansModalProps) {
 							<Selector />
 						</DrawerPanel>
 						<DrawerFooter>
-							<ConfirmationModal />
+							<BookingFormModalTrigger />
+							<BookingFormModal />
 						</DrawerFooter>
 					</DrawerPopup>
 				</Drawer>
@@ -188,7 +189,8 @@ export function MembershipModal({ trigger }: PlansModalProps) {
 						<Selector />
 					</DialogPanel>
 					<DialogFooter>
-						<ConfirmationModal />
+						<BookingFormModalTrigger />
+						<BookingFormModal />
 					</DialogFooter>
 				</DialogPopup>
 			</Dialog>

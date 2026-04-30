@@ -13,9 +13,13 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 
-import { FAQS } from "../constants";
+import { getFaqs } from "../actions";
 
-export const FaqSection = () => {
+export const FaqSection = async () => {
+	const faqs = await getFaqs();
+
+	if (!faqs.length) return null;
+
 	return (
 		<section
 			className="container mx-auto grid grid-cols-1 gap-6 py-14 lg:grid-cols-2"
@@ -50,15 +54,15 @@ export const FaqSection = () => {
 					</Link>
 				</div>
 			</div>
-			<Accordion className="w-full space-y-3" defaultValue={["01"]}>
-				{FAQS.map((item) => (
+			<Accordion className="w-full space-y-3" defaultValue={[faqs[0].id]}>
+				{faqs.map((item) => (
 					<AccordionItem
 						className="rounded-lg border-b-0 bg-taupe-300/30 px-4"
-						key={item.id}
-						value={item.id}
+						key={String(item.id)}
+						value={String(item.id)}
 					>
-						<AccordionTrigger>{item.title}</AccordionTrigger>
-						<AccordionPanel>{item.content}</AccordionPanel>
+						<AccordionTrigger>{item.question}</AccordionTrigger>
+						<AccordionPanel>{item.answer}</AccordionPanel>
 					</AccordionItem>
 				))}
 			</Accordion>

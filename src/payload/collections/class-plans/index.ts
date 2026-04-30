@@ -58,6 +58,7 @@ export const ClassPlans: CollectionConfig = {
 						{
 							name: "pricingType",
 							type: "select",
+							index: true,
 							required: true,
 							defaultValue: "group",
 							admin: {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { SITE_URL, SOCIALS } from "@/constants/site-config";
-import { FAQS } from "@/features/home/constants";
+import { getFaqs } from "@/features/home/actions";
 import { HomeView } from "@/features/home/home-view";
 import { JsonLd } from "@/features/seo/json-ld";
 
@@ -18,7 +18,12 @@ export const metadata: Metadata = {
 	},
 };
 
-const homepageSchema = {
+const buildHomepageSchema = (
+	faqs: {
+		question?: string | null;
+		answer?: string | null;
+	}[]
+) => ({
 	"@context": "https://schema.org",
 	"@graph": [
 		{
@@ -145,19 +150,28 @@ const homepageSchema = {
 		{
 			"@type": "FAQPage",
 			"@id": `${SITE_URL}/#faq`,
-			mainEntity: FAQS.map((faq) => ({
+			mainEntity: faqs.map((faq) => ({
 				"@type": "Question",
-				name: faq.title,
+				name: faq.question,
 				acceptedAnswer: {
 					"@type": "Answer",
-					text: faq.content,
+					text: faq.answer,
 				},
 			})),
 		},
 	],
-};
+});
 
 export default async function Home() {
+	const faqs = await getFaqs();
+	const faqSchemaItems = faqs
+		.filter((faq) => Boolean(faq.question && faq.answer))
+		.map((faq) => ({
+			question: faq.question as string,
+			answer: faq.answer as string,
+		}));
+	const homepageSchema = buildHomepageSchema(faqSchemaItems);
+
 	return (
 		<>
 			<JsonLd data={homepageSchema} />
